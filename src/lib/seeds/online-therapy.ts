@@ -19,8 +19,8 @@ import { onlineTherapyArticles } from "./online-therapy-articles";
 // outcomes, or discourages in-person care.
 //
 // OPERATOR TO VERIFY:
-//  - affiliateUrl for both providers is the brand's own site until a tracked
-//    affiliate link is supplied.
+//  - BetterHelp uses the operator's tracked affiliate link; Headspace links to
+//    its own site until a tracked link is supplied.
 //  - Trustpilot figures were captured from the claimed profiles in Aug 2026;
 //    re-check before bumping PROVIDER_DATA_CHECKED.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -87,8 +87,8 @@ export const onlineTherapyConfig: SiteConfig = {
         "Video, phone or chat sessions, plus messaging",
         "Over 6.6 million people helped",
       ],
-      // Direct site link until an affiliate link exists - CTAs must work.
-      affiliateUrl: "https://www.betterhelp.com",
+      // Live operator affiliate link (Sep 2026).
+      affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1660&aff_id=12904",
       ctaText: "Visit Site",
       trustpilotRating: "3.9",
       trustpilotReviewCount: "9,652",
