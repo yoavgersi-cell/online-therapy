@@ -1,0 +1,26 @@
+[
+  {
+    "question": "What is online therapy?",
+    "answer": "Online therapy (teletherapy) is care from a licensed therapist delivered remotely - by video, phone, live chat or messaging - through a platform that handles matching, scheduling and billing. The clinicians are licensed in your state, the same as office-based therapists; what changes is access."
+  },
+  {
+    "question": "Does insurance cover online therapy?",
+    "answer": "Often, but it's always plan-specific. BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, and Headspace's therapy service takes insurance too. Both have a coverage check that shows your actual cost in minutes."
+  },
+  {
+    "question": "Does online therapy actually work?",
+    "answer": "For many common concerns - anxiety, depression, stress, relationship strain - research generally finds online therapy comparable in effectiveness to in-person care. The biggest driver isn't the medium but the fit with your therapist and your engagement between sessions."
+  },
+  {
+    "question": "Can online therapists prescribe medication?",
+    "answer": "Therapists don't prescribe - psychiatric clinicians do. If medication may be part of your care, you'd pair a therapy platform with a separate prescriber. Controlled substances face stricter telehealth rules and may require in-person care."
+  },
+  {
+    "question": "How much does online therapy cost?",
+    "answer": "It varies by platform, plan, location and insurance, and we only publish prices we've verified. Run the coverage check at signup first; if you're paying out of pocket, BetterHelp's financial-aid questionnaire can lower the rate."
+  },
+  {
+    "question": "What should I do if I'm in crisis right now?",
+    "answer": "Don't start a signup flow. In the US, call or text 988 - the Suicide & Crisis Lifeline - free, confidential and open 24/7. If you or someone else is in immediate danger, call 911. Online therapy platforms are not emergency services."
+  }
+]
