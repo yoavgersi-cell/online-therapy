@@ -45,7 +45,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   sidebar: {
-    socialProofNumber: "124,598",
+    socialProofNumber: "1,875",
     socialProofText: "people compared online therapy platforms on our site this month.",
     secureTitle: "Private & Confidential",
     secureText:
@@ -57,7 +57,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   cardSocialProof: {
-    number: "124,598",
+    number: "1,875",
     text: "people compared therapy platforms this month",
   },
 
@@ -727,6 +727,91 @@ export const onlineTherapyConfig: SiteConfig = {
         },
       ],
       updatedAt: UPDATED,
+    },
+    {
+      slug: "free-online-therapy",
+      seoTitle: "Free Online Therapy: What Actually Exists & How to Get Close (2026)",
+      seoDescription:
+        "Is free online therapy real? The genuinely free routes - EAPs, 988, warmlines, sliding-scale clinics - plus how the major platforms get close to free through insurance, financial aid and employer benefits.",
+      h1: "Free Online Therapy",
+      h2: "The genuinely free options, and how the major platforms get close to free",
+      heroDescription:
+        "Some routes to online therapy really are free; the big platforms can get close to it through insurance, financial aid and employer benefits. Here's the honest map - and the platforms to check first.",
+      providerOrder: ["talkspace", "betterhelp", "headspace"],
+      editorialSections: [
+        {
+          heading: "Is free online therapy a real thing?",
+          body: `<p>Partly, yes - and knowing exactly which part matters. Licensed therapy from the major platforms is not free, but it can get close: <strong><a href="/reviews/talkspace">Talkspace</a></strong> is covered by many major insurance plans and employer EAPs and claims a $0 copay for most insured members, <strong><a href="/reviews/betterhelp">BetterHelp</a></strong> now accepts insurance (copays cited from around $23/session) and offers a financial-aid questionnaire that lowers self-pay rates, and <strong><a href="/reviews/headspace">Headspace</a></strong> is often included in employer benefits at no cost to you. Then there are the routes that are genuinely free and that most people never use: employer EAP sessions, the 988 line, warmlines and peer-support groups. This page maps both.</p>`,
+        },
+        {
+          heading: "What is genuinely free?",
+          body: `<p>These cost nothing, and several are chronically unused because people don't know they have them:</p>`,
+          bullets: [
+            "Employer EAPs (employee-assistance programs) - commonly several fully covered therapy sessions per issue per year. Check HR or your benefits portal today.",
+            "988 Suicide & Crisis Lifeline (call or text 988, US) - free, confidential, 24/7, and not only for suicidal crises; a legitimate support line for any overwhelming moment.",
+            "Warmlines - non-crisis peer-support phone lines run in many states, for the space below a crisis.",
+            "Peer-support groups - NAMI's free groups, condition-specific communities and similar programs.",
+            "Employer-bundled Headspace access - some benefits packages include the app, and sometimes its care services, entirely.",
+          ],
+        },
+        {
+          heading: "Which platforms come closest to free?",
+          body: `<p>Insurance is the lever that turns a subscription into a copay, so the first move is a coverage check, not a price comparison. Talkspace is the platform built around insurance - many plans plus EAPs, with a claimed $0 copay for most insured members that its eligibility check confirms in minutes. BetterHelp now accepts insurance too, and for the uncovered its financial-aid questionnaire adjusts the self-pay rate to income; first-month discounts are commonly offered. Headspace's app is the lowest-cost door for a daily stress-and-sleep practice, and its separate therapy service accepts insurance. We don't publish prices we haven't verified, so run the checks and get your own number - our <a href="/articles/online-therapy-cost">online therapy cost guide</a> explains the models.</p>`,
+        },
+        {
+          heading: "Where does low-cost therapy hide offline?",
+          body: `<p>Three underused doors: community mental-health centers (federally supported clinics that charge on income-based sliding scales), university training clinics (graduate students delivering supervised therapy at steep discounts - supervision by a licensed clinician is a feature, not a caveat), and individual therapists who reserve sliding-scale slots. Group therapy led by a licensed clinician typically costs a fraction of individual sessions and is clinically legitimate in its own right. Our guide to <a href="/articles/free-and-low-cost-therapy-options">free and low-cost therapy options</a> covers all of it.</p>`,
+        },
+        {
+          heading: "What to be careful with",
+          body: `<p>"Free therapy" is also a phrase that attracts things that aren't therapy: chat apps with no licensed clinician, lead-generation forms that sell your details, and "free trials" that quietly convert into subscriptions. Two checks protect you: is a licensed, state-credentialed clinician actually involved, and what exactly happens to your card and your data after the free part ends. Read the platform's current privacy policy before signing up anywhere - therapy data is as sensitive as data gets.</p>`,
+        },
+        {
+          heading: "How we chose these platforms",
+          body: `<p>We ranked platforms on how close a typical person can get to free care - insurance acceptance and claimed copays, financial aid, discounts and employer benefits - against what you actually get for it: licensed clinicians, session formats and switching. We never rank a platform higher for being cheap if it cuts the care, and every figure here comes from the platform's own published claims, to confirm on your plan. See the full field on our <a href="/">online therapy comparison</a>.</p><p><em>This page is general information, not medical advice. In crisis in the US, call or text 988 - free and open 24/7.</em></p>`,
+        },
+      ],
+      updatedAt: "2026-09-19",
+    },
+    {
+      slug: "online-family-therapy",
+      seoTitle: "Best Online Family Therapy Platforms (2026): Couples, Teens & Families",
+      seoDescription:
+        "Online family therapy compared: which platforms offer couples, teen and family sessions, how joint sessions work over video, what insurance covers, and when in-person is the better call.",
+      h1: "Best Online Family Therapy",
+      h2: "Couples, parent-teen and family sessions online - which platforms offer what",
+      heroDescription:
+        "Family therapy works on the relationships between people, and online it solves the hardest part: getting everyone into the same session. Compare the platforms that offer couples, teen and family formats.",
+      providerOrder: ["talkspace", "betterhelp", "headspace"],
+      editorialSections: [
+        {
+          heading: "What is the best online platform for family therapy?",
+          body: `<p><strong><a href="/reviews/talkspace">Talkspace</a> is our pick for family formats</strong> because it offers couples therapy and teen therapy on its main platform - alongside individual therapy and psychiatry - with insurance coverage that can apply plan-permitting, so a household can keep its care in one place. <a href="/reviews/betterhelp">BetterHelp</a> asks at signup whether you're seeking individual, couples or teen therapy and routes couples and teens through its sister platforms, with a parent or guardian involved for teens. <a href="/reviews/headspace">Headspace</a> isn't family therapy - it's a self-guided practice app - but its sleep and stress content is a reasonable shared habit for a household alongside real sessions. For whole-family sessions with several members at once, a local marriage-and-family therapist is often the more direct route; our <a href="/articles/what-is-family-therapy">family therapy guide</a> explains the formats.</p>`,
+        },
+        {
+          heading: "How does online family therapy work?",
+          body: `<p>A licensed therapist - often a marriage and family therapist or a clinician trained in systemic approaches - meets with two or more family members together by video, sometimes with individual check-ins alongside. Online, that means:</p>`,
+          bullets: [
+            "Everyone joins from wherever they are - a parent at work, a teen at home, a partner travelling - which removes the scheduling problem that stops most family therapy from starting.",
+            "Sessions focus on the relationships: communication patterns, recurring conflict, co-parenting, a household adjusting to a diagnosis, divorce or a move.",
+            "Teen therapy involves a parent or guardian, and consent and confidentiality rules vary by state and platform.",
+            "Whole-family sessions with young children are harder over video; couples and parent-teen formats translate best.",
+          ],
+        },
+        {
+          heading: "Does insurance cover online family or couples therapy?",
+          body: `<p>Sometimes, and only if you ask specifically. Individual-therapy coverage doesn't automatically extend to couples or family sessions, and a teen's coverage under a parent's plan is its own question. Run Talkspace's eligibility check and BetterHelp's signup coverage check with the format named explicitly, and check whether your employer's EAP includes family or couples sessions. We don't publish prices we haven't verified; the mechanics are in our <a href="/articles/online-therapy-that-takes-insurance">insurance guide</a>. One structural note: a couples or family subscription covers several people, which often makes the per-person cost lower than separate individual therapies.</p>`,
+        },
+        {
+          heading: "When is in-person or individual care the better call?",
+          body: `<p>Three situations, plainly. <strong>Safety:</strong> where abuse or safety concerns are present, joint sessions are often contraindicated and individual support comes first. <strong>Crisis:</strong> a family member in acute crisis needs immediate care, not a family intake - in the US, call or text 988. <strong>Minors:</strong> some situations need a clinician who can see the young person in the room. Outside those, online family work is a legitimate, convenient starting point - see <a href="/articles/online-couples-therapy">online couples therapy</a> for the couples format in depth.</p>`,
+        },
+        {
+          heading: "How we chose the best online family therapy",
+          body: `<p>We ranked platforms on which family formats they actually offer (couples, teen, family), whether those sit on the main platform or a sister service, insurance applicability, session flexibility for several schedules, and the ease of switching therapists. See the full field on our <a href="/">online therapy comparison</a> and the individual <a href="/reviews">platform reviews</a>.</p><p><em>This page is general information, not medical advice. In crisis in the US, call or text 988 - free and open 24/7.</em></p>`,
+        },
+      ],
+      updatedAt: "2026-09-19",
     },
     {
       slug: "cheapest-online-therapy",

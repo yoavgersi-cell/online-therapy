@@ -149,7 +149,11 @@ export function EditorialContent() {
         platform, location, plan and insurance - so this page quotes none. What we can tell you is where the cost
         levers are: insurance coverage (worth checking first, always), employer EAPs that quietly include free
         sessions, BetterHelp&rsquo;s financial-aid questionnaire for out-of-pocket subscribers, HSA/FSA eligibility
-        where offered, and out-of-network reimbursement via superbills. Our{" "}
+        where offered, and out-of-network reimbursement via superbills. Looking for{" "}
+        <Link href="/free-online-therapy" className={link}>
+          free online therapy
+        </Link>
+        ? The genuinely free routes exist and we map them. Our{" "}
         <Link href="/articles/online-therapy-cost" className={link}>
           online therapy cost guide
         </Link>{" "}

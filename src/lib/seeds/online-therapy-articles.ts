@@ -10,6 +10,91 @@ import type { ArticleData } from "@/lib/config";
 const UPDATED = "2026-09-14";
 
 export const onlineTherapyArticles: ArticleData[] = [
+  // ───── Trend-riding coverage (Google Trends, Sep 19 2026) ─────
+  // "online family therapy" was the only rising query in the top 10 and had
+  // zero coverage; "online therapy near me" / "therapy near me" were only
+  // partly covered by the state pages. Both are qualitative, platform-facts-
+  // only pieces: no invented prices, ratings or outcome statistics.
+  {
+    slug: "what-is-family-therapy",
+    title: "What Is Family Therapy? How It Works Online, Who Offers It & When It Fits (2026)",
+    description:
+      "Family therapy is available online - but not every platform offers it, and 'family' covers couples, parent-teen and whole-household work. What it involves, which platforms cover which formats, and when in-person is the better call.",
+    category: "Guide",
+    readTime: "6 min read",
+    publishedAt: "2026-09-19",
+    updatedAt: "2026-09-19",
+    heroColor: "#E6F4EC",
+    author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Family therapy treats the relationships between people, not one person - so sessions involve two or more family members with a licensed therapist.",
+      "Online, it splits into formats platforms handle differently: couples therapy, teen therapy with parent involvement, and whole-family sessions.",
+      "BetterHelp routes couples and teens through sister platforms; Talkspace offers couples and teen therapy on its main platform - neither is a full-family practice.",
+      "Situations involving safety concerns, active crisis, or a minor's consent rules call for individual or in-person care first.",
+    ],
+    sections: [
+      {
+        heading: "What is family therapy, and how is it different?",
+        body: `Individual therapy works on one person; family therapy works on the <em>relationships</em> between people - communication patterns, recurring conflict, a household adjusting to a diagnosis, a divorce, a move, or a teenager everyone is worried about. A licensed therapist (often a marriage and family therapist, or a clinician trained in systemic approaches) meets with two or more members together, sometimes with individual check-ins alongside. The unit of treatment is the family system, which is why it can shift dynamics that years of one person working alone never touched.`,
+      },
+      {
+        heading: "Does family therapy work online?",
+        body: `For the common ground - communication, conflict, co-parenting logistics, a family adapting to change - video sessions work well, and they solve the single biggest reason family therapy never starts: getting several people into the same room at the same hour. Online, a parent at work, a teen at home and a partner travelling can all join. The honest limits: whole-family sessions with young children are harder over video, and anything involving safety concerns or a family member in crisis belongs with individual or in-person care first. The broader evidence on the format is in <a href="/articles/does-online-therapy-work">does online therapy work</a>.`,
+      },
+      {
+        heading: "Which platforms offer family, couples or teen therapy?",
+        body: `"Family therapy" on the big platforms mostly means two narrower formats, so match the format to what you need. <a href="/reviews/betterhelp">BetterHelp</a> asks at signup whether you're seeking individual, couples or teen therapy and routes couples and teens through its sister platforms; teen therapy requires a parent or guardian's involvement. <a href="/reviews/talkspace">Talkspace</a> offers couples therapy and teen therapy on its main platform, alongside individual therapy and psychiatry, with insurance coverage that can apply plan-permitting. <a href="/reviews/headspace">Headspace</a> is a self-guided practice app, not family therapy - though its sleep and stress content is a reasonable shared habit for a household. For whole-family sessions with several members, a local family-therapy practice or a therapist directory filtered for marriage-and-family therapists is often the more direct route. Compare the platforms side by side on our <a href="/online-family-therapy">online family therapy page</a>. Our <a href="/articles/online-couples-therapy">online couples therapy guide</a> covers the couples format in depth.`,
+      },
+      {
+        heading: "What does online family therapy cost, and does insurance cover it?",
+        body: `Same honest rule as everywhere on this site: we don't quote prices we haven't verified, and family and couples pricing varies by platform, plan and insurance. Two things to check specifically: whether your plan covers couples or family sessions at all - individual-therapy coverage doesn't automatically extend to them - and whether a teen is covered under a parent's plan for therapy. Run the eligibility checks with that question asked explicitly, and see our <a href="/articles/online-therapy-that-takes-insurance">insurance guide</a> for the mechanics. A couples or family subscription is one subscription for several people, which often makes the per-person cost lower than separate individual therapies.`,
+      },
+      {
+        heading: "When is in-person or individual care the better call?",
+        body: `Three situations, plainly. Safety: where abuse or safety concerns are present, joint sessions are often contraindicated and individual support comes first. Crisis: a family member in acute crisis needs immediate care, not a family intake - in the US, call or text 988. Minors: consent and confidentiality rules for teens vary by state and platform, and some situations need a clinician who can see the young person in the room. Outside those, online family work is a legitimate, convenient starting point - compare the platforms on our <a href="/">online therapy ranking</a>. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "online-therapy-near-me",
+    title: "Online Therapy Near Me: Why Location Barely Matters (and When It Does) (2026)",
+    description:
+      "Searching 'online therapy near me'? For online care, 'near' means licensed in your state, not down the street. How matching works, why it widens your choice, and the cases where a local therapist is still the better pick.",
+    category: "Guide",
+    readTime: "5 min read",
+    publishedAt: "2026-09-19",
+    updatedAt: "2026-09-19",
+    heroColor: "#EAF5F0",
+    author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Online therapists don't need to be near you - they need to be licensed in your state, and platforms match you only with those who are.",
+      "That widens your choice: someone in a rural corner of a state gets the same statewide pool of therapists as someone in its biggest city.",
+      "Location still matters in three cases - you want in-person sessions, you need higher-intensity or coordinated care, or you don't have privacy at home.",
+      "If you travel or move, tell your platform: a therapist licensed only in your home state may not be able to see you from another one.",
+    ],
+    sections: [
+      {
+        heading: "What 'near me' actually means for online therapy",
+        body: `Therapy licensing is state-based: a clinician treating you must hold a license valid in the state you're in during the session. That's the whole geography of online therapy. A therapist two states over can't see you, but a therapist 400 miles away in your own state can - and platforms like <a href="/reviews/betterhelp">BetterHelp</a> and <a href="/reviews/talkspace">Talkspace</a> match you only from clinicians credentialed for your state. So "online therapy near me" resolves to "online therapy in my state," which is why our <a href="/online-therapy">state-by-state pages</a> exist: pick your state and you'll see what serves it and what to know about coverage there.`,
+      },
+      {
+        heading: "Why that's better than a therapist down the street",
+        body: `Because the local pool is small and the statewide pool isn't. Searching for a therapist near you means choosing from whoever practices within driving distance, has openings, and takes your insurance - often a short list, and in rural areas sometimes none. Matching statewide means you can filter for what actually matters: a therapist who works with your specific concern, in the format you'll keep (video, phone, chat or messaging), at hours that fit. Our guide to <a href="/articles/how-to-choose-an-online-therapy-platform">choosing a platform</a> walks through those filters.`,
+      },
+      {
+        heading: "When a local therapist really is the better pick",
+        body: `Three honest cases. You want to be in a room with someone - some people find screens distancing rather than freeing, and that preference is legitimate. You need higher-intensity or coordinated care - severe or complex conditions, or treatment that needs to link with local doctors or services. Or you don't have reliable privacy at home - whispering while family listens through the wall isn't therapy, and the office is the better clinical setting. The full trade-off is in <a href="/articles/online-therapy-vs-in-person">online therapy vs in-person</a>. Hybrids are normal too: an online therapist as your regular rhythm with local care when circumstances call for it.`,
+      },
+      {
+        heading: "Travelling, moving, or living in two states",
+        body: `Tell your platform. Because licensing follows where you physically are during the session, a therapist licensed only in your home state may not be able to see you while you're elsewhere, and a move can mean a re-match. Some therapists hold licenses in several states, and platforms can usually re-match you quickly - but it's a conversation to have before you leave, not after a cancelled session.`,
+      },
+      {
+        heading: "How to start",
+        body: `Pick your state on our <a href="/online-therapy">online therapy by state</a> index to see the platforms that serve it, run the insurance coverage checks first (they take minutes and decide most of the cost question), and treat the first therapist match as a starting point - switching until the fit is right is normal and easy. Compare everything on our <a href="/">online therapy ranking</a>. If you're in crisis, no search is the tool: in the US, call or text 988, free and open 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   {
     slug: "cbt-online",
     title: "CBT Online: What It Is & Why Every Platform Offers It (2026)",

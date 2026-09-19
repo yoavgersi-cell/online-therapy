@@ -29,9 +29,11 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     title: "Best Therapy For",
     links: [
       { label: "Beginners", href: "/online-therapy-for-beginners" },
+      { label: "Free Options", href: "/free-online-therapy" },
       { label: "Best Value", href: "/cheapest-online-therapy" },
       { label: "With Insurance", href: "/best-online-therapy-with-insurance" },
       { label: "Anxiety", href: "/best-online-therapy-for-anxiety" },
+      { label: "Families & Couples", href: "/online-family-therapy" },
     ],
   },
   {
