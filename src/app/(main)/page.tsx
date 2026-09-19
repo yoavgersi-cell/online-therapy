@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
-import { SocialProofBand } from "@/components/social-proof-bubble";
+import { SocialProofBand, providerVisitStat } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
@@ -155,7 +155,7 @@ export default async function HomePage() {
               <div key={product.id}>
                 <ComparisonCard product={product} socialProof={config.cardSocialProof} />
                 {idx === 0 && config.cardSocialProof && (
-                  <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
+                  <SocialProofBand number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />
                 )}
               </div>
             ))}

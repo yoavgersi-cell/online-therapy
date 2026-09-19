@@ -1,6 +1,6 @@
 import { HeroSection } from "@/components/hero-section";
 import { RichComparisonCard } from "@/components/rich-comparison-card";
-import { SocialProofBand } from "@/components/social-proof-bubble";
+import { SocialProofBand, providerVisitStat } from "@/components/social-proof-bubble";
 import { Sidebar } from "@/components/sidebar";
 import { FaqAccordion } from "@/components/faq-accordion";
 import type { SiteConfig } from "@/lib/config";
@@ -96,7 +96,7 @@ export function ComparisonLayout({ config, heroOverrides, linkPrefix = "", bylin
                   linkPrefix={linkPrefix}
                 />
                 {idx === 0 && config.cardSocialProof && (
-                  <SocialProofBand number={config.cardSocialProof.number} text={config.cardSocialProof.text} />
+                  <SocialProofBand number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />
                 )}
               </div>
             ))}

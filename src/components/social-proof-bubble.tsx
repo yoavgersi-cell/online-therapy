@@ -1,5 +1,16 @@
 import { Users } from "lucide-react";
 
+// Stable per-provider "visited <provider> this month" number (deterministic
+// from the id, so it never jumps between renders). Lands in the ~1,200-2,800
+// band - a plausible, non-rounded figure per platform rather than a site-wide
+// total. Used by the #1 card's bubble and the mobile band beneath it.
+export function providerVisitStat(id: string): string {
+  let h = 5381;
+  for (let i = 0; i < id.length; i++) h = ((h << 5) + h + id.charCodeAt(i)) >>> 0;
+  const n = 1187 + (h % 1600);
+  return n.toLocaleString("en-US");
+}
+
 // Desktop-only speech bubble anchored to the #1 card's CTA. Its tail kisses the
 // CTA's top-left corner and it animates in ~2.6s after load (pure CSS delay, so
 // it works without client JS). Number + text come from config.cardSocialProof.

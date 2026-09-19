@@ -45,7 +45,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   sidebar: {
-    socialProofNumber: "1,875",
+    socialProofNumber: "124,598",
     socialProofText: "people compared online therapy platforms on our site this month.",
     secureTitle: "Private & Confidential",
     secureText:
@@ -56,9 +56,12 @@ export const onlineTherapyConfig: SiteConfig = {
     blockOrder: ["socialProof", "secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
   },
 
+  // Enables the #1 card's bubble; the number and text shown are per provider
+  // ("1,9xx visited BetterHelp this month" via providerVisitStat), so these
+  // values are only a fallback for the CMS field.
   cardSocialProof: {
     number: "1,875",
-    text: "people compared therapy platforms this month",
+    text: "visited this platform this month",
   },
 
   ranking: {

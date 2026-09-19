@@ -1,7 +1,7 @@
 import { Check, Video, Star } from "lucide-react";
 import { RatingBadge } from "./rating-badge";
 import { ProviderCta } from "./provider-cta";
-import { SocialProofBubble } from "./social-proof-bubble";
+import { SocialProofBubble, providerVisitStat } from "./social-proof-bubble";
 
 interface ComparisonCardProduct {
   id: string;
@@ -89,7 +89,7 @@ export function ComparisonCard({ product, hideRank, pageType = "listing", source
         <div className="relative flex flex-col items-center justify-center gap-4 px-6 py-5 sm:w-[200px] sm:shrink-0">
           <RatingBadge rating={product.rating} label={product.ratingLabel} starRating={product.starRating} />
           <div className="relative w-full">
-            {showBubble && <SocialProofBubble number={socialProof!.number} text={socialProof!.text} />}
+            {showBubble && <SocialProofBubble number={providerVisitStat(product.id)} text={`visited ${product.name} this month`} />}
             <ProviderCta
               href={product.affiliateUrl}
               providerName={product.name}
