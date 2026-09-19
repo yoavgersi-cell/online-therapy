@@ -447,7 +447,7 @@ export const defaultConfig: SiteConfig = {
       "All providers featured on our platform use secure systems to protect your personal information.",
     featuredImageUrl: "/sidebar-featured.webp",
     featuredImageAlt:
-      "BetterHelp - online therapy with licensed therapists",
+      "betterhelp - online therapy with licensed therapists",
     featuredImageLink: "#",
   },
   ranking: {

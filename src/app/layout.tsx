@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     "teletherapy",
     "online counseling",
     "online therapy that takes insurance",
-    "BetterHelp review",
-    "Headspace review",
+    "betterhelp review",
+    "headspace review",
     "online therapy platforms",
   ],
   openGraph: {

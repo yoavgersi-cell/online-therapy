@@ -46,10 +46,13 @@ const BATTLE_CATEGORY_BY_VERTICAL: Record<string, string> = {
 
 // Title-case a "{a} vs {b}" matchup so no SERP title starts lowercase, while
 // preserving any internal brand capitals (altRx -> AltRx, TrimRX -> TrimRX).
+// Brands that style their own name in lowercase (betterhelp, headspace) are
+// left exactly as written - never "Betterhelp".
+const LOWERCASE_BRANDS = new Set(["betterhelp", "headspace"]);
 function titleCaseMatchup(label: string): string {
   return label
     .split(/\s+vs\s+/i)
-    .map((side) => (side ? side.charAt(0).toUpperCase() + side.slice(1) : side))
+    .map((side) => (side && !LOWERCASE_BRANDS.has(side.trim().toLowerCase()) ? side.charAt(0).toUpperCase() + side.slice(1) : side))
     .join(" vs ");
 }
 

@@ -90,11 +90,11 @@ export default async function StatePage({
     },
     {
       question: `Does insurance cover online therapy in ${s.name}?`,
-      answer: `Often, but it's always plan-specific rather than state-specific. Talkspace is covered by many major plans and EAPs, BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, and Headspace's therapy service takes insurance too. Run each platform's coverage check with your plan details before paying out of pocket - it takes minutes and answers the only question that matters for you.`,
+      answer: `Often, but it's always plan-specific rather than state-specific. Talkspace is covered by many major plans and EAPs, betterhelp now accepts insurance, with copays cited from around $23/session for covered members, and headspace's therapy service takes insurance too. Run each platform's coverage check with your plan details before paying out of pocket - it takes minutes and answers the only question that matters for you.`,
     },
     {
       question: `How much does online therapy cost in ${s.name}?`,
-      answer: `Pricing depends on the platform, your plan and your insurance - not on where you live in ${s.name}, although BetterHelp's self-pay rate can vary by location and therapist availability. We only publish prices we've verified, so confirm your number at signup and use financial aid or employer EAP sessions where they apply.`,
+      answer: `Pricing depends on the platform, your plan and your insurance - not on where you live in ${s.name}, although betterhelp's self-pay rate can vary by location and therapist availability. We only publish prices we've verified, so confirm your number at signup and use financial aid or employer EAP sessions where they apply.`,
     },
   ];
 
@@ -226,9 +226,9 @@ export default async function StatePage({
           Insurance and Cost in {s.name}
         </h2>
         <p className="mb-4">
-          Coverage is plan-specific rather than state-specific. Talkspace is covered by many major plans and employer EAPs and claims a $0 copay for most insured members; BetterHelp now accepts insurance, with copays
+          Coverage is plan-specific rather than state-specific. Talkspace is covered by many major plans and employer EAPs and claims a $0 copay for most insured members; betterhelp now accepts insurance, with copays
           cited from around $23/session for covered members and a financial-aid questionnaire for self-pay;
-          Headspace&apos;s therapy service accepts insurance too, with a coverage check on its site. Employer
+          headspace&apos;s therapy service accepts insurance too, with a coverage check on its site. Employer
           EAPs often include fully covered sessions and go unused. We only publish prices we&apos;ve verified,
           so run the coverage checks and confirm your own number - our guide to{" "}
           <Link href="/articles/online-therapy-that-takes-insurance" className="font-semibold text-[#1A7A52] hover:underline">

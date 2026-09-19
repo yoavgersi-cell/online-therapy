@@ -6,7 +6,7 @@ treatment sites: ranked provider cards on the homepage, provider reviews,
 head-to-head comparisons, guides, programmatic per-state pages, a matching
 quiz, and a light-green theme.
 
-Partners: **BetterHelp**, **Talkspace** and **Headspace**.
+Partners: **betterhelp**, **Talkspace** and **headspace**.
 
 ## Getting Started
 

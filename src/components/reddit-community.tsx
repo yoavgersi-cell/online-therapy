@@ -36,7 +36,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     themes:
       "Four comments on a shared review thread, one pattern: the anytime-messaging flexibility is what wins people over, and finding the right therapist can take a couple of tries - which is why the easy switching keeps coming up as the feature that matters.",
     intro:
-      "BetterHelp threads on Reddit are full of people comparing notes before trying it - here's how real commenters describe the messaging, the matching, and the tries it takes to find the right fit.",
+      "betterhelp threads on Reddit are full of people comparing notes before trying it - here's how real commenters describe the messaging, the matching, and the tries it takes to find the right fit.",
     threads: [
       {
         author: "Opnes123",
@@ -72,7 +72,7 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
       },
     ],
     takeaway:
-      "The flexibility case dominates: messaging your therapist anytime and scheduling around a chaotic life is why these commenters chose online over in-person. The honest notes are just as useful - one commenter says outright it took a couple of tries to find a therapist they clicked with, and another opens with having seen mixed reviews. That's the real BetterHelp experience: matching is a process, and the easy-switching feature exists precisely because of it.",
+      "The flexibility case dominates: messaging your therapist anytime and scheduling around a chaotic life is why these commenters chose online over in-person. The honest notes are just as useful - one commenter says outright it took a couple of tries to find a therapist they clicked with, and another opens with having seen mixed reviews. That's the real betterhelp experience: matching is a process, and the easy-switching feature exists precisely because of it.",
   },
   talkspace: {
     vertical: "online-therapy",

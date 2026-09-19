@@ -1,10 +1,10 @@
 import Link from "next/link";
 
 const modelRows: [string, string, string][] = [
-  ["Subscription therapy", "A matched licensed therapist, live sessions plus messaging, billed as a subscription or through insurance.", "BetterHelp is the biggest example; Talkspace runs the same model with broad insurance coverage."],
-  ["Psychiatry & medication", "Evaluation, diagnosis and medication management by psychiatric clinicians.", "Talkspace offers it as a service alongside therapy; BetterHelp and Headspace's app don't prescribe."],
-  ["Therapy billed through insurance", "Scheduled video sessions with a licensed clinician, paid as a copay where your plan covers it.", "Headspace's therapy service works this way; Talkspace and BetterHelp accept insurance too."],
-  ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "Headspace is the best-known; pairs well with therapy rather than replacing it."],
+  ["Subscription therapy", "A matched licensed therapist, live sessions plus messaging, billed as a subscription or through insurance.", "betterhelp is the biggest example; Talkspace runs the same model with broad insurance coverage."],
+  ["Psychiatry & medication", "Evaluation, diagnosis and medication management by psychiatric clinicians.", "Talkspace offers it as a service alongside therapy; betterhelp and headspace's app don't prescribe."],
+  ["Therapy billed through insurance", "Scheduled video sessions with a licensed clinician, paid as a copay where your plan covers it.", "headspace's therapy service works this way; Talkspace and betterhelp accept insurance too."],
+  ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "headspace is the best-known; pairs well with therapy rather than replacing it."],
 ];
 
 // Verified Trustpilot standings, captured from each platform's live profile
@@ -12,7 +12,7 @@ const modelRows: [string, string, string][] = [
 const ratingRows: [string, string, string][] = [
   ["Talkspace", "4.4 across 2,370 reviews", "The best verified score in our coverage - praise centers on therapists who stick; the captured reviews carry Trustpilot's \"Invited\" tag."],
   ["betterhelp", "3.9 across 9,652 reviews", "Solid but mixed on the category's biggest review base - accessibility and therapist quality praised, fit and billing complaints alongside."],
-  ["headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity Headspace cites, and read recent reviews before subscribing."],
+  ["headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity headspace cites, and read recent reviews before subscribing."],
 ];
 
 function ComparisonTable({ colA, colHeadB, colB, rows }: { colA: string; colHeadB?: string; colB: string; rows: [string, string, string][] }) {
@@ -63,7 +63,7 @@ export function EditorialContent() {
         </Link>{" "}
         or compare the two biggest names in our{" "}
         <Link href="/betterhelp-vs-talkspace" className={link}>
-          BetterHelp vs Talkspace comparison
+          betterhelp vs Talkspace comparison
         </Link>
         .
       </p>
@@ -92,12 +92,12 @@ export function EditorialContent() {
         </Link>{" "}
         is covered by many major plans and employer EAPs and claims a $0 copay for most insured members.{" "}
         <Link href="/reviews/betterhelp" className={link}>
-          BetterHelp
+          betterhelp
         </Link>{" "}
         - long the insurance holdout - now accepts it, with copays cited from around $23/session for covered members
         and a financial-aid questionnaire for self-pay.{" "}
         <Link href="/reviews/headspace" className={link}>
-          Headspace
+          headspace
         </Link>
         &rsquo;s therapy service accepts insurance as well, with a coverage check on its site. Every check is free
         and takes minutes - run two or three before paying anyone out of pocket; they answer the question no comparison table
@@ -112,7 +112,7 @@ export function EditorialContent() {
       <ul className="mb-4 list-disc space-y-2 pl-6">
         <li>
           <strong>You want talk therapy, started fast:</strong>{" "}
-          <Link href="/reviews/betterhelp" className={link}>BetterHelp</Link>{" "}
+          <Link href="/reviews/betterhelp" className={link}>betterhelp</Link>{" "}
           - the largest network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted (copays from ~$23/session for covered members).
         </li>
         <li>
@@ -122,14 +122,14 @@ export function EditorialContent() {
         </li>
         <li>
           <strong>You want a daily practice for stress and sleep, not treatment:</strong>{" "}
-          <Link href="/reviews/headspace" className={link}>Headspace</Link>{" "}
+          <Link href="/reviews/headspace" className={link}>headspace</Link>{" "}
           - the best-known meditation app, best used alongside therapy rather than instead of it. Its separate therapy service accepts insurance if you decide you want a clinician. Our{" "}
-          <Link href="/headspace-vs-betterhelp" className={link}>Headspace vs BetterHelp comparison</Link>{" "}
+          <Link href="/headspace-vs-betterhelp" className={link}>headspace vs betterhelp comparison</Link>{" "}
           covers that fork in depth.
         </li>
         <li>
           <strong>Medication might be part of your care:</strong> Talkspace is the platform here with psychiatry
-          on board; BetterHelp is talk therapy only and Headspace&rsquo;s app is self-guided, so with those plan for
+          on board; betterhelp is talk therapy only and headspace&rsquo;s app is self-guided, so with those plan for
           a separate prescriber alongside. Our guides to{" "}
           <Link href="/articles/therapy-vs-psychiatry" className={link}>therapist vs psychiatrist</Link>{" "}
           and{" "}
@@ -148,7 +148,7 @@ export function EditorialContent() {
         We publish prices only after we&rsquo;ve verified them, and in this category prices genuinely vary - by
         platform, location, plan and insurance - so this page quotes none. What we can tell you is where the cost
         levers are: insurance coverage (worth checking first, always), employer EAPs that quietly include free
-        sessions, BetterHelp&rsquo;s financial-aid questionnaire for out-of-pocket subscribers, HSA/FSA eligibility
+        sessions, betterhelp&rsquo;s financial-aid questionnaire for out-of-pocket subscribers, HSA/FSA eligibility
         where offered, and out-of-network reimbursement via superbills. Looking for{" "}
         <Link href="/free-online-therapy" className={link}>
           free online therapy
@@ -166,14 +166,14 @@ export function EditorialContent() {
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">A word on privacy</h3>
       <p className="mb-4">
-        Therapy data is as sensitive as data gets, and the category&rsquo;s record isn&rsquo;t spotless - BetterHelp
+        Therapy data is as sensitive as data gets, and the category&rsquo;s record isn&rsquo;t spotless - betterhelp
         settled with the FTC in 2023 over past sharing of user data with advertisers, a fact our{" "}
         <Link href="/reviews/betterhelp" className={link}>
-          BetterHelp review
+          betterhelp review
         </Link>{" "}
         covers rather than buries. Before signing up anywhere: read the platform&rsquo;s current privacy policy, check
         whether your data is used for advertising, and know that therapy notes and billing records are handled under
-        different rules. Insurance-billed care (Talkspace, Headspace&rsquo;s therapy service, BetterHelp with a
+        different rules. Insurance-billed care (Talkspace, headspace&rsquo;s therapy service, betterhelp with a
         covered plan) also creates claims records with your insurer - a normal part of
         healthcare, but worth knowing.
       </p>
