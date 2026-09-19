@@ -11,7 +11,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const SITE_URL = "https://www.onlinetherapyhub.com";
+const SITE_URL = "https://www.toponlinetherapy.io";
 
 export const metadata: Metadata = {
   title: {
@@ -97,7 +97,7 @@ export default async function HomePage() {
     inLanguage: "en-US",
     datePublished: "2026-06-01",
     dateModified: CONTENT_LAST_UPDATED,
-    isPartOf: { "@type": "WebSite", name: "Online Therapy Hub", url: SITE_URL },
+    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: SITE_URL },
     about: { "@type": "Thing", name: "Online therapy platforms" },
     ...(author && {
       author: { "@type": "Organization", name: author.name, url: `${SITE_URL}/about` },
@@ -105,7 +105,7 @@ export default async function HomePage() {
     ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),
     publisher: {
       "@type": "Organization",
-      name: "Online Therapy Hub",
+      name: "Top Online Therapy",
       url: SITE_URL,
       logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
     },

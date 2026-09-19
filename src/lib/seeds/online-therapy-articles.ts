@@ -1,6 +1,6 @@
 import type { ArticleData } from "@/lib/config";
 
-// Online-therapy guides for onlinetherapyhub.com. Ported from the operator's
+// Online-therapy guides for toponlinetherapy.io. Ported from the operator's
 // hub vertical (Aug-Sep 2026). House rules: real platforms, truthful general
 // descriptions, NO invented data - no fabricated prices, ratings, session
 // counts or outcome statistics. Every crisis-adjacent surface points to the
@@ -20,7 +20,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-08-31",
     updatedAt: "2026-08-31",
     heroColor: "#E6F4EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "CBT is structured, present-focused talk therapy: it works on the loop between thoughts, feelings and behaviors, with skills you practice between sessions.",
       "It is among the most-studied forms of psychotherapy and the approach most online platforms are built around - structure and homework translate naturally to video and messaging.",
@@ -56,7 +56,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#EAF5F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     sections: [
       {
         heading: "Does insurance cover online therapy?",
@@ -90,7 +90,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#E4F2EA",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     sections: [
       {
         heading: "Is online therapy as good as in-person therapy?",
@@ -124,7 +124,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#EEF7F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     sections: [
       {
         heading: "Do you need therapy - or a daily practice?",
@@ -154,7 +154,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#E3F1EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     sections: [
       {
         heading: "Is free therapy a real thing?",
@@ -188,7 +188,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#E9F6F1",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "BetterHelp now accepts insurance - a recent change most articles haven't caught up with.",
       "Copays are cited from around $23/session for covered members; coverage is plan-specific.",
@@ -228,7 +228,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#E6F4EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Yes - licensed, state-credentialed therapists; BetterHelp itself reports 31,739 of them.",
       "Verified Trustpilot: 3.9 across 9,652 reviews - solid but mixed, not stellar.",
@@ -272,7 +272,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#EAF5F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Talkspace is covered by many major insurance plans and employer EAPs.",
       "Talkspace claims most insured members pay a $0 copay - its eligibility check confirms yours in minutes.",
@@ -312,7 +312,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#E4F2EA",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "There is no single BetterHelp price - anyone quoting one flat number is describing their own quote.",
       "Insurance is now accepted, with copays cited from ~$23/session for covered members.",
@@ -356,7 +356,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: UPDATED,
     updatedAt: UPDATED,
     heroColor: "#EEF7F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Both BetterHelp and Talkspace offer couples therapy - one subscription covers both partners.",
       "Verify couples coverage specifically: individual-therapy insurance doesn't always extend to it.",
@@ -400,7 +400,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#E3F1EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "For many common concerns - like anxiety and depression - research generally finds online therapy comparable in effectiveness to in-person care.",
       "The biggest driver of whether therapy works isn't the medium - it's the fit with your therapist and your engagement with the process.",
@@ -436,7 +436,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#E9F6F1",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "A therapist provides talk therapy; a psychiatrist is a medical doctor who can diagnose and prescribe medication.",
       "Which you need depends on what you're facing - many people benefit from talk therapy alone, some from medication, and many from both together.",
@@ -472,7 +472,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#E6F4EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Online psychiatry connects you with a licensed psychiatric provider by video for evaluation, diagnosis and ongoing medication management.",
       "It's well suited to common conditions like anxiety and depression; some medications - notably certain controlled substances - face prescribing restrictions online.",
@@ -508,7 +508,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EAF5F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Anxiety is among the concerns online therapy is best supported for - the format handles it comparably to in-person for many people.",
       "CBT is one of the most established approaches for anxiety, and it translates well to video and structured online formats.",
@@ -544,7 +544,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#E4F2EA",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "For mild-to-moderate depression, online therapy is well-supported and comparable to in-person care for many people.",
       "For more severe depression, the combination of therapy and medication is a well-established approach - not therapy alone.",
@@ -580,7 +580,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#EEF7F0",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Therapy 'modalities' are different structured approaches - CBT, DBT and others - each with strengths for particular concerns.",
       "CBT is the most widely-used, evidence-based approach for anxiety and depression, and it translates well online.",
@@ -616,7 +616,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-08",
     updatedAt: "2026-09-08",
     heroColor: "#E3F1EC",
-    author: "Online Therapy Hub Editorial Team",
+    author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Online therapy generally comes in three pricing shapes: weekly/monthly subscriptions, per-session fees, and insurance-based (copay) models.",
       "Subscription platforms often price below traditional per-session therapy, but what you get per week varies - read what a 'plan' actually includes.",

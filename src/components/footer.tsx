@@ -74,7 +74,7 @@ export async function Footer() {
           {/* Brand blurb */}
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <p className="text-[13px] leading-relaxed text-gray-500">
-              <span className="font-bold text-[#1A7A52]">Online Therapy Hub</span> is an independent comparison
+              <span className="font-bold text-[#1A7A52]">Top Online Therapy</span> is an independent comparison
               publisher for online therapy and mental-health platforms.
             </p>
             <p className="mt-3 text-[12px] leading-relaxed text-gray-400">
@@ -99,16 +99,16 @@ export async function Footer() {
 
         <div className="mt-8 border-t border-gray-100 pt-5">
           <p className="mb-4 text-xs text-gray-400">
-            <strong className="text-gray-500">Affiliate Disclosure:</strong> Online Therapy Hub may earn a commission
+            <strong className="text-gray-500">Affiliate Disclosure:</strong> Top Online Therapy may earn a commission
             when you click on links and make a purchase. This does not affect our rankings or reviews. We are
             committed to providing honest, independent comparisons to help you make informed decisions.
           </p>
           <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
             <p className="text-[12px] text-gray-400">
-              &copy; {new Date().getFullYear()} Online Therapy Hub. All rights reserved.
+              &copy; {new Date().getFullYear()} Top Online Therapy. All rights reserved.
             </p>
             <p className="text-[11px] text-gray-300">
-              onlinetherapyhub.com is not a mental-health provider. Always consult a licensed clinician.
+              toponlinetherapy.io is not a mental-health provider. Always consult a licensed clinician.
             </p>
           </div>
         </div>

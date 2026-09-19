@@ -4,10 +4,10 @@ import { STATES } from "@/lib/states";
 
 export const revalidate = 60;
 
-const SITE_URL = "https://www.onlinetherapyhub.com";
+const SITE_URL = "https://www.toponlinetherapy.io";
 
 export const metadata: Metadata = {
-  title: { absolute: "Online Therapy by State (2026) | Online Therapy Hub" },
+  title: { absolute: "Online Therapy by State (2026) | Top Online Therapy" },
   description:
     "Find online therapy in your state. Compare platforms that match you with therapists licensed where you live - video, phone or messaging sessions, insurance accepted. Pick your state to see options.",
   alternates: { canonical: `${SITE_URL}/online-therapy` },

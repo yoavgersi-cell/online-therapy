@@ -36,7 +36,7 @@ export function DisclosureBar() {
 
             <div className="space-y-4 text-[14px] leading-[1.7] text-gray-600">
               <p>
-                Online Therapy Hub is an independent comparison website designed to help people explore and evaluate online therapy and mental-health platforms. We research, review, and compare available platforms, services, and session options to make the decision process easier.
+                Top Online Therapy is an independent comparison website designed to help people explore and evaluate online therapy and mental-health platforms. We research, review, and compare available platforms, services, and session options to make the decision process easier.
               </p>
               <p>
                 The information presented on this website is provided for general informational purposes only. While we strive to keep content accurate and up to date, we cannot guarantee the completeness, accuracy, or availability of every provider, offer, or treatment currently available in the market.

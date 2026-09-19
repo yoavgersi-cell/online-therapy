@@ -12,13 +12,13 @@ const geistSans = Geist({
   subsets: ["latin"],
 });
 
-const SITE_URL = "https://www.onlinetherapyhub.com";
+const SITE_URL = "https://www.toponlinetherapy.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Online Therapy Hub - Compare the Best Online Therapy Platforms & Prices",
-    template: "%s | Online Therapy Hub",
+    default: "Top Online Therapy - Compare the Best Online Therapy Platforms & Prices",
+    template: "%s | Top Online Therapy",
   },
   description:
     "Compare the best online therapy platforms of 2026 - licensed teletherapy providers ranked by insurance coverage, session formats, price and ongoing support.",
@@ -33,17 +33,17 @@ export const metadata: Metadata = {
     "online therapy platforms",
   ],
   openGraph: {
-    title: "Online Therapy Hub - Compare the Best Online Therapy Platforms & Prices",
+    title: "Top Online Therapy - Compare the Best Online Therapy Platforms & Prices",
     description:
       "Independent, side-by-side comparisons of top online therapy platforms - ranked on insurance, session formats, price and support.",
     type: "website",
-    siteName: "Online Therapy Hub",
+    siteName: "Top Online Therapy",
     locale: "en_US",
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Online Therapy Hub - Compare the Best Online Therapy Platforms & Prices",
+    title: "Top Online Therapy - Compare the Best Online Therapy Platforms & Prices",
     description:
       "Independent, side-by-side comparisons of top online therapy platforms.",
   },
@@ -87,7 +87,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              name: "Online Therapy Hub",
+              name: "Top Online Therapy",
               url: SITE_URL,
               areaServed: { "@type": "Country", name: "United States" },
               description:
@@ -102,7 +102,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
-              name: "Online Therapy Hub",
+              name: "Top Online Therapy",
               url: SITE_URL,
               description:
                 "Compare trusted online therapy platforms side by side.",

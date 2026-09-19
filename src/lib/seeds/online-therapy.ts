@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/lib/config";
 import { onlineTherapyArticles } from "./online-therapy-articles";
 
 // ─────────────────────────────────────────────────────────────────────────────
-// Online therapy vertical content - onlinetherapyhub.com
+// Online therapy vertical content - toponlinetherapy.io
 //
 // Launch content for the single-vertical online-therapy review site. Three
 // partner platforms: BetterHelp (subscription talk therapy), Talkspace
@@ -30,7 +30,7 @@ const PRICING_TBD =
   "We haven't verified this platform's current published pricing yet - subscription rates, per-session fees and insurance arrangements change, so check the platform's site for current numbers. This page will carry exact verified prices once we've confirmed them.";
 
 export const onlineTherapyConfig: SiteConfig = {
-  siteName: "Online Therapy Hub",
+  siteName: "Top Online Therapy",
   disclosureText:
     "Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.",
 
@@ -664,7 +664,7 @@ export const onlineTherapyConfig: SiteConfig = {
   experts: [
     {
       id: "editorial",
-      name: "Online Therapy Hub Editorial Team",
+      name: "Top Online Therapy Editorial Team",
       role: "Editorial & Research",
       bio: "Our editorial team researches and compares online therapy and mental-health platforms, reads the published evidence on teletherapy, and writes plain-English, compliance-minded guides. We prioritize accuracy and honesty over hype - including being clear about what online therapy can and cannot do, showing real customer ratings as they are, and pointing to crisis resources wherever they belong.",
       specialties: [

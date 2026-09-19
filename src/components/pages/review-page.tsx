@@ -438,7 +438,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           <ReadableProse text={review.pricingSummary} paragraphClassName="text-[15px] leading-[1.75] text-gray-600" />
         </Section>
 
-        {/* The Online Therapy Hub audit - verified-facts card. Registry-gated:
+        {/* The Top Online Therapy audit - verified-facts card. Registry-gated:
             providers whose data isn't fully verified render nothing. */}
         <ProviderAudit providerId={provider.id} providerName={provider.name} vertical={ctx.vertical} />
 

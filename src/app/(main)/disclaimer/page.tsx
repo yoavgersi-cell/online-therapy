@@ -3,9 +3,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Disclaimer - FTC Disclosure & Affiliate Information",
   description:
-    "FTC disclosure, affiliate relationship details, medical disclaimer, and revenue model transparency for onlinetherapyhub.com.",
+    "FTC disclosure, affiliate relationship details, medical disclaimer, and revenue model transparency for toponlinetherapy.io.",
   alternates: {
-    canonical: "https://www.onlinetherapyhub.com/disclaimer",
+    canonical: "https://www.toponlinetherapy.io/disclaimer",
   },
 };
 
@@ -18,7 +18,7 @@ export default function DisclaimerPage() {
           FTC Disclosure
         </h2>
         <p>
-          In accordance with the Federal Trade Commission guidelines, Online Therapy Hub
+          In accordance with the Federal Trade Commission guidelines, Top Online Therapy
           discloses that this website contains affiliate links. When you click
           on a link and make a purchase or sign up for a service, we may receive
           a commission at no additional cost to you.
@@ -28,7 +28,7 @@ export default function DisclaimerPage() {
           Affiliate Relationships
         </h2>
         <p>
-          Online Therapy Hub participates in affiliate programs with various online therapy
+          Top Online Therapy participates in affiliate programs with various online therapy
           and mental-health platforms. This means we may earn
           referral fees when visitors click through our links and complete
           qualifying actions. These relationships help support the operation of
@@ -49,7 +49,7 @@ export default function DisclaimerPage() {
           Medical Disclaimer
         </h2>
         <p>
-          The content on Online Therapy Hub is for general information purposes only and is not
+          The content on Top Online Therapy is for general information purposes only and is not
           intended as medical or mental-health advice. Therapy and psychiatric care should be
           provided by licensed clinicians, and what is right for you depends on your situation.
           Always consult a licensed professional before making decisions about your mental health
@@ -61,7 +61,7 @@ export default function DisclaimerPage() {
           Revenue Model
         </h2>
         <p>
-          Online Therapy Hub generates revenue primarily through affiliate commissions.
+          Top Online Therapy generates revenue primarily through affiliate commissions.
           When you use our links to visit a provider&apos;s website and take a
           qualifying action (such as scheduling a consultation or making a
           purchase), we may receive compensation. This model allows us to

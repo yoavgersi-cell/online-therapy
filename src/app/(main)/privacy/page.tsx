@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
-    "How Online Therapy Hub (onlinetherapyhub.com) collects, uses, and protects your information, including analytics, cookies, and affiliate tracking.",
-  alternates: { canonical: "https://www.onlinetherapyhub.com/privacy" },
+    "How Top Online Therapy (toponlinetherapy.io) collects, uses, and protects your information, including analytics, cookies, and affiliate tracking.",
+  alternates: { canonical: "https://www.toponlinetherapy.io/privacy" },
 };
 
 const UPDATED = "September 2026";
@@ -16,9 +16,9 @@ export default function PrivacyPage() {
       <p className="mb-6 text-sm text-gray-400">Last updated: {UPDATED}</p>
       <div className="space-y-4 text-gray-600 leading-relaxed">
         <p>
-          This Privacy Policy explains how Online Therapy Hub (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;),
-          operating the website onlinetherapyhub.com, collects, uses, and shares information when you
-          visit our site. Online Therapy Hub is an independent publisher that compares online
+          This Privacy Policy explains how Top Online Therapy (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;),
+          operating the website toponlinetherapy.io, collects, uses, and shares information when you
+          visit our site. Top Online Therapy is an independent publisher that compares online
           therapy and mental-health platforms; we are not a mental-health provider and do not
           deliver therapy or prescribe medication.
         </p>
@@ -115,8 +115,8 @@ export default function PrivacyPage() {
         <h2 className="pt-4 text-xl font-semibold text-[#191919]">Contact Us</h2>
         <p>
           Questions about this policy or your data? Email us at{" "}
-          <a href="mailto:privacy@onlinetherapyhub.com" className="font-semibold text-[#1A7A52] hover:underline">
-            privacy@onlinetherapyhub.com
+          <a href="mailto:privacy@toponlinetherapy.io" className="font-semibold text-[#1A7A52] hover:underline">
+            privacy@toponlinetherapy.io
           </a>{" "}
           or visit our{" "}
           <a href="/contact" className="font-semibold text-[#1A7A52] hover:underline">contact page</a>.

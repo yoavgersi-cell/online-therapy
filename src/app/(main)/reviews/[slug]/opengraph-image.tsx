@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 import { getConfig } from "@/lib/config-store";
 
 export const runtime = "edge";
-export const alt = "Provider Review - onlinetherapyhub.com";
+export const alt = "Provider Review - toponlinetherapy.io";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -52,7 +52,7 @@ export default async function OGImage({
             marginBottom: "40px",
           }}
         >
-          onlinetherapyhub.com
+          toponlinetherapy.io
         </span>
         <div
           style={{

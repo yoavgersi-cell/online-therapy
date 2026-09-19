@@ -3,7 +3,7 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { STATES } from "@/lib/states";
 
-const SITE_URL = "https://www.onlinetherapyhub.com";
+const SITE_URL = "https://www.toponlinetherapy.io";
 const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
 const flooredLastModified = (updatedAt?: string) => new Date(latestUpdate(updatedAt));
 

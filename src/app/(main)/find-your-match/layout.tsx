@@ -5,13 +5,13 @@ export const metadata: Metadata = {
   description:
     "Answer a few quick questions and get a personalized online therapy platform recommendation. Compare platforms based on your needs, budget, and how you want sessions to work.",
   alternates: {
-    canonical: "https://www.onlinetherapyhub.com/find-your-match",
+    canonical: "https://www.toponlinetherapy.io/find-your-match",
   },
   openGraph: {
     title: "Find Your Best Online Therapy Match",
     description:
       "Take our free quiz and get matched with the best online therapy platform for your needs and budget.",
-    url: "https://www.onlinetherapyhub.com/find-your-match",
+    url: "https://www.toponlinetherapy.io/find-your-match",
   },
 };
 

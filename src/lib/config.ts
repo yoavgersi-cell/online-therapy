@@ -430,7 +430,7 @@ export const WEIGHT_LOSS_HERO_TEXT = {
 };
 
 export const defaultConfig: SiteConfig = {
-  siteName: "Online Therapy Hub",
+  siteName: "Top Online Therapy",
   disclosureText:
     "Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.",
   hero: {

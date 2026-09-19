@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Online Therapy Hub - Compare the Best Online Therapy Platforms 2026";
+export const alt = "Top Online Therapy - Compare the Best Online Therapy Platforms 2026";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -49,7 +49,7 @@ export default function OGImage() {
               color: "white",
             }}
           >
-            onlinetherapyhub.com
+            toponlinetherapy.io
           </span>
         </div>
         <div

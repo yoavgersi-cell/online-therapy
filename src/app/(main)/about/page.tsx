@@ -7,11 +7,11 @@ import { ExpertTeam } from "@/components/expert-team";
 export const revalidate = 60;
 
 export const metadata: Metadata = {
-  title: "About Online Therapy Hub - Our Mission, Team & Review Methodology",
+  title: "About Top Online Therapy - Our Mission, Team & Review Methodology",
   description:
-    "Learn how onlinetherapyhub.com independently ranks and reviews online therapy and mental-health platforms. Our editorial methodology, review process, and commitment to unbiased comparisons.",
+    "Learn how toponlinetherapy.io independently ranks and reviews online therapy and mental-health platforms. Our editorial methodology, review process, and commitment to unbiased comparisons.",
   alternates: {
-    canonical: "https://www.onlinetherapyhub.com/about",
+    canonical: "https://www.toponlinetherapy.io/about",
   },
 };
 
@@ -22,8 +22,8 @@ export default async function AboutPage() {
   const teamSchema = experts.length > 0 ? {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "onlinetherapyhub.com",
-    url: "https://www.onlinetherapyhub.com",
+    name: "toponlinetherapy.io",
+    url: "https://www.toponlinetherapy.io",
     employee: experts.map((e) => ({
       "@type": "Person",
       name: e.credentials ? `${e.name}, ${e.credentials}` : e.name,
@@ -39,7 +39,7 @@ export default async function AboutPage() {
       <div className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[900px] px-4 py-12 sm:px-6 sm:py-16">
           <h1 className="text-[28px] font-extrabold text-[#191919] sm:text-[36px]">
-            About Online Therapy Hub
+            About Top Online Therapy
           </h1>
           <p className="mt-3 max-w-[600px] text-[16px] leading-relaxed text-gray-500">
             We help people make informed decisions about online therapy by independently
@@ -60,7 +60,7 @@ export default async function AboutPage() {
             pricing, insurance arrangements, session formats, scope of care, and privacy practices.
           </p>
           <p className="text-[16px] leading-[1.75] text-gray-600">
-            Online Therapy Hub exists to simplify this decision. We independently research,
+            Top Online Therapy exists to simplify this decision. We independently research,
             compare, and review the major platforms so you can find the right fit for your
             needs, budget, and privacy - without spending hours doing the research yourself.
           </p>
@@ -183,7 +183,7 @@ export default async function AboutPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical Disclaimer</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              Online Therapy Hub is not a mental-health provider and does not deliver therapy or
+              Top Online Therapy is not a mental-health provider and does not deliver therapy or
               prescribe medication. The information on this site is for general information and comparison
               purposes only and should not replace professional advice. Therapy and psychiatric care should
               be provided by licensed clinicians, and what is right for you depends on your situation.

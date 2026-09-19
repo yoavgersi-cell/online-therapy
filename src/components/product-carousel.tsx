@@ -188,7 +188,7 @@ export function ProductCarousel({
                 "@type": "Product",
                 name: `${provider.name} ${p.name}`,
                 description: `${p.name} from ${provider.name} - $${productPriceValue(p)}/month (${p.priceNote}). ${p.shipping}.`,
-                ...(p.image ? { image: `https://www.onlinetherapyhub.com${p.image}` } : {}),
+                ...(p.image ? { image: `https://www.toponlinetherapy.io${p.image}` } : {}),
                 brand: { "@type": "Brand", name: provider.name },
                 ...(hasAggregate && {
                   aggregateRating: {

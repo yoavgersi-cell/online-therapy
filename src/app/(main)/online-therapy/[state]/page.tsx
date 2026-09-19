@@ -11,7 +11,7 @@ import { STATES, STATE_BY_SLUG } from "@/lib/states";
 
 export const revalidate = 60;
 
-const SITE_URL = "https://www.onlinetherapyhub.com";
+const SITE_URL = "https://www.toponlinetherapy.io";
 
 export function generateStaticParams() {
   return STATES.map((s) => ({ state: s.slug }));
@@ -30,7 +30,7 @@ export async function generateMetadata({
   const description =
     `Compare online therapy platforms serving ${s.name}. Licensed ${s.abbr} therapists, video, phone or messaging sessions, and insurance accepted - start from anywhere in ${s.name}.`;
   return {
-    title: { absolute: `${title} | Online Therapy Hub` },
+    title: { absolute: `${title} | Top Online Therapy` },
     description,
     alternates: { canonical: url },
     openGraph: { title, description, url, type: "website" },
@@ -110,7 +110,7 @@ export default async function StatePage({
     url,
     inLanguage: "en-US",
     dateModified: CONTENT_LAST_UPDATED,
-    isPartOf: { "@type": "WebSite", name: "Online Therapy Hub", url: SITE_URL },
+    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: SITE_URL },
     about: { "@type": "Thing", name: `Online therapy in ${s.name}` },
     ...(author && { author: { "@type": "Organization", name: author.name, url: `${SITE_URL}/about` } }),
     ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),

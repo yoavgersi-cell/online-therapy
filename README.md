@@ -1,7 +1,7 @@
-# Online Therapy Hub
+# Top Online Therapy
 
 Independent comparison site for online therapy and mental-health platforms
-(onlinetherapyhub.com). Built on the same Next.js structure as the TRT and ED
+(toponlinetherapy.io). Built on the same Next.js structure as the TRT and ED
 treatment sites: ranked provider cards on the homepage, provider reviews,
 head-to-head comparisons, guides, programmatic per-state pages, a matching
 quiz, and a light-green theme.

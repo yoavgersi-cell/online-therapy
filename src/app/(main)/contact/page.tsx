@@ -4,8 +4,8 @@ import { Mail } from "lucide-react";
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with the Online Therapy Hub editorial team - corrections, feedback, platform and partnership inquiries for onlinetherapyhub.com.",
-  alternates: { canonical: "https://www.onlinetherapyhub.com/contact" },
+    "Get in touch with the Top Online Therapy editorial team - corrections, feedback, platform and partnership inquiries for toponlinetherapy.io.",
+  alternates: { canonical: "https://www.toponlinetherapy.io/contact" },
 };
 
 export default function ContactPage() {
@@ -25,8 +25,8 @@ export default function ContactPage() {
           </div>
           <div>
             <p className="text-sm font-semibold text-[#191919]">Email us</p>
-            <a href="mailto:hello@onlinetherapyhub.com" className="text-[15px] font-semibold text-[#1A7A52] hover:underline">
-              hello@onlinetherapyhub.com
+            <a href="mailto:hello@toponlinetherapy.io" className="text-[15px] font-semibold text-[#1A7A52] hover:underline">
+              hello@toponlinetherapy.io
             </a>
           </div>
         </div>

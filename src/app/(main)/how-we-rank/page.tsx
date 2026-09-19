@@ -9,7 +9,7 @@ import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
 export const revalidate = 60;
 
-const CANONICAL = "https://www.onlinetherapyhub.com/how-we-rank";
+const CANONICAL = "https://www.toponlinetherapy.io/how-we-rank";
 
 export const metadata: Metadata = {
   title: "How We Rank & Review Online Therapy Platforms - Our Methodology",
@@ -75,14 +75,14 @@ export default async function HowWeRankPage() {
     description:
       "Our full methodology for ranking and reviewing online therapy platforms: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners.",
     url: CANONICAL,
-    publisher: { "@type": "Organization", name: "onlinetherapyhub.com", url: "https://www.onlinetherapyhub.com" },
+    publisher: { "@type": "Organization", name: "toponlinetherapy.io", url: "https://www.toponlinetherapy.io" },
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.onlinetherapyhub.com" },
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.toponlinetherapy.io" },
       { "@type": "ListItem", position: 2, name: "How We Rank", item: CANONICAL },
     ],
   };
@@ -325,7 +325,7 @@ export default async function HowWeRankPage() {
           <h2 className="mb-4 text-[22px] font-bold text-[#191919]">Medical disclaimer</h2>
           <div className="rounded-xl border border-gray-200 bg-white p-6">
             <p className="text-[15px] leading-[1.75] text-gray-600">
-              onlinetherapyhub.com is not a mental-health provider and does not deliver therapy or
+              toponlinetherapy.io is not a mental-health provider and does not deliver therapy or
               prescribe medication. The information on this site is for general information and comparison
               purposes only and should not replace professional advice. Therapy and psychiatric care should
               be provided by licensed clinicians, and what is right for you depends on your situation.
