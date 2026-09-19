@@ -45,7 +45,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   sidebar: {
-    socialProofNumber: "1,987",
+    socialProofNumber: "124,598",
     socialProofText: "people compared online therapy platforms on our site this month.",
     secureTitle: "Private & Confidential",
     secureText:
@@ -57,7 +57,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   cardSocialProof: {
-    number: "1,987",
+    number: "124,598",
     text: "people compared therapy platforms this month",
   },
 

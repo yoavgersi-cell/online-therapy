@@ -157,7 +157,7 @@ export default async function AboutPage() {
             <div className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white p-4">
               <Users className="h-8 w-8 shrink-0 text-[#1A7A52]" strokeWidth={1.5} />
               <div>
-                <p className="text-[18px] font-extrabold text-[#191919]">1,987</p>
+                <p className="text-[18px] font-extrabold text-[#191919]">124,598</p>
                 <p className="text-[12px] text-gray-500">People compared therapy platforms this month</p>
               </div>
             </div>
