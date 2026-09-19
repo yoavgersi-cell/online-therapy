@@ -8,6 +8,7 @@ export const metadata: Metadata = {
     canonical: "https://www.toponlinetherapy.io/find-your-match",
   },
   openGraph: {
+    siteName: "Top Online Therapy",
     title: "Find Your Best Online Therapy Match",
     description:
       "Take our free quiz and get matched with the best online therapy platform for your needs and budget.",

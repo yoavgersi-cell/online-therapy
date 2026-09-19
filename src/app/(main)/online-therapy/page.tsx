@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     "Find online therapy in your state. Compare platforms that match you with therapists licensed where you live - video, phone or messaging sessions, insurance accepted. Pick your state to see options.",
   alternates: { canonical: `${SITE_URL}/online-therapy` },
   openGraph: {
+    siteName: "Top Online Therapy",
     title: "Online Therapy by State (2026)",
     description: "Compare online therapy platforms with therapists licensed in your state.",
     url: `${SITE_URL}/online-therapy`,

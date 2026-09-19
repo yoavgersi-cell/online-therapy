@@ -82,6 +82,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
       canonical: url,
     },
     openGraph: {
+      siteName: "Top Online Therapy",
       title: pageTitle,
       description: pageDescription,
       url,

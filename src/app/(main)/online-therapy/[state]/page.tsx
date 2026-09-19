@@ -33,7 +33,7 @@ export async function generateMetadata({
     title: { absolute: `${title} | Top Online Therapy` },
     description,
     alternates: { canonical: url },
-    openGraph: { title, description, url, type: "website" },
+    openGraph: { siteName: "Top Online Therapy", title, description, url, type: "website" },
   };
 }
 

@@ -47,6 +47,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
       canonical: url,
     },
     openGraph: {
+      siteName: "Top Online Therapy",
       title: override?.title ?? article.title,
       description: override?.description ?? article.description,
       url,

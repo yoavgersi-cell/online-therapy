@@ -37,7 +37,7 @@ export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Me
         ? { index: false, follow: true }
         : undefined,
     alternates: { canonical: url },
-    openGraph: { title: trio.metaTitle, description: trio.description, url, type: "article" },
+    openGraph: { siteName: "Top Online Therapy", title: trio.metaTitle, description: trio.description, url, type: "article" },
   };
 }
 

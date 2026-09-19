@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "Compare the best online therapy platforms of 2026. Top mental-health providers ranked by insurance coverage, session formats, therapist matching, pricing and value - find your best fit.",
   alternates: { canonical: SITE_URL },
   openGraph: {
+    siteName: "Top Online Therapy",
     title: "Best Online Therapy Platforms of 2026 - Compare Top Providers",
     description:
       "Compare the best online therapy platforms of 2026 - top providers ranked by insurance, session formats, price, support and value.",

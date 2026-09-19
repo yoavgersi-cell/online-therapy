@@ -88,6 +88,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
       robots: ctx.noindex ? { index: false, follow: false } : undefined,
       alternates: { canonical: url },
       openGraph: {
+        siteName: "Top Online Therapy",
         title: landing.seoTitle,
         description: landingDesc,
         url,
@@ -144,6 +145,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
         : undefined,
     alternates: { canonical: url },
     openGraph: {
+      siteName: "Top Online Therapy",
       title: metaTitle,
       description: metaDescription,
       url,

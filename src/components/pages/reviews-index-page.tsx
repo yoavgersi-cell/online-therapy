@@ -35,6 +35,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
       canonical: url,
     },
     openGraph: {
+      siteName: "Top Online Therapy",
       title,
       description,
       url,

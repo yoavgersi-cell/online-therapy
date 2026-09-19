@@ -17,6 +17,7 @@ export const metadata: Metadata = {
     "Our full methodology for ranking and reviewing online therapy platforms: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners in head-to-head comparisons.",
   alternates: { canonical: CANONICAL },
   openGraph: {
+    siteName: "Top Online Therapy",
     title: "How We Rank & Review Online Therapy Platforms - Our Methodology",
     description:
       "The factors we score, where our data comes from, how we verify accuracy, and how we pick winners in our online therapy platform comparisons.",
