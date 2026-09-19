@@ -74,6 +74,33 @@ export const REDDIT_COMMUNITY_FEEDBACK: Record<
     takeaway:
       "The flexibility case dominates: messaging your therapist anytime and scheduling around a chaotic life is why these commenters chose online over in-person. The honest notes are just as useful - one commenter says outright it took a couple of tries to find a therapist they clicked with, and another opens with having seen mixed reviews. That's the real BetterHelp experience: matching is a process, and the easy-switching feature exists precisely because of it.",
   },
+  talkspace: {
+    vertical: "online-therapy",
+    themes:
+      "Two working-patient comments: relaxed, responsive providers handling complex, overlapping diagnoses - with one honest gripe about the records department rather than the care itself.",
+    intro:
+      "Talkspace comments on Reddit tend to come from people already in treatment - here's how they describe their providers, in their own words.",
+    threads: [
+      {
+        author: "NeverJustaDream",
+        age: "1y ago",
+        upvotes: 1,
+        body: [
+          "It's been a decent experience for me so far. My provider is more relaxed (eg doesn't pressure you into scheduling at the end), and he's responsive. The records department is pretty bad though.",
+        ],
+      },
+      {
+        author: "Unlikely-Banana-2184",
+        age: "1y ago",
+        upvotes: 1,
+        body: [
+          "So far so good, my therapist just listens to me go through everything, grief, ptsd MDD, GAD, adhd all meshed together \ud83d\ude2c",
+        ],
+      },
+    ],
+    takeaway:
+      "Small sample, consistent picture: providers described as relaxed and responsive, comfortable holding complex overlapping conditions in one treatment. The one complaint is administrative - a \"pretty bad\" records department - which matches the general telehealth pattern where logistics, not clinical care, draw the criticism.",
+  },
 };
 
 // A minimal Snoo-style mark drawn inline (no external assets) - used to give

@@ -4,9 +4,10 @@ import { onlineTherapyArticles } from "./online-therapy-articles";
 // ─────────────────────────────────────────────────────────────────────────────
 // Online therapy vertical content - onlinetherapyhub.com
 //
-// Launch content for the single-vertical online-therapy review site. Two
-// partner platforms for now: BetterHelp (subscription talk therapy) and
-// Headspace (mindfulness app plus an insurance-accepting therapy service).
+// Launch content for the single-vertical online-therapy review site. Three
+// partner platforms: BetterHelp (subscription talk therapy), Talkspace
+// (therapy plus psychiatry, insurance-first) and Headspace (mindfulness app
+// plus an insurance-accepting therapy service).
 //
 // House rules: real platforms with truthful, general descriptions and NO
 // invented data - no fabricated prices, Trustpilot scores, session counts or
@@ -19,8 +20,7 @@ import { onlineTherapyArticles } from "./online-therapy-articles";
 // outcomes, or discourages in-person care.
 //
 // OPERATOR TO VERIFY:
-//  - BetterHelp uses the operator's tracked affiliate link; Headspace links to
-//    its own site until a tracked link is supplied.
+//  - All three providers use the operator's tracked affiliate links.
 //  - Trustpilot figures were captured from the claimed profiles in Aug 2026;
 //    re-check before bumping PROVIDER_DATA_CHECKED.
 // ─────────────────────────────────────────────────────────────────────────────
@@ -62,7 +62,7 @@ export const onlineTherapyConfig: SiteConfig = {
   },
 
   ranking: {
-    providerOrder: ["betterhelp", "headspace"],
+    providerOrder: ["betterhelp", "talkspace", "headspace"],
     positions: [
       { score: 9.6, starRating: 5, label: "Exceptional", badge: "Our Top Pick" },
       { score: 9.1, starRating: 5, label: "Excellent" },
@@ -123,6 +123,61 @@ export const onlineTherapyConfig: SiteConfig = {
       ],
     },
     {
+      id: "talkspace",
+      name: "Talkspace",
+      tagline: "Online therapy and psychiatry that many major insurance plans cover",
+      logo: "/logos/talkspacelogo.png",
+      smallLogo: "/logos/talkspacelogo.png",
+      highlights: [
+        "Most insured members pay a $0 copay (per Talkspace)",
+        "Therapy and psychiatry (medication management) on one platform",
+        "App-based care with 24/7 access - sessions plus messaging",
+        "Rated 4.4 on Trustpilot (2,370 reviews)",
+      ],
+      // Live operator affiliate link (Sep 2026).
+      affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=892&aff_id=12904",
+      ctaText: "Visit Site",
+      trustpilotRating: "4.4",
+      trustpilotReviewCount: "2,370",
+      // Verified from the operator's Trustpilot screenshots (claimed profile,
+      // Aug 2026). All four captured reviews carry Trustpilot's "Invited" tag
+      // (company-invited), noted here for the record.
+      trustpilotReviews: [
+        {
+          title: "I've had multiple therapists... this one is the best!",
+          text: "I've had multiple therapists throughout my lifetime, but this is the first therapist who has actually helped. She is amazing. I've been with Talkspace for over 2 years now, and I've made huge progress. I highly recommend them.",
+          name: "Elizabeth Bissett",
+          location: "US",
+          rating: 5,
+          date: "Aug 26, 2026",
+        },
+        {
+          title: "Would recommend Talkspace to anyone",
+          text: "How my therapist was chosen for me is unbeknownst but she is what makes me want to schedule another session each time one ends. She keeps me wanting to get and do better for myself.",
+          name: "Talkspace Member",
+          location: "US",
+          rating: 5,
+          date: "Jul 31, 2026",
+        },
+        {
+          title: "Love it here!",
+          text: "This has been the best platform since I first decided to start therapy in 2020. I have a great therapist who has supported me from my lowest moment to now a well thriving life.",
+          name: "Talkspace Member",
+          location: "US",
+          rating: 5,
+          date: "Feb 27, 2026",
+        },
+        {
+          title: "Best app ever very good platform",
+          text: "Best app ever very good platform",
+          name: "Dawn",
+          location: "US",
+          rating: 5,
+          date: "Aug 26, 2026",
+        },
+      ],
+    },
+    {
       id: "headspace",
       name: "Headspace",
       tagline:
@@ -135,8 +190,8 @@ export const onlineTherapyConfig: SiteConfig = {
         "HSA/FSA eligible; app subscription separate from therapy",
         "105M+ app downloads",
       ],
-      // Direct site link until an affiliate link exists - CTAs must work.
-      affiliateUrl: "https://www.headspace.com",
+      // Live operator affiliate link (Sep 2026).
+      affiliateUrl: "https://track.revoffers.com/aff_c?offer_id=1113&aff_id=12904",
       ctaText: "Visit Site",
       trustpilotRating: "1.5",
       trustpilotReviewCount: "770",
@@ -202,7 +257,7 @@ export const onlineTherapyConfig: SiteConfig = {
         "Anyone who values switching therapists easily until the fit is right",
       ],
       finalVerdict:
-        "BetterHelp is the default choice for subscription talk therapy for a reason: the network is huge, matching is fast, and the weekly-session-plus-messaging format suits how most people actually engage with therapy. It now takes insurance too - copays cited from around $23/session for covered members - which removes its old biggest weakness. The remaining honest trade-offs: no medication management, location/plan-based pricing you should confirm at signup, and a privacy history worth reading up on. If you expect to need psychiatry, plan for a separate prescriber alongside it. And therapy platforms are not crisis services - if you're in crisis in the US, call or text 988.",
+        "BetterHelp is the default choice for subscription talk therapy for a reason: the network is huge, matching is fast, and the weekly-session-plus-messaging format suits how most people actually engage with therapy. It now takes insurance too - copays cited from around $23/session for covered members - which removes its old biggest weakness. The remaining honest trade-offs: no medication management, location/plan-based pricing you should confirm at signup, and a privacy history worth reading up on. If you expect to need psychiatry, Talkspace fits better. And therapy platforms are not crisis services - if you're in crisis in the US, call or text 988.",
       howItWorks: [
         { timing: "Day 1", title: "Answer the intake questionnaire", detail: "A few minutes on what you're dealing with, your preferences for a therapist, and - new - your insurance details for a coverage check." },
         { timing: "Within ~2 days", title: "Get matched with a licensed therapist", detail: "BetterHelp proposes a therapist licensed in your state. Not the right fit? Switching is free and takes a couple of clicks." },
@@ -210,6 +265,51 @@ export const onlineTherapyConfig: SiteConfig = {
         { timing: "Ongoing", title: "Weekly sessions, plus tools", detail: "Group webinars, digital worksheets and journaling sit alongside the weekly session. Cancel or switch any time." },
       ],
       trustBadges: ["Licensed therapists", "Video, phone & chat sessions", "Financial aid available"],
+      updatedAt: UPDATED,
+    },
+    {
+      slug: "talkspace",
+      providerId: "talkspace",
+      shortSummary:
+        "Online therapy and psychiatry with the broadest insurance story among the big subscription platforms - many major plans and EAPs cover it.",
+      reviewIntro:
+        "Talkspace pairs the subscription-therapy format (live sessions plus messaging) with two things BetterHelp doesn't have: psychiatry with medication management, and insurance acceptance. Many major insurance plans and employee-assistance programs cover Talkspace, which can turn therapy from a significant monthly out-of-pocket cost into a copay - for eligible plans, that changes the affordability math entirely. Talkspace says most insured members pay a $0 copay - its own claim, but one your eligibility check confirms or denies in minutes - and the app-based format means 24/7 access to your therapy room, not just session slots. It also carries the strongest verified customer rating in our online-therapy coverage: 4.4 on Trustpilot across 2,370 reviews (ahead of BetterHelp's 3.9). Coverage is plan-specific, so run its eligibility check with your insurance details before assuming anything. We haven't verified Talkspace's current self-pay rates, so check those on its site if you're paying out of pocket.",
+      keyFeatures: [
+        "Insurance coverage through many major plans and EAPs",
+        "Therapy and psychiatry (medication management) on one platform",
+        "Live video sessions plus ongoing messaging",
+        "Eligibility check shows your coverage before you commit",
+      ],
+      pricingSummary: PRICING_TBD,
+      treatmentOptions: [
+        "Individual talk therapy",
+        "Psychiatry - evaluation and medication management",
+        "Couples and teen therapy",
+      ],
+      pros: [
+        "The strongest insurance story among the big subscription platforms",
+        "4.4 Trustpilot average (2,370 reviews) - the best verified score in our coverage",
+        "Medication management available without leaving the platform",
+        "Messaging-first format suits people who process in writing",
+      ],
+      cons: [
+        "Insurance coverage is plan-specific - verify yours before signing up",
+        "Self-pay rates unverified by us - check the site",
+        "Therapist choice is match-based rather than browsing profiles",
+      ],
+      bestFor: [
+        "Anyone whose insurance or EAP covers Talkspace - check first, it changes everything",
+        "People who may need both therapy and medication",
+      ],
+      finalVerdict:
+        "If your insurance covers it, Talkspace is very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury. If your plan doesn't cover it, the decision reverts to format preference against BetterHelp - and you should compare self-pay rates directly on its site, since we haven't verified them. Keep the Headspace app as the between-sessions habit either way. Not a crisis service: in the US, call or text 988 in an emergency.",
+      howItWorks: [
+        { timing: "Day 1", title: "Run the eligibility check", detail: "Enter your insurer and member details on Talkspace's site - it returns your coverage and estimated cost in minutes, before you commit." },
+        { timing: "Within days", title: "Get matched", detail: "Talkspace proposes a licensed therapist based on your intake; you can request a change if the fit isn't right." },
+        { timing: "Week 1", title: "Start your therapy room", detail: "Live video sessions per your plan, plus messaging in a private room you can write to any time." },
+        { timing: "If needed", title: "Add psychiatry", detail: "Evaluation and medication management are available on the same platform, so your therapist and prescriber stay coordinated." },
+      ],
+      trustBadges: ["Insurance & EAP coverage", "Therapy + psychiatry", "Licensed clinicians"],
       updatedAt: UPDATED,
     },
     {
@@ -249,7 +349,7 @@ export const onlineTherapyConfig: SiteConfig = {
         "Anyone whose employer benefits include Headspace",
       ],
       finalVerdict:
-        "Judged as what it is - a daily mental-fitness practice - Headspace is excellent, and it pairs well with real therapy rather than competing with it. Its newer therapy offering is worth a look precisely because it accepts insurance - run the coverage check - though the 1.5 Trustpilot average (770 reviews) says the company's customer experience deserves scrutiny before you hand over a card; read recent reviews and know the cancellation terms. For treatment-first needs, compare BetterHelp; keep the Headspace app as the between-sessions habit either way. In crisis, call or text 988 (US) - an app is not the tool for that moment.",
+        "Judged as what it is - a daily mental-fitness practice - Headspace is excellent, and it pairs well with real therapy rather than competing with it. Its newer therapy offering is worth a look precisely because it accepts insurance - run the coverage check - though the 1.5 Trustpilot average (770 reviews) says the company's customer experience deserves scrutiny before you hand over a card; read recent reviews and know the cancellation terms. For treatment-first needs, compare BetterHelp and Talkspace; keep the Headspace app as the between-sessions habit either way. In crisis, call or text 988 (US) - an app is not the tool for that moment.",
       howItWorks: [
         { timing: "Day 1", title: "Download the app or check therapy coverage", detail: "The app starts with a short intro course; the therapy service starts with an insurance eligibility check on Headspace's site." },
         { timing: "Week 1", title: "Build the daily habit", detail: "Short guided sessions for stress, focus and sleep - most people start with a 10-minute daily practice." },
@@ -262,6 +362,140 @@ export const onlineTherapyConfig: SiteConfig = {
   ],
 
   battles: [
+    {
+      slug: "betterhelp-vs-talkspace",
+      provider1Id: "betterhelp",
+      provider2Id: "talkspace",
+      title: "BetterHelp vs Talkspace (2026): Which Wins?",
+      matchupLabel: "BetterHelp vs Talkspace",
+      subtitle: "The two biggest names in online therapy - compared on insurance, psychiatry, and how the subscriptions actually work.",
+      description:
+        "BetterHelp vs Talkspace: both now take insurance, so psychiatry and verified ratings (4.4 vs 3.9 on Trustpilot) decide it. An honest comparison.",
+      intro:
+        "BetterHelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - BetterHelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. That leaves two real differences: scope of care - Talkspace offers psychiatry with medication management alongside therapy, BetterHelp is talk therapy only - and track record, where Talkspace's 4.4 on Trustpilot (2,370 reviews) leads BetterHelp's 3.9 (9,652). We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
+      verdict:
+        "Talkspace wins on capability and record: therapy plus psychiatry on one platform, broad plan and EAP coverage with a claimed $0 copay for most insured members, and the better verified rating - 4.4 on Trustpilot (2,370 reviews) against BetterHelp's 3.9 (9,652). BetterHelp has closed its old gap - it now takes insurance too, with copays cited from around $23/session - and still wins on network size, 2-day matching, video/phone/chat flexibility and easy switching for pure talk therapy. The practical move: run both eligibility checks with your insurance details and let your actual copays decide; if you may ever need medication management, Talkspace settles it. Neither platform is a crisis service - in the US, call or text 988.",
+      verdictWinnerPoints: [
+        "Many major insurance plans and EAPs cover it",
+        "Psychiatry and medication management available",
+        "Live sessions plus messaging, like BetterHelp",
+      ],
+      verdictLoserPoints: [
+        "Larger therapist network with faster matching",
+        "Video, phone or chat sessions - your choice",
+        "Insurance accepted too (copays from ~$23/session) - but no psychiatry",
+      ],
+      winnerId: "talkspace",
+      categories: [
+        {
+          name: "Insurance & Affordability",
+          winner: "provider2",
+          explanation:
+            "Both platforms now accept insurance, so this category is closer than it used to be. Talkspace still edges it: coverage through many major plans plus employer EAPs, and - by its own claim - a $0 copay for most insured members, against BetterHelp's cited copays from around $23/session. Both also serve self-pay (BetterHelp adds a financial-aid questionnaire). Coverage is plan-specific at both, so run both eligibility checks and let your actual numbers decide.",
+          supportingPoints: [
+            "Broad plans + EAPs; $0 copay for most insured members, per Talkspace",
+            "Copays cited from ~$23/session (BetterHelp)",
+          ],
+        },
+        {
+          name: "Scope of Care",
+          winner: "provider2",
+          explanation:
+            "Talkspace offers psychiatry - evaluation and medication management - alongside therapy. BetterHelp is talk therapy only, so if medication ever becomes part of your care, you'd be coordinating a second provider outside the platform.",
+          supportingPoints: [
+            "Therapy + psychiatry on one platform (Talkspace)",
+            "Talk therapy only (BetterHelp)",
+          ],
+        },
+        {
+          name: "Network & Flexibility",
+          winner: "provider1",
+          explanation:
+            "BetterHelp runs the largest therapist network in the category, which shows up as faster matching, easier switching until the fit is right, and three live-session formats (video, phone, chat). Talkspace's matching is solid but more constrained, particularly when filtering to in-network clinicians.",
+          supportingPoints: [
+            "Largest network, fast re-matching (BetterHelp)",
+            "Video, phone or chat sessions (BetterHelp)",
+          ],
+        },
+      ],
+      features: [
+        { feature: "Care model", provider1Value: "Subscription talk therapy", provider2Value: "Subscription therapy + psychiatry", highlight: "provider2" },
+        { feature: "Insurance", provider1Value: "Accepted - copays from ~$23/session", provider2Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", highlight: "provider2" },
+        { feature: "Medication management", provider1Value: "No", provider2Value: "Yes (psychiatry)", highlight: "provider2" },
+        { feature: "Live session formats", provider1Value: "Video, phone or chat", provider2Value: "Video (plans vary)", highlight: "provider1" },
+        { feature: "Messaging between sessions", provider1Value: "Included", provider2Value: "Included", highlight: "both" },
+        { feature: "Trustpilot", provider1Value: "3.9 (9,652 reviews)", provider2Value: "4.4 (2,370 reviews)", highlight: "provider2" },
+        { feature: "Pricing", provider1Value: "Varies by location - verify at signup", provider2Value: "Verify coverage/self-pay on site", highlight: "none" },
+      ],
+      updatedAt: UPDATED,
+    },
+    {
+      slug: "talkspace-vs-headspace",
+      provider1Id: "talkspace",
+      provider2Id: "headspace",
+      title: "Talkspace vs Headspace (2026): Therapy or Practice?",
+      matchupLabel: "Talkspace vs Headspace",
+      subtitle: "Insurance-covered therapy and psychiatry vs the best-known mindfulness app - two different tools people keep comparing.",
+      description:
+        "Talkspace vs Headspace: one is insurance-friendly therapy and psychiatry with a 4.4 Trustpilot record, the other is a meditation app with a newer therapy service and a 1.5 rating. Which you actually need - and when it's both.",
+      intro:
+        "Talkspace and Headspace get compared because both show up when people search for mental-health help online - but they are built for different jobs. Talkspace is treatment: a matched licensed therapist, live sessions plus messaging, psychiatry with medication management on the same platform, and coverage through many major insurance plans and EAPs. Headspace's core product is a daily practice app - guided meditation, sleep and stress content - with a newer online-therapy service that also accepts insurance. The verified ratings sit far apart: Talkspace holds 4.4 on Trustpilot across 2,370 reviews, the best in our coverage, while Headspace's profile stands at 1.5 across 770. We haven't verified current pricing at either, so where cost matters we point you to the eligibility and coverage checks rather than quoting numbers.",
+      verdict:
+        "If you need care - persistent low mood, anxiety that interferes, or anything where medication might be part of the picture - Talkspace is the relevant tool: therapy and psychiatry in one place, insurance-friendly with a claimed $0 copay for most insured members, and the strongest verified customer record we track. Headspace wins the other contest outright: the best daily stress-and-sleep practice on the market, at app-subscription cost, and often free through employer benefits. Its insurance-accepting therapy service is worth a coverage check, but the 1.5 Trustpilot average argues for reading recent reviews before subscribing to anything. The strongest pattern is often both - Talkspace for the work, the Headspace app between sessions. In crisis, skip both: call or text 988 (US).",
+      verdictWinnerPoints: [
+        "Therapy plus psychiatry on one platform - actual treatment",
+        "Many insurance plans and EAPs; $0 copay claimed for most insured members",
+        "4.4 on Trustpilot across 2,370 reviews - best verified record in our coverage",
+      ],
+      verdictLoserPoints: [
+        "Best-known daily meditation and sleep practice",
+        "App-subscription cost; often included in employer benefits",
+        "Newer therapy service that accepts insurance",
+      ],
+      winnerId: "talkspace",
+      categories: [
+        {
+          name: "Actual Treatment",
+          winner: "provider1",
+          explanation:
+            "Talkspace is care through and through: a licensed therapist, live sessions, messaging, and psychiatry with medication management when needed. Headspace's app teaches meditation and supports sleep and stress - valuable, but not treatment - and while its newer therapy service is real, it is young next to Talkspace's platform, and the 1.5 vs 4.4 Trustpilot gap is hard to ignore when choosing who handles your care.",
+          supportingPoints: [
+            "Therapy + psychiatry, licensed clinicians (Talkspace)",
+            "Practice app + newer therapy service (Headspace)",
+          ],
+        },
+        {
+          name: "Daily Practice & Prevention",
+          winner: "provider2",
+          explanation:
+            "Nothing in therapy-land replaces a daily practice you actually keep, and Headspace is the best on-ramp to one: short guided sessions, structured courses, and sleep content that earns its screen time. Talkspace's messaging room helps between sessions, but it isn't a practice tool.",
+          supportingPoints: [
+            "Daily guided practice and courses (Headspace)",
+            "Session-and-messaging rhythm (Talkspace)",
+          ],
+        },
+        {
+          name: "Insurance & Cost",
+          winner: "provider1",
+          explanation:
+            "Both accept insurance on the care side, but Talkspace is built around it - many major plans plus employer EAPs, and a claimed $0 copay for most insured members that its eligibility check confirms in minutes. Headspace's app is the cheaper door for daily practice and is often free through employers; its therapy service's coverage check answers the care question. Coverage is plan-specific at both.",
+          supportingPoints: [
+            "Broad plans + EAPs; $0 copay claimed (Talkspace)",
+            "App-level pricing; employer benefits (Headspace)",
+          ],
+        },
+      ],
+      features: [
+        { feature: "What it is", provider1Value: "Therapy + psychiatry platform", provider2Value: "Mindfulness & sleep app + therapy service", highlight: "none" },
+        { feature: "Human clinician", provider1Value: "Yes - matched therapist, psychiatry available", provider2Value: "App is self-guided; therapy service has clinicians", highlight: "provider1" },
+        { feature: "Medication management", provider1Value: "Yes (psychiatry)", provider2Value: "No", highlight: "provider1" },
+        { feature: "Best at", provider1Value: "Working through real problems", provider2Value: "Daily stress, sleep, focus practice", highlight: "none" },
+        { feature: "Insurance", provider1Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", provider2Value: "Therapy service accepts insurance; app is subscription", highlight: "provider1" },
+        { feature: "Trustpilot", provider1Value: "4.4 (2,370 reviews)", provider2Value: "1.5 (770 reviews)", highlight: "provider1" },
+        { feature: "Pricing", provider1Value: "Verify coverage/self-pay on site", provider2Value: "App + therapy - verify on site", highlight: "none" },
+      ],
+      updatedAt: UPDATED,
+    },
     {
       slug: "headspace-vs-betterhelp",
       provider1Id: "headspace",
@@ -342,7 +576,7 @@ export const onlineTherapyConfig: SiteConfig = {
     {
       question: "Does insurance cover online therapy?",
       answer:
-        "Often, but it's always plan-specific. BetterHelp now accepts insurance, with copays cited from around $23/session for covered members, and Headspace's therapy service takes insurance too (the app itself is a subscription). Both have a coverage check that shows your actual cost in minutes. If nothing is covered, ask your insurer about out-of-network reimbursement via superbills.",
+        "Often, but it's always plan-specific. Talkspace (therapy and psychiatry) is built around insurance billing - many major plans and EAPs, with a claimed $0 copay for most insured members. BetterHelp now accepts insurance as well, with copays cited from around $23/session for covered members, and Headspace's therapy service takes insurance too (the app itself is a subscription). Each has a free coverage check that shows your actual cost in minutes. If nothing is covered, ask your insurer about out-of-network reimbursement via superbills.",
     },
     {
       question: "Does online therapy actually work?",
@@ -352,12 +586,12 @@ export const onlineTherapyConfig: SiteConfig = {
     {
       question: "Can online therapists prescribe medication?",
       answer:
-        "Therapists don't prescribe - psychiatric clinicians do. BetterHelp is talk therapy only and Headspace's app is self-guided practice, so if medication may be part of your care you'd pair the platform with a separate prescriber, such as your doctor or an online psychiatry service. Controlled substances face stricter telehealth rules and may require in-person care.",
+        "Therapists don't prescribe - psychiatric clinicians do. Talkspace offers psychiatry (evaluation and medication management) alongside its therapy platform, with prescriptions sent to your local pharmacy. BetterHelp is talk therapy only and Headspace's app is self-guided practice, so with those you'd pair a separate prescriber. Controlled substances face stricter telehealth rules and may require in-person care.",
     },
     {
       question: "How much does online therapy cost?",
       answer:
-        "It genuinely varies - by platform, plan, location and insurance - and we only publish prices we've verified, so this page doesn't quote numbers. The fast path to your real cost: run BetterHelp's coverage check at signup (and its financial-aid questionnaire if you're paying out of pocket), and see Headspace's published app and therapy pricing on its site.",
+        "It genuinely varies - by platform, plan, location and insurance - and we only publish prices we've verified, so this page doesn't quote numbers. The fast path to your real cost: run Talkspace's eligibility check, BetterHelp's coverage check at signup (and its financial-aid questionnaire if you're paying out of pocket), and see Headspace's published app and therapy pricing on its site.",
     },
     {
       question: "Is Headspace a substitute for therapy?",
@@ -365,9 +599,9 @@ export const onlineTherapyConfig: SiteConfig = {
         "The app isn't - and Headspace itself doesn't claim it is. It builds a meditation, sleep and stress practice, which is genuinely valuable alongside therapy or as everyday prevention. Headspace does now offer a separate online-therapy service that accepts insurance; for treatment-first needs, compare it against BetterHelp - and note Headspace's strikingly low 1.5 Trustpilot average (770 reviews) when weighing the company's customer experience.",
     },
     {
-      question: "How do I choose between BetterHelp and Headspace?",
+      question: "How do I choose between BetterHelp, Talkspace and Headspace?",
       answer:
-        "Name what you need first. If something is genuinely weighing on you and you want a licensed clinician, BetterHelp is the therapy-first platform - fast matching, flexible session formats, insurance accepted. If what you're after is a daily practice for stress and sleep, Headspace's app is the right tool at app-subscription cost, and it pairs well with therapy rather than replacing it. Many people end up using both.",
+        "Name what you need first. If you want talk therapy started fast, BetterHelp has the largest network, matching in as little as 2 days, and video, phone or chat sessions. If your insurance covers Talkspace, or medication may be part of your care, Talkspace's therapy-plus-psychiatry platform is very hard to beat. If what you're after is a daily practice for stress and sleep, Headspace's app is the right tool at app-subscription cost, and it pairs well with therapy rather than replacing it.",
     },
     {
       question: "What should I do if I'm in crisis right now?",
@@ -452,11 +686,11 @@ export const onlineTherapyConfig: SiteConfig = {
       h2: "Where to start with therapy for the first time - without the guesswork",
       heroDescription:
         "Never done therapy before? These platforms make the first step simple: a short intake, a licensed therapist matched to you within days, and easy switching if the fit isn't right. Compare the best places to begin.",
-      providerOrder: ["betterhelp", "headspace"],
+      providerOrder: ["betterhelp", "talkspace", "headspace"],
       editorialSections: [
         {
           heading: "What is the best online therapy platform for beginners?",
-          body: `<p><strong><a href="/reviews/betterhelp">BetterHelp</a> is our top pick for first-timers</strong> because it removes the two things that stop people from starting: finding a therapist and finding the time. You answer a short questionnaire, BetterHelp matches you with a licensed therapist - often within about 2 days - and you choose how sessions happen: video, phone or live chat, with messaging in between. If the first match isn't right, switching is free and normal; expect that, rather than reading it as failure. <a href="/reviews/headspace">Headspace</a> is the gentler on-ramp for people who aren't sure they want therapy yet: a daily meditation and sleep practice in an app, with a separate therapy service that accepts insurance when you're ready for a clinician.</p>`,
+          body: `<p><strong><a href="/reviews/betterhelp">BetterHelp</a> is our top pick for first-timers</strong> because it removes the two things that stop people from starting: finding a therapist and finding the time. You answer a short questionnaire, BetterHelp matches you with a licensed therapist - often within about 2 days - and you choose how sessions happen: video, phone or live chat, with messaging in between. If the first match isn't right, switching is free and normal; expect that, rather than reading it as failure. <a href="/reviews/talkspace">Talkspace</a> is the pick if your insurance covers it or medication might enter the picture - it bills like healthcare and adds psychiatry on the same platform. <a href="/reviews/headspace">Headspace</a> is the gentler on-ramp for people who aren't sure they want therapy yet: a daily meditation and sleep practice in an app, with a separate therapy service that accepts insurance when you're ready for a clinician.</p>`,
         },
         {
           heading: "How does starting online therapy actually work?",
@@ -479,7 +713,7 @@ export const onlineTherapyConfig: SiteConfig = {
             "Licensed therapists - credentialed in your state, the same standard as an office therapist.",
             "Fast, low-pressure matching, with painless switching if the first fit isn't right.",
             "Session formats that suit how you actually communicate - video, phone, chat or messaging.",
-            "A coverage check before you pay - both BetterHelp and Headspace's therapy service accept insurance.",
+            "A coverage check before you pay - Talkspace, BetterHelp and Headspace's therapy service all accept insurance.",
             "Clear terms - what a plan includes, how billing works, and how to pause or cancel.",
           ],
         },
@@ -503,17 +737,17 @@ export const onlineTherapyConfig: SiteConfig = {
       h2: "The best-value ways to start therapy - without skipping licensed care",
       heroDescription:
         "Want therapy without overpaying? These are the best-value online options, ranked by how low your real cost can go - through insurance, financial aid and app-level pricing - with licensed clinicians still in the picture.",
-      providerOrder: ["betterhelp", "headspace"],
+      providerOrder: ["betterhelp", "talkspace", "headspace"],
       editorialSections: [
         {
           heading: "What is the cheapest legitimate online therapy?",
-          body: `<p>The honest answer is: the platform your insurance covers. A covered session at copay rates beats almost any out-of-pocket deal, which is why the first move is a coverage check, not a price comparison. <strong><a href="/reviews/betterhelp">BetterHelp</a> is our value pick</strong> because it now accepts insurance - copays cited from around $23/session for covered members - and, for the uncovered, offers a financial-aid questionnaire that adjusts the self-pay subscription down. <a href="/reviews/headspace">Headspace</a> is the lowest-cost door of all for a daily stress-and-sleep practice at app-subscription pricing, with a separate insurance-accepting therapy service for when you want a clinician.</p>`,
+          body: `<p>The honest answer is: the platform your insurance covers. A covered session at copay rates beats almost any out-of-pocket deal, which is why the first move is a coverage check, not a price comparison. <strong><a href="/reviews/talkspace">Talkspace</a> is the first check to run</strong> - many major plans and employer EAPs cover it, and Talkspace claims a $0 copay for most insured members. <strong><a href="/reviews/betterhelp">BetterHelp</a> is our self-pay value pick</strong> because it now accepts insurance - copays cited from around $23/session for covered members - and, for the uncovered, offers a financial-aid questionnaire that adjusts the self-pay subscription down. <a href="/reviews/headspace">Headspace</a> is the lowest-cost door of all for a daily stress-and-sleep practice at app-subscription pricing, with a separate insurance-accepting therapy service for when you want a clinician.</p>`,
         },
         {
           heading: "What actually drives the cost of online therapy?",
           body: `<p>Three things decide your real number, and none of them is the headline price on an ad:</p>`,
           bullets: [
-            "Insurance coverage - the single biggest lever; both BetterHelp and Headspace's therapy service have a coverage check.",
+            "Insurance coverage - the single biggest lever; Talkspace, BetterHelp and Headspace's therapy service each have a coverage check.",
             "Session frequency - subscriptions bill whether you attend or not, so weekly attendance is what makes them good value.",
             "Financial aid and discounts - BetterHelp's income questionnaire and first-month offers lower self-pay rates.",
             "Employer benefits - EAPs often include fully covered sessions, and some employers bundle Headspace access.",
@@ -542,18 +776,18 @@ export const onlineTherapyConfig: SiteConfig = {
       h1: "Best Online Therapy With Insurance",
       h2: "Online therapy platforms that accept insurance - and how to check your plan in minutes",
       heroDescription:
-        "Both platforms we compare now accept insurance. Here's how coverage works at each, what a copay can look like, and how to confirm your own number before you commit.",
-      providerOrder: ["betterhelp", "headspace"],
+        "All three platforms we compare accept insurance. Here's how coverage works at each, what a copay can look like, and how to confirm your own number before you commit.",
+      providerOrder: ["betterhelp", "talkspace", "headspace"],
       editorialSections: [
         {
           heading: "Which online therapy platforms take insurance?",
-          body: `<p>Both platforms in our coverage now do - a recent change most articles haven't caught up with. <strong><a href="/reviews/betterhelp">BetterHelp</a></strong>, long the platform that deliberately skipped insurance, now accepts it, with copays cited from around $23/session for covered members; you enter your plan details at signup and the coverage check answers before you commit. <strong><a href="/reviews/headspace">Headspace</a></strong>'s online-therapy service accepts insurance too, with a coverage check on its site (and the service is HSA/FSA eligible); note that the Headspace app itself is a separate subscription, not an insurance product.</p>`,
+          body: `<p>All three platforms in our coverage do. <strong><a href="/reviews/talkspace">Talkspace</a></strong> is built around it - covered by many major plans and employer EAPs, with a claimed $0 copay for most insured members that its eligibility check confirms in minutes - and insurance can apply to its psychiatry service too, plan permitting. <strong><a href="/reviews/betterhelp">BetterHelp</a></strong>, long the platform that deliberately skipped insurance, now accepts it, with copays cited from around $23/session for covered members; you enter your plan details at signup and the coverage check answers before you commit. <strong><a href="/reviews/headspace">Headspace</a></strong>'s online-therapy service accepts insurance too, with a coverage check on its site (and the service is HSA/FSA eligible); note that the Headspace app itself is a separate subscription, not an insurance product.</p>`,
         },
         {
           heading: "How does insurance coverage for online therapy work?",
           body: `<p>Teletherapy with a licensed clinician is broadly reimbursable under most US plans, but coverage is always plan-specific: the same platform can be a copay for one person and full price for their neighbor. That's why the eligibility checks exist - and why no comparison table, including ours, can tell you what <em>you</em> will pay.</p>`,
           bullets: [
-            "Run the coverage check first - at BetterHelp's signup and on Headspace's therapy page. Each takes minutes.",
+            "Run the coverage checks first - Talkspace's eligibility check, BetterHelp's at signup, and Headspace's on its therapy page. Each takes minutes.",
             "Ask HR about an EAP - employee-assistance programs often include fully covered sessions.",
             "Not covered? Ask your insurer about out-of-network reimbursement via a superbill (an itemized receipt).",
             "Still out of pocket? BetterHelp's financial-aid questionnaire lowers self-pay rates.",
@@ -561,7 +795,7 @@ export const onlineTherapyConfig: SiteConfig = {
         },
         {
           heading: "Does insurance cover couples or teen therapy online?",
-          body: `<p>Not always - individual-therapy coverage doesn't automatically extend to couples or family work, so verify that specifically with your plan before assuming. Coverage for medication management is a separate question again: therapists don't prescribe, and neither platform here offers psychiatry, so a prescriber would be a separate provider with their own coverage. Our guides to <a href="/articles/online-therapy-that-takes-insurance">online therapy that takes insurance</a> and <a href="/articles/does-betterhelp-take-insurance">whether BetterHelp takes insurance</a> go deeper.</p>`,
+          body: `<p>Not always - individual-therapy coverage doesn't automatically extend to couples or family work, so verify that specifically with your plan before assuming. Coverage for medication management is a separate question again: therapists don't prescribe, and only Talkspace here offers psychiatry - elsewhere a prescriber would be a separate provider with their own coverage. Our guides to <a href="/articles/online-therapy-that-takes-insurance">online therapy that takes insurance</a> and <a href="/articles/does-betterhelp-take-insurance">whether BetterHelp takes insurance</a> go deeper.</p>`,
         },
         {
           heading: "How we chose the best online therapy with insurance",
@@ -579,11 +813,11 @@ export const onlineTherapyConfig: SiteConfig = {
       h2: "Platforms compared for anxiety - licensed therapy, daily practice, and how to begin",
       heroDescription:
         "Anxiety is one of the concerns online therapy handles best. Compare platforms with CBT-trained therapists and flexible sessions - plus the daily-practice tools that help between them.",
-      providerOrder: ["betterhelp", "headspace"],
+      providerOrder: ["betterhelp", "talkspace", "headspace"],
       editorialSections: [
         {
           heading: "What is the best online therapy platform for anxiety?",
-          body: `<p><strong><a href="/reviews/betterhelp">BetterHelp</a> is our top pick for anxiety</strong> because it pairs the two things that matter most here: a licensed therapist matched to you quickly - many of them trained in cognitive behavioral therapy (CBT), the most established approach for anxiety - and session formats you can actually keep up with (video, phone or chat, plus messaging between sessions). For anxiety specifically, low-friction access is not a minor convenience; it's often the difference between getting help and putting it off. <a href="/reviews/headspace">Headspace</a> earns its place as the daily practice between sessions - guided breathing, stress and sleep content - and as a lower-pressure starting point for people who aren't ready for a therapist yet.</p>`,
+          body: `<p><strong><a href="/reviews/betterhelp">BetterHelp</a> is our top pick for anxiety</strong> because it pairs the two things that matter most here: a licensed therapist matched to you quickly - many of them trained in cognitive behavioral therapy (CBT), the most established approach for anxiety - and session formats you can actually keep up with (video, phone or chat, plus messaging between sessions). For anxiety specifically, low-friction access is not a minor convenience; it's often the difference between getting help and putting it off. <a href="/reviews/talkspace">Talkspace</a> is the stronger pick if your insurance covers it or medication may be part of your care. <a href="/reviews/headspace">Headspace</a> earns its place as the daily practice between sessions - guided breathing, stress and sleep content - and as a lower-pressure starting point for people who aren't ready for a therapist yet.</p>`,
         },
         {
           heading: "Does online therapy help with anxiety?",
@@ -601,7 +835,7 @@ export const onlineTherapyConfig: SiteConfig = {
         },
         {
           heading: "When is medication part of the picture?",
-          body: `<p>For some people, therapy alone is enough; for others, medication is added, and for anxiety the combination is a well-recognized approach. Neither platform here prescribes - BetterHelp is talk therapy and Headspace's app is self-guided - so medication would come from a separate prescriber, such as your doctor or an online psychiatry service. You don't need to decide that up front; many people start with therapy and revisit it with a provider if symptoms warrant. See <a href="/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a> and <a href="/articles/online-psychiatry">online psychiatry</a>.</p>`,
+          body: `<p>For some people, therapy alone is enough; for others, medication is added, and for anxiety the combination is a well-recognized approach. <a href="/reviews/talkspace">Talkspace</a> is the platform here that offers psychiatry alongside therapy, so a therapist and prescriber can stay coordinated; BetterHelp is talk therapy only and Headspace's app is self-guided, so with those medication would come from a separate prescriber. You don't need to decide that up front; many people start with therapy and revisit it with a provider if symptoms warrant. See <a href="/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a> and <a href="/articles/online-psychiatry">online psychiatry</a>.</p>`,
         },
         {
           heading: "How we chose the best online therapy for anxiety",

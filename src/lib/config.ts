@@ -361,6 +361,7 @@ export const isHiddenVertical = (id: string): boolean => HIDDEN_VERTICALS.includ
 // (operator policy: impressions everywhere first, optimize what earns clicks).
 export const AFFILIATE_PROVIDER_IDS = [
   "betterhelp",
+  "talkspace",
   "headspace",
 ];
 

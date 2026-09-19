@@ -1,14 +1,16 @@
 import Link from "next/link";
 
 const modelRows: [string, string, string][] = [
-  ["Subscription therapy", "A matched licensed therapist, weekly live sessions plus messaging, billed as a subscription or through insurance.", "BetterHelp is the biggest example - talk therapy only, no psychiatry."],
-  ["Therapy billed through insurance", "Scheduled video sessions with a licensed clinician, paid as a copay where your plan covers it.", "Headspace's therapy service works this way; BetterHelp now accepts insurance too."],
+  ["Subscription therapy", "A matched licensed therapist, live sessions plus messaging, billed as a subscription or through insurance.", "BetterHelp is the biggest example; Talkspace runs the same model with broad insurance coverage."],
+  ["Psychiatry & medication", "Evaluation, diagnosis and medication management by psychiatric clinicians.", "Talkspace offers it as a service alongside therapy; BetterHelp and Headspace's app don't prescribe."],
+  ["Therapy billed through insurance", "Scheduled video sessions with a licensed clinician, paid as a copay where your plan covers it.", "Headspace's therapy service works this way; Talkspace and BetterHelp accept insurance too."],
   ["Mindfulness apps", "Self-guided meditation, sleep and stress practice - not treatment.", "Headspace is the best-known; pairs well with therapy rather than replacing it."],
 ];
 
 // Verified Trustpilot standings, captured from each platform's live profile
 // (operator screenshots, August 2026). Real aggregates only - never adjusted.
 const ratingRows: [string, string, string][] = [
+  ["Talkspace", "4.4 across 2,370 reviews", "The best verified score in our coverage - praise centers on therapists who stick; the captured reviews carry Trustpilot's \"Invited\" tag."],
   ["BetterHelp", "3.9 across 9,652 reviews", "Solid but mixed on the category's biggest review base - accessibility and therapist quality praised, fit and billing complaints alongside."],
   ["Headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity Headspace cites, and read recent reviews before subscribing."],
 ];
@@ -59,9 +61,9 @@ export function EditorialContent() {
         <Link href="/reviews" className={link}>
           platform reviews
         </Link>{" "}
-        or see the two side by side in our{" "}
-        <Link href="/headspace-vs-betterhelp" className={link}>
-          Headspace vs BetterHelp comparison
+        or compare the two biggest names in our{" "}
+        <Link href="/betterhelp-vs-talkspace" className={link}>
+          BetterHelp vs Talkspace comparison
         </Link>
         .
       </p>
@@ -85,6 +87,10 @@ export function EditorialContent() {
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">The insurance question comes first</h3>
       <p className="mb-4">
         The single biggest cost factor is whether your insurance covers a platform.{" "}
+        <Link href="/reviews/talkspace" className={link}>
+          Talkspace
+        </Link>{" "}
+        is covered by many major plans and employer EAPs and claims a $0 copay for most insured members.{" "}
         <Link href="/reviews/betterhelp" className={link}>
           BetterHelp
         </Link>{" "}
@@ -93,8 +99,8 @@ export function EditorialContent() {
         <Link href="/reviews/headspace" className={link}>
           Headspace
         </Link>
-        &rsquo;s therapy service accepts insurance as well, with a coverage check on its site. Both checks are free
-        and take minutes - run them before paying anyone out of pocket; they answer the question no comparison table
+        &rsquo;s therapy service accepts insurance as well, with a coverage check on its site. Every check is free
+        and takes minutes - run two or three before paying anyone out of pocket; they answer the question no comparison table
         can: what <em>you</em> will actually pay. Our{" "}
         <Link href="/articles/online-therapy-that-takes-insurance" className={link}>
           insurance guide
@@ -110,6 +116,11 @@ export function EditorialContent() {
           - the largest network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted (copays from ~$23/session for covered members).
         </li>
         <li>
+          <strong>You have insurance, or might need medication too:</strong>{" "}
+          <Link href="/reviews/talkspace" className={link}>Talkspace</Link>{" "}
+          - therapy plus psychiatry on one platform, broad plan and EAP coverage, and the strongest verified rating in our coverage.
+        </li>
+        <li>
           <strong>You want a daily practice for stress and sleep, not treatment:</strong>{" "}
           <Link href="/reviews/headspace" className={link}>Headspace</Link>{" "}
           - the best-known meditation app, best used alongside therapy rather than instead of it. Its separate therapy service accepts insurance if you decide you want a clinician. Our{" "}
@@ -117,9 +128,9 @@ export function EditorialContent() {
           covers that fork in depth.
         </li>
         <li>
-          <strong>Medication might be part of your care:</strong> neither platform prescribes - BetterHelp is talk
-          therapy only and Headspace&rsquo;s app is self-guided - so plan for a separate prescriber alongside. Our
-          guides to{" "}
+          <strong>Medication might be part of your care:</strong> Talkspace is the platform here with psychiatry
+          on board; BetterHelp is talk therapy only and Headspace&rsquo;s app is self-guided, so with those plan for
+          a separate prescriber alongside. Our guides to{" "}
           <Link href="/articles/therapy-vs-psychiatry" className={link}>therapist vs psychiatrist</Link>{" "}
           and{" "}
           <Link href="/articles/online-psychiatry" className={link}>online psychiatry</Link>{" "}
@@ -158,14 +169,15 @@ export function EditorialContent() {
         </Link>{" "}
         covers rather than buries. Before signing up anywhere: read the platform&rsquo;s current privacy policy, check
         whether your data is used for advertising, and know that therapy notes and billing records are handled under
-        different rules. Insurance-billed care also creates claims records with your insurer - a normal part of
+        different rules. Insurance-billed care (Talkspace, Headspace&rsquo;s therapy service, BetterHelp with a
+        covered plan) also creates claims records with your insurer - a normal part of
         healthcare, but worth knowing.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">What to look for in a platform</h3>
       <ul className="mb-4 list-disc space-y-2 pl-6">
-        <li><strong>Licensed clinicians</strong> - therapists licensed in your state; a separate psychiatric clinician if medication may be part of your care. Our <Link href="/articles/online-psychiatry" className={link}>online psychiatry guide</Link> explains how remote prescribing works and its limits.</li>
-        <li><strong>The right care model</strong> - therapy-first, or daily practice. Our <Link href="/articles/how-to-choose-an-online-therapy-platform" className={link}>choosing guide</Link> sorts it in four questions.</li>
+        <li><strong>Licensed clinicians</strong> - therapists licensed in your state; psychiatric clinicians (Talkspace has them on-platform) if medication may be part of your care. Our <Link href="/articles/online-psychiatry" className={link}>online psychiatry guide</Link> explains how remote prescribing works and its limits.</li>
+        <li><strong>The right care model</strong> - therapy-first, therapy plus psychiatry, or daily practice. Our <Link href="/articles/how-to-choose-an-online-therapy-platform" className={link}>choosing guide</Link> sorts it in four questions.</li>
         <li><strong>A session rhythm you&rsquo;ll keep</strong> - video, phone, chat or messaging; consistency drives outcomes more than format, and the best platform is the one you&rsquo;re still attending in month three.</li>
         <li><strong>Easy switching</strong> - finding the right therapist can take more than one try (community feedback says exactly this), so how painless re-matching is matters more than it sounds.</li>
         <li><strong>Transparent terms</strong> - current rates, cancellation terms and refund rules on the platform&rsquo;s own site. We don&rsquo;t quote prices we haven&rsquo;t verified, and neither should your memory of an ad.</li>
