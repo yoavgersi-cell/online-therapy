@@ -8,9 +8,9 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Reviews",
     links: [
-      { label: "BetterHelp", href: "/reviews/betterhelp" },
+      { label: "betterhelp", href: "/reviews/betterhelp" },
       { label: "Talkspace", href: "/reviews/talkspace" },
-      { label: "Headspace", href: "/reviews/headspace" },
+      { label: "headspace", href: "/reviews/headspace" },
       { label: "All Reviews", href: "/reviews" },
     ],
   },

@@ -16,6 +16,7 @@ const SITE_URL = "https://www.toponlinetherapy.io";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  applicationName: "Top Online Therapy",
   title: {
     default: "Top Online Therapy - Compare the Best Online Therapy Platforms & Prices",
     template: "%s | Top Online Therapy",
@@ -103,6 +104,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Top Online Therapy",
+              alternateName: ["toponlinetherapy.io", "Top Online Therapy .io"],
               url: SITE_URL,
               description:
                 "Compare trusted online therapy platforms side by side.",

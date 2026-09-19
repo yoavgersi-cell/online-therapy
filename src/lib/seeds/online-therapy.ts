@@ -51,7 +51,7 @@ export const onlineTherapyConfig: SiteConfig = {
     secureText:
       "Every platform we feature uses secure systems to protect your personal information and session privacy.",
     featuredImageUrl: "/sidebar-featured.webp",
-    featuredImageAlt: "BetterHelp - online therapy with licensed therapists",
+    featuredImageAlt: "betterhelp - online therapy with licensed therapists",
     featuredImageLink: "#",
     blockOrder: ["socialProof", "secureBadge", "editorialReviews", "rankingMethodology", "disclosure"],
   },
@@ -79,7 +79,7 @@ export const onlineTherapyConfig: SiteConfig = {
   providers: [
     {
       id: "betterhelp",
-      name: "BetterHelp",
+      name: "betterhelp",
       tagline:
         "The largest online therapy platform - subscription talk therapy with weekly live sessions and messaging in between",
       logo: "/logos/betterhelplogo.png",
@@ -182,7 +182,7 @@ export const onlineTherapyConfig: SiteConfig = {
     },
     {
       id: "headspace",
-      name: "Headspace",
+      name: "headspace",
       tagline:
         "The mindfulness and meditation app - now also offering online therapy that accepts insurance",
       logo: "/logos/headspacelogo.png",

@@ -11,8 +11,8 @@ const modelRows: [string, string, string][] = [
 // (operator screenshots, August 2026). Real aggregates only - never adjusted.
 const ratingRows: [string, string, string][] = [
   ["Talkspace", "4.4 across 2,370 reviews", "The best verified score in our coverage - praise centers on therapists who stick; the captured reviews carry Trustpilot's \"Invited\" tag."],
-  ["BetterHelp", "3.9 across 9,652 reviews", "Solid but mixed on the category's biggest review base - accessibility and therapist quality praised, fit and billing complaints alongside."],
-  ["Headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity Headspace cites, and read recent reviews before subscribing."],
+  ["betterhelp", "3.9 across 9,652 reviews", "Solid but mixed on the category's biggest review base - accessibility and therapist quality praised, fit and billing complaints alongside."],
+  ["headspace", "1.5 across 770 reviews", "Strikingly low for so popular an app - weigh it against the app-store popularity Headspace cites, and read recent reviews before subscribing."],
 ];
 
 function ComparisonTable({ colA, colHeadB, colB, rows }: { colA: string; colHeadB?: string; colB: string; rows: [string, string, string][] }) {
