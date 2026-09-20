@@ -334,6 +334,19 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           )}
         </div>
 
+        {/* Trustpilot Reviews - high on the page: real customer voice right after the intro */}
+        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
+          <div className="mb-6">
+            <TrustpilotCarousel
+              providerName={provider.name}
+              providerLogo={provider.logo}
+              reviews={provider.trustpilotReviews!}
+              rating={provider.trustpilotRating}
+              reviewCount={provider.trustpilotReviewCount}
+            />
+          </div>
+        )}
+
         {/* Is [brand] legit? - trust block for the "is X legit" query cluster */}
         {legit && (
           <div className="mb-6 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm">
@@ -539,19 +552,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
             ))}
           </ul>
         </Section>
-
-        {/* Trustpilot Reviews */}
-        {(provider.trustpilotReviews?.length ?? 0) > 0 && (
-          <div className="mb-6">
-            <TrustpilotCarousel
-              providerName={provider.name}
-              providerLogo={provider.logo}
-              reviews={provider.trustpilotReviews!}
-              rating={provider.trustpilotRating}
-              reviewCount={provider.trustpilotReviewCount}
-            />
-          </div>
-        )}
 
         {/* Community feedback - real Reddit threads, rendered Reddit-style.
             Each registry entry names the vertical its threads were captured
