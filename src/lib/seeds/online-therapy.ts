@@ -371,62 +371,74 @@ export const onlineTherapyConfig: SiteConfig = {
       provider2Id: "talkspace",
       title: "betterhelp vs Talkspace (2026): Which Wins?",
       matchupLabel: "betterhelp vs Talkspace",
-      subtitle: "The two biggest names in online therapy - compared on insurance, psychiatry, and how the subscriptions actually work.",
+      subtitle: "The two biggest names in online therapy - compared on matching, session formats, insurance, and how the subscriptions actually work.",
       description:
-        "betterhelp vs Talkspace: both now take insurance, so psychiatry and verified ratings (4.4 vs 3.9 on Trustpilot) decide it. An honest comparison.",
+        "betterhelp vs Talkspace: both now take insurance, so network size, matching speed, session flexibility and psychiatry decide it. An honest comparison with the verified ratings shown as they are.",
       intro:
-        "betterhelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - betterhelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. That leaves two real differences: scope of care - Talkspace offers psychiatry with medication management alongside therapy, betterhelp is talk therapy only - and track record, where Talkspace's 4.4 on Trustpilot (2,370 reviews) leads betterhelp's 3.9 (9,652). We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
+        "betterhelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - betterhelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. With the insurance gap closed, the real differences are the therapy experience itself - betterhelp runs the category's largest network, matches in as little as 2 days, and offers video, phone or chat sessions with easy switching - and scope of care, where Talkspace adds psychiatry with medication management. Track record cuts the other way: Talkspace's 4.4 on Trustpilot (2,370 reviews) leads betterhelp's 3.9 (9,652), and we show both as they are. We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
       verdict:
-        "Talkspace wins on capability and record: therapy plus psychiatry on one platform, broad plan and EAP coverage with a claimed $0 copay for most insured members, and the better verified rating - 4.4 on Trustpilot (2,370 reviews) against betterhelp's 3.9 (9,652). betterhelp has closed its old gap - it now takes insurance too, with copays cited from around $23/session - and still wins on network size, 2-day matching, video/phone/chat flexibility and easy switching for pure talk therapy. The practical move: run both eligibility checks with your insurance details and let your actual copays decide; if you may ever need medication management, Talkspace settles it. Neither platform is a crisis service - in the US, call or text 988.",
+        "betterhelp wins for most people looking for talk therapy: the largest therapist network in the category, matching in as little as 2 days, three live-session formats (video, phone or chat) plus messaging, and painless switching until the fit is right - and it now takes insurance too, with copays cited from around $23/session, which removes what used to be Talkspace's decisive edge. Talkspace keeps two real advantages worth naming plainly: psychiatry with medication management on the same platform, and the stronger verified rating - 4.4 on Trustpilot (2,370 reviews) against betterhelp's 3.9 (9,652) - so if medication is likely part of your care, or your plan covers Talkspace at a $0 copay and not betterhelp, Talkspace is the better fit. The practical move: run both eligibility checks with your insurance details and let your actual copays decide. Neither platform is a crisis service - in the US, call or text 988.",
       verdictWinnerPoints: [
-        "Many major insurance plans and EAPs cover it",
-        "Psychiatry and medication management available",
-        "Live sessions plus messaging, like betterhelp",
+        "Largest therapist network - matching in as little as 2 days",
+        "Video, phone or chat sessions, plus messaging between them",
+        "Insurance now accepted (copays cited from ~$23/session), plus financial aid",
       ],
       verdictLoserPoints: [
-        "Larger therapist network with faster matching",
-        "Video, phone or chat sessions - your choice",
-        "Insurance accepted too (copays from ~$23/session) - but no psychiatry",
+        "Psychiatry and medication management on the same platform",
+        "Many major insurance plans and EAPs; $0 copay claimed for most insured members",
+        "Stronger verified rating - 4.4 on Trustpilot (2,370 reviews)",
       ],
-      winnerId: "talkspace",
+      winnerId: "betterhelp",
       categories: [
         {
-          name: "Insurance & Affordability",
-          winner: "provider2",
+          name: "Network & Matching",
+          winner: "provider1",
           explanation:
-            "Both platforms now accept insurance, so this category is closer than it used to be. Talkspace still edges it: coverage through many major plans plus employer EAPs, and - by its own claim - a $0 copay for most insured members, against betterhelp's cited copays from around $23/session. Both also serve self-pay (betterhelp adds a financial-aid questionnaire). Coverage is plan-specific at both, so run both eligibility checks and let your actual numbers decide.",
+            "betterhelp runs the largest therapist network in the category - it reports 31,739 therapists - which shows up as matching in as little as 2 days and easy re-matching until the fit is right, the single biggest driver of whether therapy helps. Talkspace's matching is solid but more constrained, particularly when filtering to in-network clinicians.",
           supportingPoints: [
-            "Broad plans + EAPs; $0 copay for most insured members, per Talkspace",
-            "Copays cited from ~$23/session (betterhelp)",
+            "Largest network, 2-day matching, easy switching (betterhelp)",
+            "Match-based, narrower when filtered to in-network (Talkspace)",
+          ],
+        },
+        {
+          name: "Session Formats & Flexibility",
+          winner: "provider1",
+          explanation:
+            "betterhelp lets you choose video, phone or live chat for the weekly session, with unlimited messaging in between and group webinars and worksheets included. Talkspace leans messaging-first with live video per plan - great for people who process in writing, more limited for those who want to pick the format each week.",
+          supportingPoints: [
+            "Video, phone or chat - your choice each week (betterhelp)",
+            "Messaging-first, live video per plan (Talkspace)",
+          ],
+        },
+        {
+          name: "Insurance & Affordability",
+          winner: "tie",
+          explanation:
+            "Both platforms now accept insurance, so this is closer than it used to be. Talkspace has the broader story - many major plans plus employer EAPs, and a claimed $0 copay for most insured members - while betterhelp cites copays from around $23/session for covered members and adds a financial-aid questionnaire and first-month discounts for self-pay. Coverage is plan-specific at both, so run both eligibility checks and let your actual numbers decide.",
+          supportingPoints: [
+            "Broad plans + EAPs; $0 copay claimed (Talkspace)",
+            "Copays cited from ~$23/session; financial aid for self-pay (betterhelp)",
           ],
         },
         {
           name: "Scope of Care",
           winner: "provider2",
           explanation:
-            "Talkspace offers psychiatry - evaluation and medication management - alongside therapy. betterhelp is talk therapy only, so if medication ever becomes part of your care, you'd be coordinating a second provider outside the platform.",
+            "Talkspace offers psychiatry - evaluation and medication management - alongside therapy. betterhelp is talk therapy only, so if medication ever becomes part of your care, you'd be coordinating a second provider outside the platform. If that's likely for you, it outweighs everything above.",
           supportingPoints: [
             "Therapy + psychiatry on one platform (Talkspace)",
             "Talk therapy only (betterhelp)",
           ],
         },
-        {
-          name: "Network & Flexibility",
-          winner: "provider1",
-          explanation:
-            "betterhelp runs the largest therapist network in the category, which shows up as faster matching, easier switching until the fit is right, and three live-session formats (video, phone, chat). Talkspace's matching is solid but more constrained, particularly when filtering to in-network clinicians.",
-          supportingPoints: [
-            "Largest network, fast re-matching (betterhelp)",
-            "Video, phone or chat sessions (betterhelp)",
-          ],
-        },
       ],
       features: [
         { feature: "Care model", provider1Value: "Subscription talk therapy", provider2Value: "Subscription therapy + psychiatry", highlight: "provider2" },
-        { feature: "Insurance", provider1Value: "Accepted - copays from ~$23/session", provider2Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", highlight: "provider2" },
-        { feature: "Medication management", provider1Value: "No", provider2Value: "Yes (psychiatry)", highlight: "provider2" },
+        { feature: "Therapist network", provider1Value: "Largest in the category (31,739 reported)", provider2Value: "Strong, insurance-filtered", highlight: "provider1" },
+        { feature: "Matching", provider1Value: "As little as 2 days; switch anytime", provider2Value: "Match-based; change on request", highlight: "provider1" },
         { feature: "Live session formats", provider1Value: "Video, phone or chat", provider2Value: "Video (plans vary)", highlight: "provider1" },
         { feature: "Messaging between sessions", provider1Value: "Included", provider2Value: "Included", highlight: "both" },
+        { feature: "Insurance", provider1Value: "Accepted - copays from ~$23/session", provider2Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", highlight: "both" },
+        { feature: "Medication management", provider1Value: "No", provider2Value: "Yes (psychiatry)", highlight: "provider2" },
         { feature: "Trustpilot", provider1Value: "3.9 (9,652 reviews)", provider2Value: "4.4 (2,370 reviews)", highlight: "provider2" },
         { feature: "Pricing", provider1Value: "Varies by location - verify at signup", provider2Value: "Verify coverage/self-pay on site", highlight: "none" },
       ],

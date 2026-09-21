@@ -367,7 +367,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     sections: [
       {
         heading: "Does Talkspace take insurance?",
-        body: 'Yes - it\'s the most insurance-native of the big subscription platforms, covered by many major plans and employee-assistance programs (EAPs). This has been Talkspace\'s structural advantage for years, and it\'s the main reason it wins our <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace comparison</a>: for an eligible plan, therapy stops being a subscription luxury and gets billed like healthcare. It also carries the strongest verified customer record in our coverage - 4.4 on Trustpilot across 2,370 reviews.',
+        body: 'Yes - it\'s the most insurance-native of the big subscription platforms, covered by many major plans and employee-assistance programs (EAPs). This has been Talkspace\'s structural advantage for years, and it\'s the strongest card it holds in our <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace comparison</a>: for an eligible plan, therapy stops being a subscription luxury and gets billed like healthcare. It also carries the strongest verified customer record in our coverage - 4.4 on Trustpilot across 2,370 reviews.',
       },
       {
         heading: "Will I really pay a $0 copay?",
