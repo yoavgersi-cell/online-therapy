@@ -703,19 +703,6 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
           </div>
         )}
 
-        {/* Not sure? Quiz CTA */}
-        <div className="mb-8 rounded-xl border border-gray-200 bg-white p-5 text-center shadow-sm">
-          <p className="mb-1 text-[15px] font-bold text-[#191919]">Not sure if {provider.name} is right for you?</p>
-          <p className="mb-4 text-[13px] text-gray-500">Take our free quiz and get a personalized provider recommendation.</p>
-          <Link
-            href={hubLink(ctx, "/find-your-match")}
-            className="inline-flex h-[42px] items-center justify-center gap-2 rounded-lg border border-[#1A7A52] px-6 text-[14px] font-bold text-[#1A7A52] transition-colors hover:bg-[#1A7A52]/5"
-          >
-            Find Your Match
-            <ArrowRight className="h-3.5 w-3.5" strokeWidth={2.5} />
-          </Link>
-        </div>
-
         {/* Related content */}
         {(relatedBattles.length > 0 || relatedArticles.length > 0) && (
           <div className="mb-6">

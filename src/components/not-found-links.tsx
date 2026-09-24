@@ -31,11 +31,11 @@ export function NotFoundLinks({
           Compare all providers
         </Link>
         <Link
-          href={href("/find-your-match")}
+          href={href("/reviews")}
           className="inline-flex h-[46px] items-center justify-center gap-2 rounded-xl border border-gray-200 bg-white px-6 text-[14px] font-bold text-[#191919] transition-colors hover:bg-gray-50"
         >
           <Search className="h-4 w-4" strokeWidth={2} />
-          Find your match
+          Browse the reviews
         </Link>
       </div>
 

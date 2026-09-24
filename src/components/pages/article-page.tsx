@@ -587,10 +587,10 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 Compare Providers
               </Link>
               <Link
-                href={hubLink(ctx, "/find-your-match")}
+                href={hubLink(ctx, "/reviews")}
                 className="inline-flex h-[44px] items-center justify-center rounded-lg border border-gray-200 bg-white px-6 text-[14px] font-semibold text-[#191919] transition-colors hover:bg-gray-50"
               >
-                Take the Quiz
+                Read the Reviews
               </Link>
             </div>
           </div>
