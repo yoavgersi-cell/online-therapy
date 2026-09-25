@@ -10,6 +10,127 @@ import type { ArticleData } from "@/lib/config";
 const UPDATED = "2026-09-14";
 
 export const onlineTherapyArticles: ArticleData[] = [
+  // ───── Search Console pass (Sep 25 2026, first 6 days live) ─────
+  // Queries with impressions and no matching page: Talkspace cost (with and
+  // without insurance), headspace app cost, and betterhelp alternatives.
+  // Pricing pieces explain the models and levers honestly; exact rates are
+  // left to the platform's site until the operator verifies them.
+  {
+    slug: "how-much-does-talkspace-cost",
+    title: "How Much Does Talkspace Cost? With Insurance, Without, and What Decides It (2026)",
+    description:
+      "Talkspace pricing depends on one question first: does your insurance cover it? A claimed $0 copay for most insured members, self-pay plans that vary by what they include, and psychiatry priced separately. The honest breakdown.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-09-25",
+    updatedAt: "2026-09-25",
+    heroColor: "#E4F2EA",
+    author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Talkspace is built around insurance: many major plans and employer EAPs cover it, and Talkspace claims most insured members pay a $0 copay.",
+      "Self-pay plans are tiered by what they include - messaging-only, messaging plus live sessions, and psychiatry - so the sticker price depends on the plan, not one flat rate.",
+      "Psychiatry (evaluation and medication management) is priced separately from therapy.",
+      "The only number that matters is yours: Talkspace's eligibility check returns your coverage and cost in minutes, before you commit.",
+    ],
+    sections: [
+      {
+        heading: "How much does Talkspace cost with insurance?",
+        body: `Often far less than people expect - and this is the whole reason Talkspace leads on affordability among the big platforms. It's in-network with many major insurance plans and employee-assistance programs (EAPs), and Talkspace itself claims that most insured members pay a $0 copay. That's the company's own number, so treat it the way we do: as a claim your eligibility check confirms or denies. Enter your insurer and member details on Talkspace's site and it returns your actual coverage and per-session cost before you pay anything. Coverage is plan-specific - the same platform can be free for you and full price for your neighbor - which is why no article, including this one, can quote your copay.`,
+      },
+      {
+        heading: "How much does Talkspace cost without insurance?",
+        body: `Self-pay Talkspace is a subscription, and the price depends on the plan tier: a messaging-focused plan (a private room where you write to your therapist and get responses through the week), a plan that adds scheduled live video sessions, and psychiatry as its own service. We haven't verified Talkspace's current self-pay rates, and they change, so we don't print a number we can't stand behind - the current rates are on Talkspace's site at checkout. What we can tell you is how to read them: the real question is the price <em>per live session you'll actually use</em>, not the monthly headline, and a messaging-only plan is a different product from weekly video therapy. Our <a href="/articles/online-therapy-cost">online therapy cost guide</a> explains the models side by side.`,
+      },
+      {
+        heading: "What about Talkspace psychiatry pricing?",
+        body: `Psychiatry - an initial evaluation with a psychiatric clinician, then follow-ups for medication management - is billed separately from therapy at Talkspace, typically as an initial-visit price and a follow-up price for self-pay, or through insurance where your plan covers it. If medication may be part of your care, run the eligibility check with psychiatry in mind, because coverage for therapy and coverage for psychiatry can differ on the same plan. How remote prescribing works, and its limits, is in <a href="/articles/online-psychiatry">online psychiatry</a>.`,
+      },
+      {
+        heading: "Is Talkspace worth the cost?",
+        body: `If your insurance or EAP covers it, it's very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury, with the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). If you're paying out of pocket, the decision reverts to format and price against <a href="/reviews/betterhelp">betterhelp</a>, which has the larger network and video/phone/chat flexibility and now accepts insurance too - our <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace comparison</a> settles that fork. Full platform verdict in our <a href="/reviews/talkspace">Talkspace review</a>.`,
+      },
+      {
+        heading: "How do I find my real Talkspace price in five minutes?",
+        body: `Three steps, in order. Run the eligibility check on Talkspace's site with your insurer and member ID - it answers the copay question directly. If you're not covered, ask HR whether your employer's EAP includes Talkspace; EAP sessions are commonly fully covered and chronically unused. Only then compare self-pay tiers at checkout, and compare them against betterhelp's quote for your location (its <a href="/articles/how-much-does-betterhelp-cost">cost model is explained here</a>). Our <a href="/best-online-therapy-with-insurance">insurance-friendly platforms page</a> covers the coverage step in depth. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "how-much-does-headspace-cost",
+    title: "How Much Does Headspace Cost? App Subscription, Trial, and Therapy Explained (2026)",
+    description:
+      "headspace prices two different things: the meditation and sleep app (a monthly or annual subscription, often with a free trial) and a separate online-therapy service that accepts insurance. What's included in each and how to pay less.",
+    category: "Advice",
+    readTime: "5 min read",
+    publishedAt: "2026-09-25",
+    updatedAt: "2026-09-25",
+    heroColor: "#EEF7F0",
+    author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "headspace sells two separate things: the app (subscription) and an online-therapy service (billed through insurance where covered).",
+      "The app is priced monthly or annually - annual is the cheaper route per month - and a free trial is commonly offered.",
+      "Employer benefits often include headspace at no cost; student and family plans exist for the app.",
+      "The app is not therapy. If you need a clinician, the therapy service's coverage check is the price that matters.",
+    ],
+    sections: [
+      {
+        heading: "What are you actually paying for with headspace?",
+        body: `Two different products, and mixing them up is the most common pricing confusion. The <strong>headspace app</strong> is a subscription to guided meditation, sleep content (sleepcasts, wind-downs), focus music, structured courses and the Ebb AI companion - a daily practice tool, not treatment. The <strong>headspace therapy service</strong> is separate: scheduled video sessions with a licensed clinician, billed through your insurance where your plan covers it, with a coverage check on headspace's site. Our <a href="/reviews/headspace">headspace review</a> draws that line in full.`,
+      },
+      {
+        heading: "How much does the headspace app cost per month?",
+        body: `The app is sold as a monthly plan or an annual plan; the annual plan works out meaningfully cheaper per month and is the route most long-term users take, and a free trial is commonly offered so you can test the habit before paying. headspace also offers student pricing and a family plan that covers several accounts. We haven't verified the current rates and headspace changes them, so we don't print a number we can't stand behind - the live prices are on headspace's subscription page. Before paying anything, check one thing: many employers include headspace in their benefits at no cost to you, which is by far the cheapest way in.`,
+      },
+      {
+        heading: "How much does headspace therapy cost?",
+        body: `It's priced like healthcare, not like the app: the therapy service accepts insurance, so for a covered plan you pay a copay per session, and the coverage check on headspace's site returns your number in minutes. The service is HSA/FSA eligible. Coverage is plan-specific, so run the check rather than assuming - and compare it against <a href="/reviews/betterhelp">betterhelp</a> (copays cited from around $23/session for covered members) and <a href="/reviews/talkspace">Talkspace</a> (a claimed $0 copay for most insured members) before choosing. Our <a href="/best-online-therapy-with-insurance">insurance guide</a> walks through it.`,
+      },
+      {
+        heading: "Is headspace worth it?",
+        body: `As a daily practice, yes - it's the best-known on-ramp to a meditation and sleep habit, and it pairs well with real therapy rather than replacing it. Two honest cautions before you subscribe: the app itself doesn't treat conditions, and headspace's Trustpilot profile stands at a strikingly low 1.5 across 770 reviews, which says the company's customer experience deserves scrutiny - read recent reviews and know the cancellation terms first. If what you need is a therapist, start with our <a href="/">platform comparison</a> and treat the app as the between-sessions habit. In crisis, an app is not the tool: call or text 988 (US), free and open 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
+  {
+    slug: "betterhelp-alternatives",
+    title: "betterhelp Alternatives (2026): When to Pick Something Else, and What",
+    description:
+      "betterhelp is the biggest online therapy platform, but not the right fit for everyone. The honest alternatives - Talkspace for insurance and psychiatry, headspace for daily practice, and the free routes - matched to the reason you're looking.",
+    category: "Advice",
+    readTime: "6 min read",
+    publishedAt: "2026-09-25",
+    updatedAt: "2026-09-25",
+    heroColor: "#E9F6F1",
+    author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "The best betterhelp alternative depends on why you're looking: medication, insurance, cost, privacy or a bad therapist match each point somewhere different.",
+      "Talkspace is the closest like-for-like alternative - same subscription-plus-messaging model, with psychiatry added and the broadest insurance coverage.",
+      "headspace is the alternative for people who wanted a daily practice rather than treatment.",
+      "A bad first match usually isn't a reason to leave betterhelp - switching therapists is free and normal.",
+    ],
+    sections: [
+      {
+        heading: "Why are you looking for a betterhelp alternative?",
+        body: `Name the reason first, because each one points to a different answer. <strong>You need medication</strong> - betterhelp is talk therapy only. <strong>Your insurance doesn't cover it</strong> - betterhelp now accepts insurance, but coverage is plan-specific and its cited copays start around $23/session. <strong>It's too expensive out of pocket</strong> - self-pay varies by location, and financial aid exists. <strong>Privacy</strong> - the 2023 FTC settlement over past data sharing is real. <strong>Your therapist wasn't a fit</strong> - which, honestly, is usually a reason to switch therapists, not platforms. The sections below take each in turn; our <a href="/reviews/betterhelp">betterhelp review</a> covers the platform itself.`,
+      },
+      {
+        heading: "Talkspace - the closest like-for-like alternative",
+        body: `<a href="/reviews/talkspace">Talkspace</a> runs the same basic model - a matched licensed therapist, live sessions plus a messaging room - with two things betterhelp doesn't have: psychiatry with medication management on the same platform, and the broadest insurance story in the category, covered by many major plans and employer EAPs with a claimed $0 copay for most insured members. It also carries the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). The trade-offs: a smaller network than betterhelp's, messaging-first with live video per plan rather than video/phone/chat on demand, and self-pay rates we haven't verified. If medication or insurance is your reason, this is the alternative. Full head-to-head in <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace</a>.`,
+      },
+      {
+        heading: "headspace - if what you wanted was a daily practice",
+        body: `Some people sign up for therapy when what they were after was a way to manage everyday stress and sleep. <a href="/reviews/headspace">headspace</a> is the best-known tool for that - guided meditation, sleep content and structured courses at app-subscription cost, often free through employer benefits - and it now also offers a separate therapy service that accepts insurance. It is not a substitute for treatment, and its 1.5 Trustpilot average (770 reviews) argues for reading recent reviews before subscribing to anything. Our <a href="/headspace-vs-betterhelp">headspace vs betterhelp comparison</a> covers that fork.`,
+      },
+      {
+        heading: "The free and low-cost alternatives",
+        body: `If cost is the reason, don't skip the routes below every platform's price: employer EAPs (several fully covered sessions per issue per year, chronically unused), community mental-health centers on sliding scales, university training clinics, group therapy, peer-support groups, warmlines, and the 988 line for any overwhelming moment. And before leaving betterhelp over price, use its financial-aid questionnaire and its insurance coverage check - both lower the number for many people. Our <a href="/free-online-therapy">free online therapy page</a> and <a href="/cheapest-online-therapy">cheapest online therapy page</a> map all of it.`,
+      },
+      {
+        heading: "When betterhelp is still the right answer",
+        body: `For pure talk therapy started fast, betterhelp remains the strongest platform we cover: the largest therapist network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted. If your reason for leaving was one bad match, try a switch first - finding the right therapist takes more than one try more often than not, and the platform makes it painless. Compare everything on our <a href="/">online therapy ranking</a>. In crisis, no platform is the tool: call or text 988 (US), free and open 24/7. This article is general information, not medical advice.`,
+      },
+    ],
+  },
   // ───── Trend-riding coverage (Google Trends, Sep 19 2026) ─────
   // "online family therapy" was the only rising query in the top 10 and had
   // zero coverage; "online therapy near me" / "therapy near me" were only
@@ -305,9 +426,9 @@ export const onlineTherapyArticles: ArticleData[] = [
   },
   {
     slug: "is-betterhelp-legit",
-    title: "Is betterhelp Legit in 2026? The Honest Answer",
+    title: "Is betterhelp Legit or a Scam? The Honest Answer (2026)",
     description:
-      "betterhelp is legitimate - licensed therapists, 9,652 Trustpilot reviews averaging 3.9, and insurance now accepted. The honest answer also covers the FTC settlement and what real users say.",
+      "Is betterhelp legit, or a scam? Legitimate - licensed therapists, 9,652 Trustpilot reviews averaging 3.9, insurance now accepted. The honest answer also covers the FTC settlement, the controversy, and what real users say.",
     category: "Advice",
     readTime: "7 min read",
     publishedAt: UPDATED,

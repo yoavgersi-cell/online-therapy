@@ -28,7 +28,7 @@ export async function generateMetadata({
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
   const title = `Online Therapy in ${s.name} (2026)`;
   const description =
-    `Compare online therapy platforms serving ${s.name}. Licensed ${s.abbr} therapists, video, phone or messaging sessions, and insurance accepted - start from anywhere in ${s.name}.`;
+    `Compare online therapy, virtual counseling and telehealth therapy platforms serving ${s.name}. Licensed ${s.abbr} therapists, video, phone or messaging sessions, and insurance accepted - start from anywhere in ${s.name}.`;
   return {
     title: { absolute: `${title} | Top Online Therapy` },
     description,
@@ -91,6 +91,10 @@ export default async function StatePage({
     {
       question: `Does insurance cover online therapy in ${s.name}?`,
       answer: `Often, but it's always plan-specific rather than state-specific. Talkspace is covered by many major plans and EAPs, betterhelp now accepts insurance, with copays cited from around $23/session for covered members, and headspace's therapy service takes insurance too. Run each platform's coverage check with your plan details before paying out of pocket - it takes minutes and answers the only question that matters for you.`,
+    },
+    {
+      question: `Can I choose a therapist's gender or specialty in ${s.name}?`,
+      answer: `Yes. The platforms we compare ask about your preferences at intake - including a therapist's gender, the concerns you want to work on (anxiety, depression, relationships, grief and more), and, on some platforms, faith or cultural background - and match you from clinicians licensed in ${s.name} who fit. If the first match isn't right, switching is free and normal; many people in ${s.name} change therapists once before settling.`,
     },
     {
       question: `How much does online therapy cost in ${s.name}?`,
@@ -208,6 +212,19 @@ export default async function StatePage({
           <Link href="/" className="font-semibold text-[#1A7A52] hover:underline">comparison</Link>{" "}
           and our{" "}
           <Link href="/reviews" className="font-semibold text-[#1A7A52] hover:underline">in-depth reviews</Link>.
+        </p>
+
+        <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
+          Online Therapy, Virtual Counseling, Telehealth: Same Thing in {s.name}?
+        </h2>
+        <p className="mb-4">
+          Mostly, yes. &quot;Online therapy&quot;, &quot;virtual therapy&quot;, &quot;online counseling&quot; and
+          &quot;telehealth therapy&quot; all describe the same care: sessions with a licensed {s.name} clinician
+          by video, phone, chat or messaging instead of in an office. The one distinction worth knowing is
+          between a <strong>therapist</strong> (talk therapy - the platforms above) and a{" "}
+          <strong>psychiatric clinician</strong> (evaluation and medication management), which only Talkspace
+          offers on-platform here. Whatever you searched for, the platforms that serve {s.name} are the ones
+          compared above.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">

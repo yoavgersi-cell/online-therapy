@@ -894,6 +894,14 @@ export const onlineTherapyConfig: SiteConfig = {
           ],
         },
         {
+          heading: "Which insurance companies do the platforms accept?",
+          body: `<p>Each platform publishes its own list of accepted insurers and employer programs, and those lists change as contracts are added, so we don't reproduce them here - the eligibility check on each site is the source of truth for your plan and your state. What we can say honestly: Talkspace's list is the longest, spanning many major national and regional plans plus employer EAPs; betterhelp's insurance program is newer and narrower; headspace's therapy service accepts insurance with a coverage check on its site. If you're searching for a specific insurer - Cigna, Aetna, UnitedHealthcare, Blue Cross plans and the like - enter your member ID in each platform's check rather than trusting a list on a third-party site, including ours.</p>`,
+        },
+        {
+          heading: "Does Medicare or Medicaid cover online therapy?",
+          body: `<p>Medicare covers telehealth mental-health services, so the question is whether a given platform is enrolled as a Medicare provider in your state - Talkspace has publicly announced accepting Medicare in many states, and its eligibility check confirms whether that applies to you. Medicaid is state-run, so coverage varies by state and platform; run the same check. If a platform isn't in-network for your plan, ask your insurer about out-of-network reimbursement via a superbill, and check the free routes on our <a href="/free-online-therapy">free online therapy page</a>.</p>`,
+        },
+        {
           heading: "Does insurance cover couples or teen therapy online?",
           body: `<p>Not always - individual-therapy coverage doesn't automatically extend to couples or family work, so verify that specifically with your plan before assuming. Coverage for medication management is a separate question again: therapists don't prescribe, and only Talkspace here offers psychiatry - elsewhere a prescriber would be a separate provider with their own coverage. Our guides to <a href="/articles/online-therapy-that-takes-insurance">online therapy that takes insurance</a> and <a href="/articles/does-betterhelp-take-insurance">whether betterhelp takes insurance</a> go deeper.</p>`,
         },
