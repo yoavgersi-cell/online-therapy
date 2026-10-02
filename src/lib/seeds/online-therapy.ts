@@ -913,6 +913,86 @@ export const onlineTherapyConfig: SiteConfig = {
       updatedAt: UPDATED,
     },
     {
+      slug: "best-online-psychiatry",
+      seoTitle: "Best Online Psychiatry (2026): Medication Management by Video, Compared",
+      seoDescription:
+        "Online psychiatry compared: which platform offers evaluation and medication management by video, how insurance applies, what can and can't be prescribed remotely, and how it pairs with therapy.",
+      h1: "Best Online Psychiatry",
+      h2: "Psychiatric evaluation and medication management online - the platform that offers it, and how to start",
+      heroDescription:
+        "Therapists don't prescribe; psychiatric clinicians do. Of the platforms we cover, Talkspace is the one with psychiatry on-platform - here's how it works, what insurance covers, and when to pair it with therapy.",
+      providerOrder: ["talkspace"],
+      editorialSections: [
+        {
+          heading: "Which online therapy platform offers psychiatry?",
+          body: `<p><strong><a href="/reviews/talkspace">Talkspace</a> is the only platform in our coverage with psychiatry on-platform</strong>: an initial evaluation with a psychiatric clinician by video, a prescription sent to your local pharmacy where appropriate, and follow-up visits for medication management - alongside its therapy service, so a therapist and prescriber can stay coordinated. It's in-network with many major insurance plans, and insurance can apply to psychiatry plan-permitting. <a href="/reviews/betterhelp">betterhelp</a> is talk therapy only and <a href="/reviews/headspace">headspace</a>'s app is self-guided practice, so with those a prescriber is a separate provider.</p>`,
+        },
+        {
+          heading: "How does online psychiatry work?",
+          body: `<p>The same rhythm as office-based psychiatry, over video:</p>`,
+          bullets: [
+            "An initial evaluation - longer than a routine visit - where the clinician reviews your history and symptoms and works toward a diagnosis.",
+            "A prescription to your local pharmacy, if medication is appropriate; common medications for anxiety and depression are routinely handled online.",
+            "Follow-up visits to check how you respond and adjust the dose or plan - the part a good service earns its keep on.",
+            "Limits: certain controlled substances face stricter telehealth rules and may require in-person care. A responsible service says so up front.",
+          ],
+        },
+        {
+          heading: "Does insurance cover online psychiatry?",
+          body: `<p>Often, but coverage for psychiatry and coverage for therapy can differ on the same plan, so run Talkspace's eligibility check with psychiatry in mind. For self-pay, psychiatry is priced separately from therapy - typically an initial-visit price and a follow-up price; we haven't verified current rates, so the live numbers are on Talkspace's site. Our <a href="/articles/how-much-does-talkspace-cost">Talkspace cost guide</a> and <a href="/best-online-therapy-with-insurance">insurance guide</a> go deeper.</p>`,
+        },
+        {
+          heading: "Do I need a psychiatrist or a therapist?",
+          body: `<p>A reasonable rule: if you want to work through thoughts, patterns, relationships or life stressors, talk therapy is the natural start. If symptoms are significantly disrupting daily functioning - or a therapist or doctor suggests medication might help - that points to a psychiatric evaluation. Many people use both, and you don't have to decide perfectly in advance; many start with therapy and are referred onward. Our guide to <a href="/articles/therapy-vs-psychiatry">therapist vs psychiatrist</a> covers the distinction, and <a href="/articles/online-psychiatry">online psychiatry</a> explains how to spot a legitimate service.</p>`,
+        },
+        {
+          heading: "How we chose",
+          body: `<p>We looked for a real evaluation with a licensed psychiatric clinician, genuine ongoing follow-up, honest limits about what can be prescribed remotely, and coordination with therapy on the same platform. Only one platform in our coverage meets that bar today; we'll add others as partnerships with psychiatry-capable services come online. See the full field on our <a href="/">online therapy comparison</a>.</p><p><em>This page is general information, not medical advice. If you're in crisis, contact emergency services or, in the US, call or text 988 - free and open 24/7.</em></p>`,
+        },
+      ],
+      updatedAt: "2026-10-02",
+    },
+    {
+      slug: "online-therapy-for-women",
+      seoTitle: "Best Online Therapy for Women (2026): Platforms, Therapist Matching & Cost",
+      seoDescription:
+        "Online therapy for women compared: choosing a female therapist, finding clinicians who work with anxiety, postpartum, relationships and life transitions, what insurance covers, and how to start from home.",
+      h1: "Best Online Therapy for Women",
+      h2: "Choose your therapist's gender and specialty, start from home, and pay through insurance where it applies",
+      heroDescription:
+        "Every platform here lets you state a therapist-gender preference and the concerns you want to work on at intake - anxiety, postpartum, relationships, burnout, life transitions - and matches you from clinicians licensed in your state. Compare the best places to start.",
+      providerOrder: ["betterhelp", "talkspace", "headspace"],
+      editorialSections: [
+        {
+          heading: "What is the best online therapy platform for women?",
+          body: `<p><strong><a href="/reviews/betterhelp">betterhelp</a> is our top pick</strong> because the two things that matter most here - a therapist you actually click with, and sessions that fit around a full life - are where it's strongest: the largest network in the category, a therapist-gender preference and your specific concerns asked at intake, matching in as little as 2 days, video, phone or chat sessions with messaging in between, and free switching until the fit is right. <a href="/reviews/talkspace">Talkspace</a> is the pick if your insurance covers it or medication may enter the picture (it offers psychiatry on-platform, relevant for postpartum and perinatal care). <a href="/reviews/headspace">headspace</a> is the daily practice for stress and sleep alongside - or before - therapy.</p>`,
+        },
+        {
+          heading: "Can I choose a female therapist online?",
+          body: `<p>Yes. The platforms we compare ask about therapist-gender preference during intake, along with the concerns you want to work on and, on some platforms, faith or cultural background, and match you accordingly from clinicians licensed in your state. If the first match isn't right, switching is free and normal - finding the right therapist takes more than one try more often than not.</p>`,
+        },
+        {
+          heading: "What do women commonly seek online therapy for?",
+          body: `<p>The concerns online therapy handles best are the common, treatable ones - and several cluster in women's searches:</p>`,
+          bullets: [
+            "Anxiety and burnout - skills-based approaches like CBT translate especially well online; see our <a href=\"/best-online-therapy-for-anxiety\">anxiety page</a>.",
+            "Postpartum and perinatal mood changes - therapy first, with a psychiatric clinician involved where medication is appropriate (Talkspace has one on-platform).",
+            "Relationship and family strain - individual work, or couples and family formats on our <a href=\"/online-family-therapy\">family therapy page</a>.",
+            "Life transitions - career change, caregiving, divorce, loss - where a consistent weekly rhythm matters more than the format.",
+          ],
+        },
+        {
+          heading: "What does online therapy for women cost?",
+          body: `<p>Same honest rule as everywhere on this site: we don't quote prices we haven't verified, and cost depends on platform, plan and insurance. Run the coverage checks first - Talkspace's eligibility check (a claimed $0 copay for most insured members), betterhelp's at signup (copays cited from around $23/session for covered members, with a financial-aid questionnaire for self-pay), and headspace's for its therapy service - and check whether your employer's EAP includes covered sessions. Our <a href="/articles/online-therapy-cost">cost guide</a> explains the models.</p>`,
+        },
+        {
+          heading: "When is in-person the better call?",
+          body: `<p>Three honest cases: you want to be in a room with someone, you need higher-intensity or coordinated care (severe or complex conditions, or care that must link with local doctors), or you don't have reliable privacy at home. Anything involving safety concerns or crisis calls for immediate help, not an intake queue - in the US, call or text 988, free and open 24/7. Outside those, online therapy is a legitimate, evidence-supported starting point; see our <a href="/">full platform comparison</a>.</p><p><em>This page is general information, not medical advice.</em></p>`,
+        },
+      ],
+      updatedAt: "2026-10-02",
+    },
+    {
       slug: "best-online-therapy-for-anxiety",
       seoTitle: "Best Online Therapy for Anxiety (2026): Platforms Compared",
       seoDescription:

@@ -215,6 +215,17 @@ export default async function StatePage({
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
+          Online Therapy in {citiesPhrase}
+        </h2>
+        <p className="mb-4">
+          Whether you&apos;re searching for an online therapist in {c0}{c1 ? `, ${c1}` : ""}{c2 ? ` or ${c2}` : ""},
+          or you live hours from any of them, the answer is the same platform list: online matching draws
+          from every clinician licensed in {s.name}, not from one city&apos;s practices. That matters most
+          outside the metros, where the local pool is thin, but it helps in the cities too - you can filter
+          for a therapist who works with your specific concern instead of whoever has an opening nearby.
+        </p>
+
+        <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           Online Therapy, Virtual Counseling, Telehealth: Same Thing in {s.name}?
         </h2>
         <p className="mb-4">

@@ -34,6 +34,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "With Insurance", href: "/best-online-therapy-with-insurance" },
       { label: "Anxiety", href: "/best-online-therapy-for-anxiety" },
       { label: "Families & Couples", href: "/online-family-therapy" },
+      { label: "Women", href: "/online-therapy-for-women" },
+      { label: "Psychiatry", href: "/best-online-psychiatry" },
     ],
   },
   {

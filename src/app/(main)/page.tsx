@@ -8,6 +8,7 @@ import { FaqAccordion } from "@/components/faq-accordion";
 import { ExpertByline } from "@/components/expert-byline";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
+import { StateLinks } from "@/components/state-links";
 
 export const revalidate = 60;
 
@@ -166,6 +167,7 @@ export default async function HomePage() {
       </section>
 
       <EditorialContent />
+      <StateLinks />
       <FaqAccordion items={config.faqs} />
     </>
   );
