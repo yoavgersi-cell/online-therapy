@@ -17,41 +17,41 @@ export const onlineTherapyArticles: ArticleData[] = [
   // left to the platform's site until the operator verifies them.
   {
     slug: "how-much-does-talkspace-cost",
-    title: "Talkspace Pricing (2026): Cost With Insurance vs Self-Pay, Explained",
+    title: "Talkspace Pricing (2026): $69-$109/Week Self-Pay, $0-$30 Copays With Insurance",
     description:
-      "How much does Talkspace cost? With insurance: a claimed $0 copay for most members. Without: subscription tiers that depend on messaging vs live sessions, with psychiatry priced separately. How to get your exact number in 5 minutes.",
+      "How much does Talkspace cost? Self-pay: $69/week messaging only, $99/week video + messaging, $109/week with workshops or for couples. Psychiatry $299 initial, $175 follow-up. With insurance: copays typically $0-$30. Full breakdown.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-09-25",
-    updatedAt: "2026-09-25",
+    updatedAt: "2026-10-05",
     heroColor: "#E4F2EA",
     author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
-      "Talkspace is built around insurance: many major plans and employer EAPs cover it, and Talkspace claims most insured members pay a $0 copay.",
-      "Self-pay plans are tiered by what they include - messaging-only, messaging plus live sessions, and psychiatry - so the sticker price depends on the plan, not one flat rate.",
-      "Psychiatry (evaluation and medication management) is priced separately from therapy.",
-      "The only number that matters is yours: Talkspace's eligibility check returns your coverage and cost in minutes, before you commit.",
+      "Self-pay Talkspace is a weekly subscription in three tiers: $69 (messaging only), $99 (video + messaging), $109 (video + messaging + workshops). Couples therapy is $109/week.",
+      "With insurance - Aetna, Cigna, Optum, Anthem, Medicare, TRICARE and many more - you pay a per-session copay, typically $0-$30, and Talkspace says many members pay $0.",
+      "Psychiatry is separate: $299 for the initial evaluation and $175 per follow-up out of pocket.",
+      "A covered plan beats every self-pay tier, so run the eligibility check before anything else.",
     ],
     sections: [
       {
         heading: "How much does Talkspace cost with insurance?",
-        body: `Often far less than people expect - and this is the whole reason Talkspace leads on affordability among the big platforms. It's in-network with many major insurance plans and employee-assistance programs (EAPs), and Talkspace itself claims that most insured members pay a $0 copay. That's the company's own number, so treat it the way we do: as a claim your eligibility check confirms or denies. Enter your insurer and member details on Talkspace's site and it returns your actual coverage and per-session cost before you pay anything. Coverage is plan-specific - the same platform can be free for you and full price for your neighbor - which is why no article, including this one, can quote your copay.`,
+        body: `Often far less than the subscription - and this is the whole reason Talkspace leads on affordability among the big platforms. It's in-network with many major insurers (Aetna, Cigna, Optum and Anthem among them), Medicare and TRICARE, plus employer EAPs. Insured members pay a per-session copay that typically lands in the $10-$30 range, and Talkspace publishes $0 for many members. Which one you get is plan-specific - the same platform can be free for you and $30 a session for your neighbor - so enter your insurer and member details in Talkspace's eligibility check and it returns your actual copay before you pay anything.`,
       },
       {
         heading: "How much does Talkspace cost without insurance?",
-        body: `Self-pay Talkspace is a subscription, and the price depends on the plan tier: a messaging-focused plan (a private room where you write to your therapist and get responses through the week), a plan that adds scheduled live video sessions, and psychiatry as its own service. We haven't verified Talkspace's current self-pay rates, and they change, so we don't print a number we can't stand behind - the current rates are on Talkspace's site at checkout. What we can tell you is how to read them: the real question is the price <em>per live session you'll actually use</em>, not the monthly headline, and a messaging-only plan is a different product from weekly video therapy. Our <a href="/articles/online-therapy-cost">online therapy cost guide</a> explains the models side by side.`,
+        body: `Self-pay Talkspace is a weekly subscription billed on a recurring basis, in three tiers (figures as published by Talkspace, checked October 2026):<table><thead><tr><th>Plan</th><th>Price</th><th>What you get</th></tr></thead><tbody><tr><td><strong>Messaging Only</strong></td><td>$69/week</td><td>Message your therapist anytime, responses five days a week. Individuals and teens (13-17).</td></tr><tr><td><strong>Video + Messaging</strong></td><td>$99/week</td><td>Up to four 30-minute live video sessions a month, plus unlimited messaging.</td></tr><tr><td><strong>Video + Messaging + Workshops</strong></td><td>$109/week</td><td>Everything above plus live weekly workshops.</td></tr><tr><td><strong>Couples Therapy</strong></td><td>$109/week</td><td>Four 30-minute joint video sessions a month, plus unlimited messaging.</td></tr><tr><td><strong>Extra live session</strong></td><td>$65 each</td><td>Add more video sessions to any plan.</td></tr></tbody></table><p>How to read that honestly: the real question is the price <em>per live session you'll actually use</em>. At $99/week with four sessions a month, that's roughly $99 per 30-minute session if you attend them all - and the plan bills whether you attend or not. Messaging Only is a different product from weekly video therapy, not a cheaper version of it. Our <a href="/articles/online-therapy-cost">online therapy cost guide</a> explains the models side by side.</p>`,
       },
       {
         heading: "What about Talkspace psychiatry pricing?",
-        body: `Psychiatry - an initial evaluation with a psychiatric clinician, then follow-ups for medication management - is billed separately from therapy at Talkspace, typically as an initial-visit price and a follow-up price for self-pay, or through insurance where your plan covers it. If medication may be part of your care, run the eligibility check with psychiatry in mind, because coverage for therapy and coverage for psychiatry can differ on the same plan. How remote prescribing works, and its limits, is in <a href="/articles/online-psychiatry">online psychiatry</a>.`,
+        body: `Psychiatry - an initial evaluation with a psychiatric clinician, then follow-ups for medication management - is billed separately from therapy at Talkspace: $299 for the initial evaluation and $175 per follow-up appointment out of pocket, or through insurance where your plan covers it. If medication may be part of your care, run the eligibility check with psychiatry in mind, because coverage for therapy and coverage for psychiatry can differ on the same plan. How remote prescribing works, and its limits, is in <a href="/articles/online-psychiatry">online psychiatry</a>.`,
       },
       {
         heading: "Is Talkspace worth the cost?",
-        body: `If your insurance or EAP covers it, it's very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury, with the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). If you're paying out of pocket, the decision reverts to format and price against <a href="/reviews/betterhelp">betterhelp</a>, which has the larger network and video/phone/chat flexibility and now accepts insurance too - our <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace comparison</a> settles that fork. Full platform verdict in our <a href="/reviews/talkspace">Talkspace review</a>.`,
+        body: `If your insurance or EAP covers it, it's very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury, with the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). If you're paying out of pocket, $99/week for video plus messaging is a real monthly cost, and the decision reverts to format and price against <a href="/reviews/betterhelp">betterhelp</a>, which has the larger network and video/phone/chat flexibility and now accepts insurance too - our <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace comparison</a> settles that fork. Full platform verdict in our <a href="/reviews/talkspace">Talkspace review</a>.`,
       },
       {
         heading: "How do I find my real Talkspace price in five minutes?",
-        body: `Three steps, in order. Run the eligibility check on Talkspace's site with your insurer and member ID - it answers the copay question directly. If you're not covered, ask HR whether your employer's EAP includes Talkspace; EAP sessions are commonly fully covered and chronically unused. Only then compare self-pay tiers at checkout, and compare them against betterhelp's quote for your location (its <a href="/articles/how-much-does-betterhelp-cost">cost model is explained here</a>). Our <a href="/best-online-therapy-with-insurance">insurance-friendly platforms page</a> covers the coverage step in depth. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7. This article is general information, not medical advice.`,
+        body: `Three steps, in order. Run the eligibility check on Talkspace's site with your insurer and member ID - it answers the copay question directly. If you're not covered, ask HR whether your employer's EAP includes Talkspace; EAP sessions are commonly fully covered and chronically unused. Only then pick a self-pay tier - $69, $99 or $109 a week - and compare it against betterhelp's quote for your location (its <a href="/articles/how-much-does-betterhelp-cost">cost model is explained here</a>). Our <a href="/best-online-therapy-with-insurance">insurance-friendly platforms page</a> covers the coverage step in depth. In crisis, cost math is the wrong tool: call or text 988 (US), free and open 24/7. This article is general information, not medical advice.`,
       },
     ],
   },
@@ -115,7 +115,7 @@ export const onlineTherapyArticles: ArticleData[] = [
       },
       {
         heading: "Talkspace - the closest like-for-like alternative",
-        body: `<a href="/reviews/talkspace">Talkspace</a> runs the same basic model - a matched licensed therapist, live sessions plus a messaging room - with two things betterhelp doesn't have: psychiatry with medication management on the same platform, and the broadest insurance story in the category, covered by many major plans and employer EAPs with a claimed $0 copay for most insured members. It also carries the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). The trade-offs: a smaller network than betterhelp's, messaging-first with live video per plan rather than video/phone/chat on demand, and self-pay rates we haven't verified. If medication or insurance is your reason, this is the alternative. Full head-to-head in <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace</a>.`,
+        body: `<a href="/reviews/talkspace">Talkspace</a> runs the same basic model - a matched licensed therapist, live sessions plus a messaging room - with two things betterhelp doesn't have: psychiatry with medication management on the same platform, and the broadest insurance story in the category, covered by many major plans and employer EAPs with a claimed $0 copay for most insured members. It also carries the strongest verified rating in our coverage (4.4 on Trustpilot across 2,370 reviews). The trade-offs: a smaller network than betterhelp's, messaging-first with live video per plan rather than video/phone/chat on demand, and self-pay that runs $69-$109/week. If medication or insurance is your reason, this is the alternative. Full head-to-head in <a href="/betterhelp-vs-talkspace">betterhelp vs Talkspace</a>.`,
       },
       {
         heading: "headspace - if what you wanted was a daily practice",
@@ -500,7 +500,7 @@ export const onlineTherapyArticles: ArticleData[] = [
       },
       {
         heading: "What if my plan doesn't cover Talkspace?",
-        body: 'First check your employer\'s EAP - Talkspace partners with many, and EAP sessions are commonly fully covered and chronically unused. Second, self-pay is available; we haven\'t verified current rates, so check them on the site. Third, compare the other covered doors before paying out of pocket anywhere: <a href="/articles/does-betterhelp-take-insurance">betterhelp now accepts insurance too</a> (copays cited from ~$23/session), and <a href="/reviews/headspace">headspace</a>\'s therapy service accepts insurance as well. Our <a href="/articles/online-therapy-that-takes-insurance">full insurance guide</a> covers all of it, including superbill reimbursement.',
+        body: 'First check your employer\'s EAP - Talkspace partners with many, and EAP sessions are commonly fully covered and chronically unused. Second, self-pay is available: $69/week messaging only, $99/week with live video, $109/week with workshops - see our <a href="/articles/how-much-does-talkspace-cost">Talkspace pricing guide</a>. Third, compare the other covered doors before paying out of pocket anywhere: <a href="/articles/does-betterhelp-take-insurance">betterhelp now accepts insurance too</a> (copays cited from ~$23/session), and <a href="/reviews/headspace">headspace</a>\'s therapy service accepts insurance as well. Our <a href="/articles/online-therapy-that-takes-insurance">full insurance guide</a> covers all of it, including superbill reimbursement.',
       },
       {
         heading: "The bottom line",

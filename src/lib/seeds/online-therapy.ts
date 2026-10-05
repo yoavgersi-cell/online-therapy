@@ -134,7 +134,7 @@ export const onlineTherapyConfig: SiteConfig = {
       highlights: [
         "Most insured members pay a $0 copay (per Talkspace)",
         "Therapy and psychiatry (medication management) on one platform",
-        "App-based care with 24/7 access - sessions plus messaging",
+        "Self-pay from $69/week; psychiatry from $299",
         "Rated 4.4 on Trustpilot (2,370 reviews)",
       ],
       // Live operator affiliate link (Sep 2026).
@@ -276,14 +276,23 @@ export const onlineTherapyConfig: SiteConfig = {
       shortSummary:
         "Online therapy and psychiatry with the broadest insurance story among the big subscription platforms - many major plans and EAPs cover it.",
       reviewIntro:
-        "Talkspace pairs the subscription-therapy format (live sessions plus messaging) with two things betterhelp doesn't have: psychiatry with medication management, and insurance acceptance. Many major insurance plans and employee-assistance programs cover Talkspace, which can turn therapy from a significant monthly out-of-pocket cost into a copay - for eligible plans, that changes the affordability math entirely. Talkspace says most insured members pay a $0 copay - its own claim, but one your eligibility check confirms or denies in minutes - and the app-based format means 24/7 access to your therapy room, not just session slots. It also carries the strongest verified customer rating in our online-therapy coverage: 4.4 on Trustpilot across 2,370 reviews (ahead of betterhelp's 3.9). Coverage is plan-specific, so run its eligibility check with your insurance details before assuming anything. We haven't verified Talkspace's current self-pay rates, so check those on its site if you're paying out of pocket.",
+        "Talkspace pairs the subscription-therapy format (live sessions plus messaging) with two things betterhelp doesn't have: psychiatry with medication management, and insurance acceptance. Many major insurance plans and employee-assistance programs cover Talkspace, which can turn therapy from a significant monthly out-of-pocket cost into a copay - for eligible plans, that changes the affordability math entirely. Talkspace says most insured members pay a $0 copay - its own claim, but one your eligibility check confirms or denies in minutes - and the app-based format means 24/7 access to your therapy room, not just session slots. It also carries the strongest verified customer rating in our online-therapy coverage: 4.4 on Trustpilot across 2,370 reviews (ahead of betterhelp's 3.9). Coverage is plan-specific, so run its eligibility check with your insurance details before assuming anything. Paying out of pocket, Talkspace publishes its tiers: $69/week for messaging only, $99/week with live video sessions, $109/week with workshops, and psychiatry from $299 - the full breakdown is in the pricing section below.",
       keyFeatures: [
         "Insurance coverage through many major plans and EAPs",
         "Therapy and psychiatry (medication management) on one platform",
         "Live video sessions plus ongoing messaging",
         "Eligibility check shows your coverage before you commit",
       ],
-      pricingSummary: PRICING_TBD,
+      pricingSummary:
+        "Talkspace prices two ways. With insurance - many major plans (Aetna, Cigna, Optum, Anthem), Medicare and TRICARE, plus employer EAPs - you pay a per-session copay, published as $0 for many members and typically in the $10-$30 range. Self-pay is a weekly subscription in three tiers: Messaging Only at $69/week, Video + Messaging at $99/week (up to four 30-minute live sessions a month plus unlimited messaging), and Video + Messaging + Workshops at $109/week; couples therapy is $109/week, and extra live sessions are $65 each. Psychiatry is priced separately: $299 for the initial evaluation and $175 per follow-up out of pocket. Figures as published by Talkspace, checked October 2026 - confirm at checkout, and run the eligibility check first, since a covered plan beats every self-pay tier.",
+      pricingPlans: [
+        { name: "Messaging Only", medication: "Message your therapist anytime, responses five days a week", price: "$69", unit: "/week", cadence: "Self-pay subscription", highlights: ["Individuals and teens (13-17)", "No live sessions - add one for $65"] },
+        { name: "Video + Messaging", medication: "Up to four 30-minute live video sessions a month, plus unlimited messaging", price: "$99", unit: "/week", cadence: "Self-pay subscription", highlights: ["The plan most people mean by 'Talkspace therapy'", "Individuals and teens"] },
+        { name: "Video + Messaging + Workshops", medication: "Everything above plus live weekly workshops", price: "$109", unit: "/week", cadence: "Self-pay subscription", highlights: ["Same price as the couples plan"] },
+        { name: "Couples Therapy", medication: "Four 30-minute joint video sessions a month, plus unlimited messaging", price: "$109", unit: "/week", cadence: "Self-pay subscription", highlights: ["One subscription covers both partners"] },
+        { name: "Psychiatry", medication: "Initial evaluation, then follow-ups for medication management", price: "$299", unit: " initial", cadence: "Self-pay; $175 per follow-up", highlights: ["Insurance can apply, plan permitting"] },
+        { name: "With insurance", medication: "Therapy billed through your plan - copay per session", price: "$0-$30", unit: " copay", cadence: "Typical range; many members $0", highlights: ["Aetna, Cigna, Optum, Anthem, Medicare, TRICARE and more", "Run the eligibility check first"] },
+      ],
       treatmentOptions: [
         "Individual talk therapy",
         "Psychiatry - evaluation and medication management",
@@ -297,7 +306,8 @@ export const onlineTherapyConfig: SiteConfig = {
       ],
       cons: [
         "Insurance coverage is plan-specific - verify yours before signing up",
-        "Self-pay rates unverified by us - check the site",
+        "Self-pay adds up: $99/week for video plus messaging is a real monthly cost without coverage",
+        "Live sessions are 30 minutes, not the traditional 50",
         "Therapist choice is match-based rather than browsing profiles",
       ],
       bestFor: [
@@ -305,7 +315,7 @@ export const onlineTherapyConfig: SiteConfig = {
         "People who may need both therapy and medication",
       ],
       finalVerdict:
-        "If your insurance covers it, Talkspace is very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury. If your plan doesn't cover it, the decision reverts to format preference against betterhelp - and you should compare self-pay rates directly on its site, since we haven't verified them. Keep the headspace app as the between-sessions habit either way. Not a crisis service: in the US, call or text 988 in an emergency.",
+        "If your insurance covers it, Talkspace is very hard to beat: therapy plus psychiatry in one place, billed like healthcare instead of a subscription luxury. If your plan doesn't cover it, the decision reverts to format preference against betterhelp - at $99/week for video plus messaging, compare it against betterhelp's quote for your location. Keep the headspace app as the between-sessions habit either way. Not a crisis service: in the US, call or text 988 in an emergency.",
       howItWorks: [
         { timing: "Day 1", title: "Run the eligibility check", detail: "Enter your insurer and member details on Talkspace's site - it returns your coverage and estimated cost in minutes, before you commit." },
         { timing: "Within days", title: "Get matched", detail: "Talkspace proposes a licensed therapist based on your intake; you can request a change if the fit isn't right." },
@@ -313,7 +323,7 @@ export const onlineTherapyConfig: SiteConfig = {
         { timing: "If needed", title: "Add psychiatry", detail: "Evaluation and medication management are available on the same platform, so your therapist and prescriber stay coordinated." },
       ],
       trustBadges: ["Insurance & EAP coverage", "Therapy + psychiatry", "Licensed clinicians"],
-      updatedAt: UPDATED,
+      updatedAt: "2026-10-05",
     },
     {
       slug: "headspace",
@@ -375,7 +385,7 @@ export const onlineTherapyConfig: SiteConfig = {
       description:
         "betterhelp vs Talkspace: both now take insurance, so network size, matching speed, session flexibility and psychiatry decide it. An honest comparison with the verified ratings shown as they are.",
       intro:
-        "betterhelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - betterhelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. With the insurance gap closed, the real differences are the therapy experience itself - betterhelp runs the category's largest network, matches in as little as 2 days, and offers video, phone or chat sessions with easy switching - and scope of care, where Talkspace adds psychiatry with medication management. Track record cuts the other way: Talkspace's 4.4 on Trustpilot (2,370 reviews) leads betterhelp's 3.9 (9,652), and we show both as they are. We haven't verified either platform's current self-pay pricing, so where cost matters we tell you exactly what to check rather than quoting numbers.",
+        "betterhelp and Talkspace are the two defining platforms of online therapy, and both now take insurance - betterhelp with copays cited from around $23/session for covered members, Talkspace with broad plan and EAP coverage and, by its own claim, a $0 copay for most insured members. With the insurance gap closed, the real differences are the therapy experience itself - betterhelp runs the category's largest network, matches in as little as 2 days, and offers video, phone or chat sessions with easy switching - and scope of care, where Talkspace adds psychiatry with medication management. Track record cuts the other way: Talkspace's 4.4 on Trustpilot (2,370 reviews) leads betterhelp's 3.9 (9,652), and we show both as they are. Talkspace's self-pay tiers are published ($69-$109/week); betterhelp's self-pay rate varies by location, so for that one we tell you exactly what to check.",
       verdict:
         "betterhelp wins for most people looking for talk therapy: the largest therapist network in the category, matching in as little as 2 days, three live-session formats (video, phone or chat) plus messaging, and painless switching until the fit is right - and it now takes insurance too, with copays cited from around $23/session, which removes what used to be Talkspace's decisive edge. Talkspace keeps two real advantages worth naming plainly: psychiatry with medication management on the same platform, and the stronger verified rating - 4.4 on Trustpilot (2,370 reviews) against betterhelp's 3.9 (9,652) - so if medication is likely part of your care, or your plan covers Talkspace at a $0 copay and not betterhelp, Talkspace is the better fit. The practical move: run both eligibility checks with your insurance details and let your actual copays decide. Neither platform is a crisis service - in the US, call or text 988.",
       verdictWinnerPoints: [
@@ -440,7 +450,7 @@ export const onlineTherapyConfig: SiteConfig = {
         { feature: "Insurance", provider1Value: "Accepted - copays from ~$23/session", provider2Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", highlight: "both" },
         { feature: "Medication management", provider1Value: "No", provider2Value: "Yes (psychiatry)", highlight: "provider2" },
         { feature: "Trustpilot", provider1Value: "3.9 (9,652 reviews)", provider2Value: "4.4 (2,370 reviews)", highlight: "provider2" },
-        { feature: "Pricing", provider1Value: "Varies by location - verify at signup", provider2Value: "Verify coverage/self-pay on site", highlight: "none" },
+        { feature: "Pricing", provider1Value: "Varies by location - verify at signup", provider2Value: "Self-pay $69-$109/week; copays typically $0-$30", highlight: "none" },
       ],
       updatedAt: UPDATED,
     },
@@ -454,7 +464,7 @@ export const onlineTherapyConfig: SiteConfig = {
       description:
         "Talkspace vs headspace: one is insurance-friendly therapy and psychiatry with a 4.4 Trustpilot record, the other is a meditation app with a newer therapy service and a 1.5 rating. Which you actually need - and when it's both.",
       intro:
-        "Talkspace and headspace get compared because both show up when people search for mental-health help online - but they are built for different jobs. Talkspace is treatment: a matched licensed therapist, live sessions plus messaging, psychiatry with medication management on the same platform, and coverage through many major insurance plans and EAPs. headspace's core product is a daily practice app - guided meditation, sleep and stress content - with a newer online-therapy service that also accepts insurance. The verified ratings sit far apart: Talkspace holds 4.4 on Trustpilot across 2,370 reviews, the best in our coverage, while headspace's profile stands at 1.5 across 770. We haven't verified current pricing at either, so where cost matters we point you to the eligibility and coverage checks rather than quoting numbers.",
+        "Talkspace and headspace get compared because both show up when people search for mental-health help online - but they are built for different jobs. Talkspace is treatment: a matched licensed therapist, live sessions plus messaging, psychiatry with medication management on the same platform, and coverage through many major insurance plans and EAPs. headspace's core product is a daily practice app - guided meditation, sleep and stress content - with a newer online-therapy service that also accepts insurance. The verified ratings sit far apart: Talkspace holds 4.4 on Trustpilot across 2,370 reviews, the best in our coverage, while headspace's profile stands at 1.5 across 770. Talkspace's self-pay tiers run $69-$109/week with psychiatry from $299; headspace's app and therapy prices are on its site, so for those we point you to its checks.",
       verdict:
         "If you need care - persistent low mood, anxiety that interferes, or anything where medication might be part of the picture - Talkspace is the relevant tool: therapy and psychiatry in one place, insurance-friendly with a claimed $0 copay for most insured members, and the strongest verified customer record we track. headspace wins the other contest outright: the best daily stress-and-sleep practice on the market, at app-subscription cost, and often free through employer benefits. Its insurance-accepting therapy service is worth a coverage check, but the 1.5 Trustpilot average argues for reading recent reviews before subscribing to anything. The strongest pattern is often both - Talkspace for the work, the headspace app between sessions. In crisis, skip both: call or text 988 (US).",
       verdictWinnerPoints: [
@@ -507,7 +517,7 @@ export const onlineTherapyConfig: SiteConfig = {
         { feature: "Best at", provider1Value: "Working through real problems", provider2Value: "Daily stress, sleep, focus practice", highlight: "none" },
         { feature: "Insurance", provider1Value: "Many plans & EAPs - $0 copay for most (per Talkspace)", provider2Value: "Therapy service accepts insurance; app is subscription", highlight: "provider1" },
         { feature: "Trustpilot", provider1Value: "4.4 (2,370 reviews)", provider2Value: "1.5 (770 reviews)", highlight: "provider1" },
-        { feature: "Pricing", provider1Value: "Verify coverage/self-pay on site", provider2Value: "App + therapy - verify on site", highlight: "none" },
+        { feature: "Pricing", provider1Value: "Self-pay $69-$109/week; copays typically $0-$30", provider2Value: "App + therapy - verify on site", highlight: "none" },
       ],
       updatedAt: UPDATED,
     },
@@ -606,7 +616,7 @@ export const onlineTherapyConfig: SiteConfig = {
     {
       question: "How much does online therapy cost?",
       answer:
-        "It genuinely varies - by platform, plan, location and insurance - and we only publish prices we've verified, so this page doesn't quote numbers. The fast path to your real cost: run Talkspace's eligibility check, betterhelp's coverage check at signup (and its financial-aid questionnaire if you're paying out of pocket), and see headspace's published app and therapy pricing on its site.",
+        "It genuinely varies - by platform, plan, location and insurance - and we only publish prices we've verified, so this page doesn't quote numbers. Where we do have published numbers: Talkspace self-pay runs $69/week (messaging only) to $99-$109/week (with live video), with copays typically $0-$30 when insured. The fast path to your real cost: run Talkspace's eligibility check, betterhelp's coverage check at signup (and its financial-aid questionnaire if you're paying out of pocket), and see headspace's published app and therapy pricing on its site.",
     },
     {
       question: "Is headspace a substitute for therapy?",
@@ -895,11 +905,11 @@ export const onlineTherapyConfig: SiteConfig = {
         },
         {
           heading: "Which insurance companies do the platforms accept?",
-          body: `<p>Each platform publishes its own list of accepted insurers and employer programs, and those lists change as contracts are added, so we don't reproduce them here - the eligibility check on each site is the source of truth for your plan and your state. What we can say honestly: Talkspace's list is the longest, spanning many major national and regional plans plus employer EAPs; betterhelp's insurance program is newer and narrower; headspace's therapy service accepts insurance with a coverage check on its site. If you're searching for a specific insurer - Cigna, Aetna, UnitedHealthcare, Blue Cross plans and the like - enter your member ID in each platform's check rather than trusting a list on a third-party site, including ours.</p>`,
+          body: `<p>Each platform publishes its own list of accepted insurers and employer programs, and those lists change as contracts are added, so we don't reproduce them here - the eligibility check on each site is the source of truth for your plan and your state. What we can say honestly: Talkspace's list is the longest - it names Aetna, Cigna, Optum and Anthem among many plans, plus Medicare, TRICARE and employer EAPs, with copays typically $0-$30 per session; betterhelp's insurance program is newer and narrower; headspace's therapy service accepts insurance with a coverage check on its site. If you're searching for a specific insurer - Cigna, Aetna, UnitedHealthcare, Blue Cross plans and the like - enter your member ID in each platform's check rather than trusting a list on a third-party site, including ours.</p>`,
         },
         {
           heading: "Does Medicare or Medicaid cover online therapy?",
-          body: `<p>Medicare covers telehealth mental-health services, so the question is whether a given platform is enrolled as a Medicare provider in your state - Talkspace has publicly announced accepting Medicare in many states, and its eligibility check confirms whether that applies to you. Medicaid is state-run, so coverage varies by state and platform; run the same check. If a platform isn't in-network for your plan, ask your insurer about out-of-network reimbursement via a superbill, and check the free routes on our <a href="/free-online-therapy">free online therapy page</a>.</p>`,
+          body: `<p>Medicare covers telehealth mental-health services, so the question is whether a given platform is enrolled as a Medicare provider in your state - Talkspace lists Medicare (and TRICARE) among the coverage it accepts, and its eligibility check confirms whether that applies to you in your state. Medicaid is state-run, so coverage varies by state and platform; run the same check. If a platform isn't in-network for your plan, ask your insurer about out-of-network reimbursement via a superbill, and check the free routes on our <a href="/free-online-therapy">free online therapy page</a>.</p>`,
         },
         {
           heading: "Does insurance cover couples or teen therapy online?",
@@ -939,7 +949,7 @@ export const onlineTherapyConfig: SiteConfig = {
         },
         {
           heading: "Does insurance cover online psychiatry?",
-          body: `<p>Often, but coverage for psychiatry and coverage for therapy can differ on the same plan, so run Talkspace's eligibility check with psychiatry in mind. For self-pay, psychiatry is priced separately from therapy - typically an initial-visit price and a follow-up price; we haven't verified current rates, so the live numbers are on Talkspace's site. Our <a href="/articles/how-much-does-talkspace-cost">Talkspace cost guide</a> and <a href="/best-online-therapy-with-insurance">insurance guide</a> go deeper.</p>`,
+          body: `<p>Often, but coverage for psychiatry and coverage for therapy can differ on the same plan, so run Talkspace's eligibility check with psychiatry in mind. For self-pay, psychiatry is priced separately from therapy: $299 for the initial evaluation and $175 per follow-up, as published by Talkspace (checked October 2026) - confirm at checkout. Our <a href="/articles/how-much-does-talkspace-cost">Talkspace cost guide</a> and <a href="/best-online-therapy-with-insurance">insurance guide</a> go deeper.</p>`,
         },
         {
           heading: "Do I need a psychiatrist or a therapist?",
