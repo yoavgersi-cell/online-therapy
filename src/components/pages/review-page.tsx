@@ -32,7 +32,23 @@ import { ProviderAudit } from "@/components/provider-audit";
 // the "is X legit?" answer falls back to the review's own intro, and the FAQ
 // list is built entirely from the review's researched content. Add an entry
 // here only with real, verified figures.
-const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {};
+const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string }> = {
+  headspace: {
+    title: "headspace Online Review (2026): App, Therapy, Cost & Is It Worth It?",
+    description:
+      "headspace online, reviewed honestly: the meditation and sleep app, the newer therapy service that accepts insurance, what each costs, the 1.5 Trustpilot score, and who it's actually for.",
+  },
+  talkspace: {
+    title: "Talkspace Review (2026): Insurance, Cost, Psychiatry & Is It Worth It?",
+    description:
+      "Talkspace reviewed: therapy plus psychiatry on one platform, many insurance plans and EAPs with a claimed $0 copay, 4.4 on Trustpilot across 2,370 reviews - and the honest caveats before you sign up.",
+  },
+  betterhelp: {
+    title: "betterhelp Reviews (2026): Is It Legit, What It Costs & Our Verdict",
+    description:
+      "betterhelp reviewed: 31,739 therapists, matching in as little as 2 days, insurance now accepted, 3.9 on Trustpilot across 9,652 reviews - plus the FTC settlement and the trade-offs most reviews skip.",
+  },
+};
 
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {};
 
@@ -50,7 +66,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
   // Overrides are written against weight-loss offers (GLP-1 pricing etc.), so
   // a shared provider id on another vertical (directmeds on HRT) falls back to
   // the generic template instead of inheriting weight-loss claims.
-  const override = ctx.vertical === "weight-loss" ? REVIEW_SEO_OVERRIDES[slug] : undefined;
+  const override = REVIEW_SEO_OVERRIDES[slug];
   // Providers reviewed in more than one vertical (Ro, Maximus, PeterMD, Hims)
   // would otherwise emit identical <title>s on two URLs - a duplicate-title
   // signal. Their titles carry the vertical name to differentiate.
