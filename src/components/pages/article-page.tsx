@@ -8,6 +8,8 @@ import { enhanceArticleHtml } from "@/components/prose";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -230,6 +232,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": canonicalUrl(ctx, `/articles/${slug}`),
+      ...pageReviewSchema(`/articles/${slug}`),
     },
     keywords: [
       "online therapy",
@@ -354,6 +357,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               )}
               <span className="text-[12px] text-gray-400">Updated {formattedDate}</span>
             </div>
+            <MedicalReviewBar path={`/articles/${slug}`} className="mt-4 max-w-[760px]" />
           </div>
         </div>
 

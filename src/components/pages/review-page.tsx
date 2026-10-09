@@ -14,6 +14,8 @@ import { ProviderCta } from "@/components/provider-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
@@ -245,6 +247,17 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     ...(REVIEW_EXTRA_FAQS[slug] ?? []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": canonicalUrl(ctx, `/reviews/${slug}`),
+    url: canonicalUrl(ctx, `/reviews/${slug}`),
+    name: `${provider.name} Review`,
+    dateModified: latestUpdate(review.updatedAt),
+    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: ctx.origin },
+    ...pageReviewSchema(`/reviews/${slug}`),
+  };
+
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -286,6 +299,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   return (
     <div className="min-h-screen bg-gray-50">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero header */}
@@ -339,7 +353,15 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     </span>
                   </div>
                 )}
+                {/* Desktop: byline inside the title column. Mobile renders it
+                    full-width below the header row instead (see sm:hidden). */}
+                <div className="hidden sm:block">
+                  <MedicalReviewBar path={`/reviews/${slug}`} className="mt-3 max-w-[760px]" compact />
+                </div>
               </div>
+            </div>
+            <div className="sm:hidden">
+              <MedicalReviewBar path={`/reviews/${slug}`} schema={false} />
             </div>
             <ProviderCta
               href={provider.affiliateUrl}

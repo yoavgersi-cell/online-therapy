@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED, latestUpdate, NOINDEX_ARTICLE_SLUGS } from "@/lib/config";
 import { STATES } from "@/lib/states";
+import { REVIEWERS } from "@/data/reviewers";
 
 const SITE_URL = "https://www.toponlinetherapy.io";
 const FALLBACK_DATE = new Date(CONTENT_LAST_UPDATED);
@@ -31,6 +32,22 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     changeFrequency: p.changeFrequency,
     priority: p.priority,
   }));
+
+  // Site-level trust pages: the medical review policy and reviewer profiles.
+  entries.push({
+    url: `${SITE_URL}/medical-review-policy`,
+    lastModified: new Date("2026-10-09"),
+    changeFrequency: "monthly",
+    priority: 0.4,
+  });
+  for (const r of REVIEWERS) {
+    entries.push({
+      url: `${SITE_URL}/reviewers/${r.slug}`,
+      lastModified: new Date(`${r.since}-01`),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    });
+  }
 
   // Provider reviews
   for (const r of cfg.reviews ?? []) {

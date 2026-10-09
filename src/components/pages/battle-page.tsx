@@ -12,6 +12,8 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
 import { LastUpdated } from "@/components/last-updated";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -211,6 +213,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     const schemaData = {
       "@context": "https://schema.org",
       "@type": "WebPage",
+      ...pageReviewSchema(`/${landing.slug}`),
       name: landing.seoTitle,
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
@@ -263,6 +266,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
             h2: landing.h2,
             description: landing.heroDescription,
           }}
+          byline={<MedicalReviewBar path={`/${landing.slug}`} className="max-w-[760px]" />}
         >
           {landing.editorialSections && landing.editorialSections.length > 0 ? (
             <LandingEditorial sections={landing.editorialSections} />
@@ -435,6 +439,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const schemaData = {
     "@context": "https://schema.org",
     "@type": "Article",
+    ...pageReviewSchema(`/${battle.slug}`),
     headline: battle.title,
     description: battle.description,
     datePublished: "2026-06-01",
@@ -523,6 +528,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <span className="text-gray-300">·</span>
               <LastUpdated date={battleUpdatedAt} />
             </div>
+            <MedicalReviewBar path={`/${battle.slug}`} className="mt-4 max-w-[760px]" />
             <TrustDisclosure disclaimerHref={hubLink(ctx, "/disclaimer")} />
           </div>
         </section>

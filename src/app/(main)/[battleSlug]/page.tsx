@@ -14,6 +14,8 @@ const RESERVED_SLUGS = [
   "disclaimer",
   "find-your-match",
   "how-we-rank",
+  "medical-review-policy",
+  "reviewers",
   "reviews",
 ];
 

@@ -45,6 +45,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
     links: [
       { label: "About", href: "/about" },
       { label: "How We Rank", href: "/how-we-rank" },
+      { label: "Medical Review Policy", href: "/medical-review-policy" },
+      { label: "Our Medical Reviewer", href: "/reviewers/francheska-capistrano" },
       { label: "Contact", href: "/contact" },
       { label: "Medical Disclaimer", href: "/disclaimer" },
       { label: "Privacy Policy", href: "/privacy" },

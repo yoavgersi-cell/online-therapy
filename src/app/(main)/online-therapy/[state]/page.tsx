@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { HeroSection } from "@/components/hero-section";
 import { ComparisonCard } from "@/components/comparison-card";
 import { FaqAccordion } from "@/components/faq-accordion";
-import { ExpertByline } from "@/components/expert-byline";
+import { MedicalReviewBar } from "@/components/medical-review-bar";
+import { pageReviewSchema } from "@/data/reviewers";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { STATES, STATE_BY_SLUG } from "@/lib/states";
@@ -103,7 +104,6 @@ export default async function StatePage({
   ];
 
   const author = config.experts?.[0];
-  const reviewer = config.experts?.[1];
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
 
   const webPageSchema = {
@@ -117,7 +117,7 @@ export default async function StatePage({
     isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: SITE_URL },
     about: { "@type": "Thing", name: `Online therapy in ${s.name}` },
     ...(author && { author: { "@type": "Organization", name: author.name, url: `${SITE_URL}/about` } }),
-    ...(reviewer && { reviewedBy: { "@type": "Organization", name: reviewer.name } }),
+    ...pageReviewSchema(`/online-therapy/${s.slug}`),
   };
 
   const faqSchema = {
@@ -155,14 +155,9 @@ export default async function StatePage({
         description={`Licensed ${s.name} therapists by video, phone, chat or messaging - with insurance accepted and matching in days, from anywhere in the state. Compare your options below.`}
       />
 
-      {(author || reviewer) && (
-        <section className="mx-auto max-w-[1200px] px-4 pt-3.5">
-          <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
-            {author && <ExpertByline expert={author} label="Written by" />}
-            {reviewer && <ExpertByline expert={reviewer} label="Reviewed by" />}
-          </div>
-        </section>
-      )}
+      <section className="mx-auto max-w-[1200px] px-4 pt-3">
+        <MedicalReviewBar path={`/online-therapy/${s.slug}`} className="max-w-[760px]" />
+      </section>
 
       {/* Breadcrumb */}
       <section className="mx-auto max-w-[1200px] px-4 pt-4">

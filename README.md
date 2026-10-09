@@ -26,6 +26,10 @@ Open [http://localhost:3000](http://localhost:3000).
 - `src/lib/site-context.ts`, `src/lib/indexnow.ts` - domain and IndexNow key.
 - `src/components/reddit-community.tsx`, `src/components/medical-sources.tsx` -
   verified community feedback and cited references.
+- `src/data/reviewers.ts` - medical reviewer profile and the page review log.
+  A page says "reviewed" only when its path is in `REVIEW_LOG`; add entries
+  only when the operator confirms the reviewer went through that page.
+  `/medical-review-policy` and `/reviewers/[slug]` render from this file.
 - `src/app/globals.css` - theme tokens.
 
 ## Content rules
