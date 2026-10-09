@@ -50,9 +50,81 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
   },
 };
 
-const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {};
+// "Is X legit?" trust blocks. Verdicts are honest, signals are facts already
+// verified elsewhere on the site (provider highlights, audits, Trustpilot).
+const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
+  betterhelp: {
+    verdict:
+      "Yes - betterhelp is a legitimate online therapy platform, not a scam. Every therapist is a licensed, accredited professional, the service has been operating for over a decade, and it is now accepted by many insurance plans. The honest caveats are real too: a 2023 FTC settlement over past sharing of user data with advertisers, a mixed 3.9 Trustpilot average, and no psychiatry or medication - all covered below rather than skipped.",
+    signals: [
+      "Licensed, accredited therapists - credentials verified before matching",
+      "Matching in as little as 2 days, with free therapist switching",
+      "Insurance now accepted - copays from around $23/session for covered members",
+      "Video, phone or chat sessions plus messaging between sessions",
+    ],
+  },
+  talkspace: {
+    verdict:
+      "Yes - Talkspace is a legitimate, licensed telehealth provider offering both therapy and psychiatry, with the best verified customer rating in our coverage. It is in-network with many major insurers and employer EAPs, and its prices are published openly. The caveats: messaging response times depend on your therapist, and the live-video tiers cost more than messaging alone.",
+    signals: [
+      "Licensed therapists and psychiatric prescribers on one platform",
+      "In-network with many major insurers, Medicare and employer EAPs",
+      "Published self-pay prices: $69-$109/week for therapy, $299 initial psychiatry visit",
+      "Therapy-first company operating since 2012",
+    ],
+  },
+  headspace: {
+    verdict:
+      "Yes - headspace is a legitimate company: one of the best-known meditation apps in the world, with a separate online therapy service staffed by licensed clinicians that accepts insurance. Judge the two products separately, though. The app is self-guided mindfulness, not treatment, and its 1.5 Trustpilot average is strikingly low for so popular a product - read recent reviews before subscribing.",
+    signals: [
+      "Guided meditation, sleep and stress content from an established brand",
+      "Online therapy service with licensed clinicians and an insurance coverage check",
+      "HSA/FSA eligible; many employers include headspace in benefits",
+      "Clear separation between the app subscription and therapy billing",
+    ],
+  },
+};
 
-const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {};
+// Extra per-provider FAQs answering the exact questions Search Console shows
+// searchers asking around each review. Prices here are verified (Oct 2026).
+const REVIEW_EXTRA_FAQS: Record<string, { question: string; answer: string }[]> = {
+  headspace: [
+    {
+      question: "Is headspace online therapy, or just a meditation app?",
+      answer:
+        "Both, as two separate products. The headspace app is a self-guided meditation, sleep and stress library - a daily practice, not treatment. headspace also runs an online therapy service with licensed clinicians by video, which accepts insurance and is billed separately from the app subscription. If you need a therapist, that service or a therapy-first platform like betterhelp or Talkspace is the right comparison; if you want a daily mindfulness habit, the app is.",
+    },
+    {
+      question: "Does headspace online therapy take insurance?",
+      answer:
+        "Yes - headspace's therapy service accepts insurance, with a coverage check on its site, and the app subscription is HSA/FSA eligible. Coverage and copays depend on your plan, so run the check before assuming a price. The meditation app itself is a consumer subscription and is not billed to insurance.",
+    },
+    {
+      question: "Is headspace worth it with a 1.5 Trustpilot rating?",
+      answer:
+        "That rating is real and we show it as is. Low aggregate scores at consumer subscription companies are often driven by billing and cancellation complaints rather than the content itself, so read the recent reviews, understand the renewal terms before you subscribe, and try the free content first. As a daily practice app it remains best in class; as therapy it is a separate service you should evaluate on its own.",
+    },
+  ],
+  betterhelp: [
+    {
+      question: "What are the best alternatives to betterhelp?",
+      answer:
+        "It depends on why you are switching. Talkspace is the closest like-for-like alternative and adds psychiatry plus broad insurance billing, with self-pay plans from $69 to $109 per week. headspace fits if what you really wanted was a daily stress and sleep practice rather than weekly sessions. If cost is the issue, employer EAPs, community clinics and sliding-scale therapists are the genuinely low-cost routes. Our betterhelp alternatives guide walks through each.",
+    },
+    {
+      question: "Is betterhelp a scam?",
+      answer:
+        "No. betterhelp is a real, licensed telehealth operation with accredited therapists, a large network and insurance acceptance. The reasons the question comes up - aggressive advertising, a 2023 FTC settlement over past data sharing, and a mixed 3.9 Trustpilot average - are worth knowing, and our review and 'is betterhelp legit' guide cover them in full.",
+    },
+  ],
+  talkspace: [
+    {
+      question: "How much does Talkspace cost without insurance?",
+      answer:
+        "Talkspace's self-pay therapy plans are $69 per week for messaging only, $99 per week for video plus messaging, and $109 per week for video, messaging and workshops; couples therapy is $109 per week and extra live sessions are $65 each. Psychiatry is $299 for the initial evaluation and $175 per follow-up. With insurance, copays typically land between $0 and $30, and Talkspace publishes $0 for many members.",
+    },
+  ],
+};
 
 
 export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Metadata> {
@@ -169,10 +241,8 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
       ? { question: `Who is ${provider.name} best for?`, answer: `${provider.name} is best for ${review.bestFor.join("; ")}.` }
       : null,
     { question: `Is ${provider.name} worth it?`, answer: review.finalVerdict },
-    // Extra FAQs are all researched against weight-loss offers, so they only
-    // apply there - a provider id shared across verticals (e.g. directmeds on
-    // HRT) must not inherit another vertical's prices and shipping claims.
-    ...(ctx.vertical === "weight-loss" ? REVIEW_EXTRA_FAQS[slug] ?? [] : []),
+    // Extra FAQs are researched per provider on this single-vertical site.
+    ...(REVIEW_EXTRA_FAQS[slug] ?? []),
   ].filter((f): f is { question: string; answer: string } => !!f && !!f.answer);
 
   const faqSchema = {
@@ -195,6 +265,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
   const clusterSlugs = [
     { slug: `is-${provider.id}-legit`, label: `Is ${provider.name} legit?` },
     { slug: `${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
+    { slug: `how-much-does-${provider.id}-cost`, label: `How much does ${provider.name} cost?` },
     { slug: `${provider.id}-alternatives`, label: `Best ${provider.name} alternatives` },
   ].filter((c) => (config.articles ?? []).some((a) => a.slug === c.slug));
 

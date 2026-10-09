@@ -21,6 +21,8 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Therapy That Takes Insurance", href: "/articles/online-therapy-that-takes-insurance" },
       { label: "Online Therapy Cost", href: "/articles/online-therapy-cost" },
       { label: "How to Choose a Platform", href: "/articles/how-to-choose-an-online-therapy-platform" },
+      { label: "betterhelp Alternatives", href: "/articles/betterhelp-alternatives" },
+      { label: "Is betterhelp Legit?", href: "/articles/is-betterhelp-legit" },
       { label: "Online Therapy by State", href: "/online-therapy" },
       { label: "All Guides", href: "/articles" },
     ],

@@ -113,7 +113,9 @@ export function EditorialContent() {
         <li>
           <strong>You want talk therapy, started fast:</strong>{" "}
           <Link href="/reviews/betterhelp" className={link}>betterhelp</Link>{" "}
-          - the largest network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted (copays from ~$23/session for covered members).
+          - the largest network, matching in as little as 2 days, video/phone/chat sessions with messaging in between, easy switching, and insurance now accepted (copays from ~$23/session for covered members). Not sold on it? Our{" "}
+          <Link href="/articles/betterhelp-alternatives" className={link}>betterhelp alternatives</Link>{" "}
+          guide matches each option to the reason you&rsquo;d switch.
         </li>
         <li>
           <strong>You have insurance, or might need medication too:</strong>{" "}
