@@ -185,9 +185,116 @@ export interface PageReview {
   reviewedAt: string; // YYYY-MM-DD
 }
 
-// No page on this site has been reviewed yet. When the operator confirms a
-// review pass, list the paths here with the date it happened.
-export const REVIEW_LOG: Record<string, PageReview> = {};
+// 2026-10-09: full-site review by Francheska Capistrano - every content page
+// that carried the review bar on that date (operator-confirmed): homepage,
+// reviews and articles indexes, /online-therapy and its 51 state pages, How We
+// Rank, the 3 provider reviews, 3 comparisons, 8 landing pages and 22 guides.
+// Pages created after this date are NOT covered; add them to REVIEWED_LATER
+// when reviewed.
+const REVIEWED_2026_10_09: string[] = [
+  "/",
+  "/reviews",
+  "/articles",
+  "/online-therapy",
+  "/how-we-rank",
+  "/reviews/betterhelp",
+  "/reviews/talkspace",
+  "/reviews/headspace",
+  "/betterhelp-vs-talkspace",
+  "/talkspace-vs-headspace",
+  "/headspace-vs-betterhelp",
+  "/online-therapy-for-beginners",
+  "/free-online-therapy",
+  "/online-family-therapy",
+  "/cheapest-online-therapy",
+  "/best-online-therapy-with-insurance",
+  "/best-online-psychiatry",
+  "/online-therapy-for-women",
+  "/best-online-therapy-for-anxiety",
+  "/articles/how-much-does-talkspace-cost",
+  "/articles/how-much-does-headspace-cost",
+  "/articles/betterhelp-alternatives",
+  "/articles/what-is-family-therapy",
+  "/articles/online-therapy-near-me",
+  "/articles/cbt-online",
+  "/articles/online-therapy-that-takes-insurance",
+  "/articles/online-therapy-vs-in-person",
+  "/articles/how-to-choose-an-online-therapy-platform",
+  "/articles/free-and-low-cost-therapy-options",
+  "/articles/does-betterhelp-take-insurance",
+  "/articles/is-betterhelp-legit",
+  "/articles/does-talkspace-take-insurance",
+  "/articles/how-much-does-betterhelp-cost",
+  "/articles/online-couples-therapy",
+  "/articles/does-online-therapy-work",
+  "/articles/therapy-vs-psychiatry",
+  "/articles/online-psychiatry",
+  "/articles/online-therapy-for-anxiety",
+  "/articles/online-therapy-for-depression",
+  "/articles/types-of-therapy",
+  "/articles/online-therapy-cost",
+  "/online-therapy/alabama",
+  "/online-therapy/alaska",
+  "/online-therapy/arizona",
+  "/online-therapy/arkansas",
+  "/online-therapy/california",
+  "/online-therapy/colorado",
+  "/online-therapy/connecticut",
+  "/online-therapy/delaware",
+  "/online-therapy/florida",
+  "/online-therapy/georgia",
+  "/online-therapy/hawaii",
+  "/online-therapy/idaho",
+  "/online-therapy/illinois",
+  "/online-therapy/indiana",
+  "/online-therapy/iowa",
+  "/online-therapy/kansas",
+  "/online-therapy/kentucky",
+  "/online-therapy/louisiana",
+  "/online-therapy/maine",
+  "/online-therapy/maryland",
+  "/online-therapy/massachusetts",
+  "/online-therapy/michigan",
+  "/online-therapy/minnesota",
+  "/online-therapy/mississippi",
+  "/online-therapy/missouri",
+  "/online-therapy/montana",
+  "/online-therapy/nebraska",
+  "/online-therapy/nevada",
+  "/online-therapy/new-hampshire",
+  "/online-therapy/new-jersey",
+  "/online-therapy/new-mexico",
+  "/online-therapy/new-york",
+  "/online-therapy/north-carolina",
+  "/online-therapy/north-dakota",
+  "/online-therapy/ohio",
+  "/online-therapy/oklahoma",
+  "/online-therapy/oregon",
+  "/online-therapy/pennsylvania",
+  "/online-therapy/rhode-island",
+  "/online-therapy/south-carolina",
+  "/online-therapy/south-dakota",
+  "/online-therapy/tennessee",
+  "/online-therapy/texas",
+  "/online-therapy/utah",
+  "/online-therapy/vermont",
+  "/online-therapy/virginia",
+  "/online-therapy/washington",
+  "/online-therapy/west-virginia",
+  "/online-therapy/wisconsin",
+  "/online-therapy/wyoming",
+  "/online-therapy/washington-dc",
+];
+
+// Pages published and reviewed after the full-site pass.
+const REVIEWED_LATER: Record<string, PageReview> = {};
+
+export const REVIEW_LOG: Record<string, PageReview> = {
+  ...Object.fromEntries(
+    REVIEWED_2026_10_09.map((p) => [p, { reviewer: "francheska-capistrano", reviewedAt: "2026-10-09" }]),
+  ),
+  ...REVIEWED_LATER,
+};
 
 export function getReviewer(slug: string = SITE_REVIEWER_SLUG): Reviewer | undefined {
   return REVIEWERS.find((r) => r.slug === slug);
