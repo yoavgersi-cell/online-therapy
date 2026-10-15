@@ -14,6 +14,7 @@ import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-re
 import { LastUpdated } from "@/components/last-updated";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { orgRef, providerEntity, WEBSITE_ID } from "@/lib/geo";
 import { ProviderCta } from "@/components/provider-cta";
 import { BattleStickyCta } from "@/components/battle-sticky-cta";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -218,7 +219,13 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
       description: landing.seoDescription,
       url: canonicalUrl(ctx, `/${landing.slug}`),
       dateModified: landing.updatedAt || CONTENT_LAST_UPDATED,
-      publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+      inLanguage: "en-US",
+      isPartOf: { "@id": WEBSITE_ID },
+      publisher: orgRef(),
+      about: providerOrder
+        .map((id) => config.providers.find((pr) => pr.id === id))
+        .filter((p): p is NonNullable<typeof p> => !!p)
+        .map(providerEntity),
     };
 
     const itemListSchema = {
@@ -444,8 +451,11 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
     description: battle.description,
     datePublished: "2026-06-01",
     dateModified: battleUpdatedAt,
-    author: { "@type": "Organization", name: ctx.brandTeam, url: ctx.origin },
-    publisher: { "@type": "Organization", name: ctx.brandDomain, url: ctx.origin },
+    inLanguage: "en-US",
+    isPartOf: { "@id": WEBSITE_ID },
+    author: orgRef(),
+    publisher: orgRef(),
+    about: [p1, p2].filter((p): p is NonNullable<typeof p> => !!p).map(providerEntity),
     mainEntityOfPage: canonicalUrl(ctx, `/${battle.slug}`),
   };
 

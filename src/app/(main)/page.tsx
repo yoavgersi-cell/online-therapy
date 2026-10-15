@@ -7,6 +7,7 @@ import { EditorialContent } from "@/components/editorial-content";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { orgRef, providerEntity, WEBSITE_ID } from "@/lib/geo";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { StateLinks } from "@/components/state-links";
@@ -99,18 +100,13 @@ export default async function HomePage() {
     inLanguage: "en-US",
     datePublished: "2026-06-01",
     dateModified: CONTENT_LAST_UPDATED,
-    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: SITE_URL },
-    about: { "@type": "Thing", name: "Online therapy platforms" },
+    isPartOf: { "@id": WEBSITE_ID },
+    about: displayList.map((p) => providerEntity(p)),
     ...(author && {
       author: { "@type": "Organization", name: author.name, url: `${SITE_URL}/about` },
     }),
     ...pageReviewSchema("/"),
-    publisher: {
-      "@type": "Organization",
-      name: "Top Online Therapy",
-      url: SITE_URL,
-      logo: { "@type": "ImageObject", url: `${SITE_URL}/icon.png` },
-    },
+    publisher: orgRef(),
     mainEntity: {
       "@type": "ItemList",
       itemListElement: displayList.map((product, index) => ({

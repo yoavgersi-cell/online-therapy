@@ -10,6 +10,7 @@ import { Breadcrumbs } from "@/components/breadcrumbs";
 import { ExpertByline } from "@/components/expert-byline";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { orgRef, providerEntity, citations, WEBSITE_ID } from "@/lib/geo";
 import { MedicalSources } from "@/components/medical-sources";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
@@ -197,6 +198,11 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     0
   );
 
+  // Platforms this guide actually discusses -> schema `about`, so answer
+  // engines tie the guide to the right entities (official sites, not ours).
+  const bodyText = article.sections.map((s) => `${s.heading} ${s.body}`).join(" ").toLowerCase();
+  const mentionedProviders = config.providers.filter((p) => bodyText.includes(p.name.toLowerCase()));
+
   // JSON-LD Article schema (enhanced)
   const articleSchema = {
     "@context": "https://schema.org",
@@ -207,6 +213,12 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+    isPartOf: { "@id": WEBSITE_ID },
+    ...(mentionedProviders.length > 0 && { about: mentionedProviders.map(providerEntity) }),
+    citation: citations(ctx.vertical),
+    ...(article.keyTakeaways?.length && { abstract: article.keyTakeaways.join(" ") }),
     articleSection: article.category,
     author: author
       ? {
@@ -220,15 +232,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
           name: article.author || ctx.brandDomain,
           url: ctx.origin,
         },
-    publisher: {
-      "@type": "Organization",
-      name: ctx.brandDomain,
-      url: ctx.origin,
-      logo: {
-        "@type": "ImageObject",
-        url: `${ctx.origin}/logo-mark.png`,
-      },
-    },
+    publisher: orgRef(),
     mainEntityOfPage: {
       "@type": "WebPage",
       "@id": canonicalUrl(ctx, `/articles/${slug}`),

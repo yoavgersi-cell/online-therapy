@@ -263,6 +263,12 @@ export const onlineTherapyArticles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EAF5F0",
     author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Talkspace is the platform built around insurance: many major plans and employer EAPs cover its therapy and psychiatry, with copays typically $0-$30 and $0 for many members.",
+      "betterhelp now accepts insurance too, with copays cited from around $23 per session for covered members, plus a financial-aid questionnaire for self-pay.",
+      "headspace's therapy service accepts insurance with a coverage check on its site; the meditation app itself is a consumer subscription.",
+      "If nothing is covered, ask your insurer about out-of-network reimbursement via a superbill, and check whether your employer's EAP includes free sessions.",
+    ],
     sections: [
       {
         heading: "Does insurance cover online therapy?",
@@ -297,6 +303,12 @@ export const onlineTherapyArticles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#E4F2EA",
     author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Online therapy fits best when access is the bottleneck: few local therapists, a schedule that fights fixed appointments, or difficulty leaving home.",
+      "Platforms match from therapists licensed across your whole state, not just your zip code, which widens choice and shortens the wait.",
+      "Consistency drives outcomes more than format - pick the option you will still be attending in month three.",
+      "Neither format is a crisis service: in the US, call or text 988 now if you are in danger.",
+    ],
     sections: [
       {
         heading: "Is online therapy as good as in-person therapy?",
@@ -331,6 +343,12 @@ export const onlineTherapyArticles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#EEF7F0",
     author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Decide first whether you need a licensed therapist (betterhelp, Talkspace) or a daily mindfulness practice (headspace) - they are different products.",
+      "If medication might be part of your care, start on a platform with psychiatry: Talkspace offers evaluation and medication management alongside therapy.",
+      "Run the free insurance eligibility checks before comparing prices - a covered platform at copay rates beats almost any self-pay deal.",
+      "Session formats differ: betterhelp offers video, phone or chat plus messaging; Talkspace is messaging-first with live video by plan; headspace is an app-based practice.",
+    ],
     sections: [
       {
         heading: "Do you need therapy - or a daily practice?",
@@ -361,6 +379,12 @@ export const onlineTherapyArticles: ArticleData[] = [
     updatedAt: UPDATED,
     heroColor: "#E3F1EC",
     author: "Top Online Therapy Editorial Team",
+    keyTakeaways: [
+      "Genuinely free routes exist: employer EAP sessions, community and university training clinics, and the 988 Lifeline for crisis support.",
+      "With insurance, online therapy can drop to copay level - run the eligibility checks at Talkspace and betterhelp before paying out of pocket.",
+      "Out of pocket, ask about sliding-scale fees and use betterhelp's financial-aid questionnaire if you go the subscription route.",
+      "Money should narrow your options, not close them: check benefits first, then insurance, then local clinics, then subscriptions.",
+    ],
     sections: [
       {
         heading: "Is free therapy a real thing?",

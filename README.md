@@ -32,6 +32,16 @@ Open [http://localhost:3000](http://localhost:3000).
   `/medical-review-policy` and `/reviewers/[slug]` render from this file.
 - `src/app/globals.css` - theme tokens.
 
+## GEO (AI answer engines)
+
+- `src/lib/geo.ts` - the single Organization/WebSite entities (stable `@id`s)
+  every page's JSON-LD references, provider entities with official sites, the
+  citation list, and the AI crawlers `robots.ts` names explicitly.
+- `src/app/llms.txt/route.ts` - generated `/llms.txt` site map for AI
+  assistants, built from the same config as the pages.
+- Articles carry `keyTakeaways` (rendered and emitted as schema `abstract`),
+  question-form headings, visible update dates and a Sources section.
+
 ## Content rules
 
 Mental-health content is YMYL at its most sensitive. Keep every crisis-adjacent

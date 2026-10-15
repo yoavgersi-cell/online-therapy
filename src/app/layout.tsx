@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { MetaPixel } from "@/components/meta-pixel";
 import { GoogleAnalytics } from "@/components/google-analytics";
 import { hreflangLanguages } from "@/lib/regions";
+import { organizationSchema, webSiteSchema } from "@/lib/geo";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -82,35 +83,10 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="min-h-full flex flex-col overflow-x-hidden">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Top Online Therapy",
-              url: SITE_URL,
-              areaServed: { "@type": "Country", name: "United States" },
-              description:
-                "Independent guides and platform comparisons for online therapy and mental-health care - expert reviews, pricing research, and side-by-side comparisons.",
-              sameAs: [],
-            }),
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "Top Online Therapy",
-              alternateName: ["toponlinetherapy.io", "Top Online Therapy .io"],
-              url: SITE_URL,
-              description:
-                "Compare trusted online therapy platforms side by side.",
-            }),
-          }}
-        />
+        {/* One Organization + WebSite entity (stable @ids) that every page's
+            publisher / isPartOf references - see src/lib/geo.ts. */}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema()) }} />
         <MetaPixel />
         <GoogleAnalytics />
         <Analytics />

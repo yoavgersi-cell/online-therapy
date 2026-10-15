@@ -6,6 +6,7 @@ import { ComparisonCard } from "@/components/comparison-card";
 import { FaqAccordion } from "@/components/faq-accordion";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { orgRef, WEBSITE_ID } from "@/lib/geo";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { STATES, STATE_BY_SLUG } from "@/lib/states";
@@ -114,7 +115,8 @@ export default async function StatePage({
     url,
     inLanguage: "en-US",
     dateModified: CONTENT_LAST_UPDATED,
-    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: SITE_URL },
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher: orgRef(),
     about: { "@type": "Thing", name: `Online therapy in ${s.name}` },
     ...(author && { author: { "@type": "Organization", name: author.name, url: `${SITE_URL}/about` } }),
     ...pageReviewSchema(`/online-therapy/${s.slug}`),

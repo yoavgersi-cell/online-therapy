@@ -16,6 +16,7 @@ import { ExpertByline } from "@/components/expert-byline";
 import { LastUpdated } from "@/components/last-updated";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
+import { orgRef, providerEntity, citations, WEBSITE_ID } from "@/lib/geo";
 import { PromoPopup } from "@/components/promo-popup";
 import { resolvePromoPopup } from "@/lib/promo-popups";
 import { TrustDisclosure } from "@/components/medical-sources";
@@ -253,8 +254,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
     "@id": canonicalUrl(ctx, `/reviews/${slug}`),
     url: canonicalUrl(ctx, `/reviews/${slug}`),
     name: `${provider.name} Review`,
+    description: review.shortSummary,
     dateModified: latestUpdate(review.updatedAt),
-    isPartOf: { "@type": "WebSite", name: "Top Online Therapy", url: ctx.origin },
+    inLanguage: "en-US",
+    isPartOf: { "@id": WEBSITE_ID },
+    publisher: orgRef(),
+    about: providerEntity(provider),
+    citation: citations(ctx.vertical),
     ...pageReviewSchema(`/reviews/${slug}`),
   };
 
