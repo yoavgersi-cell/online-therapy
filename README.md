@@ -42,6 +42,15 @@ Open [http://localhost:3000](http://localhost:3000).
 - Articles carry `keyTakeaways` (rendered and emitted as schema `abstract`),
   question-form headings, visible update dates and a Sources section.
 
+## Weekly SEO / GEO audit
+
+`npm run seo:audit [baseUrl]` crawls a running build (default
+`http://localhost:3000`): every sitemap URL, robots.txt, llms.txt, internal
+links, titles, descriptions, canonicals, JSON-LD validity, review-log coverage
+and unverified prices. Exit code 1 means a blocking issue. A scheduled Claude
+routine runs it weekly on a fresh build, fixes safe issues under the content
+rules below, and reports.
+
 ## Content rules
 
 Mental-health content is YMYL at its most sensitive. Keep every crisis-adjacent
