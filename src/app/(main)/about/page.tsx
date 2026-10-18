@@ -65,6 +65,13 @@ export default async function AboutPage() {
             compare, and review the major platforms so you can find the right fit for your
             needs, budget, and privacy - without spending hours doing the research yourself.
           </p>
+          <p className="mt-4 text-[16px] leading-[1.75] text-gray-600">
+            Top Online Therapy is published by the team behind{" "}
+            <a href="https://www.treatmentshub.com" className="font-semibold text-[#191919] underline underline-offset-4">
+              Treatments Hub
+            </a>
+            , which covers weight loss, hair loss, HRT, TRT and online therapy.
+          </p>
         </section>
 
         {/* What we do - icons grid */}
