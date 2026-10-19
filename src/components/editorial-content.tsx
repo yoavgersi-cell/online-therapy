@@ -57,7 +57,11 @@ export function EditorialContent() {
         suggest: insurance coverage and copays vary sharply between them, some are therapy-first and some are built
         around a daily practice app, and one of the best-known names isn&rsquo;t primarily therapy at all. We compare
         them on exactly those lines - with real published information and verified customer ratings, never invented
-        numbers. Read our{" "}
+        numbers. New to all of this? Start with our{" "}
+        <Link href="/articles/online-therapy-guide" className={link}>
+          complete guide to online therapy
+        </Link>
+        . Otherwise, read our{" "}
         <Link href="/reviews" className={link}>
           platform reviews
         </Link>{" "}

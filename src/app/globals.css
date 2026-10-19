@@ -180,6 +180,19 @@ html[data-hub] .hub-name {
     white-space: nowrap;
   }
 }
+.article-body h3 {
+  margin: 1.5em 0 0.45em;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.35;
+  color: #191919;
+}
+.article-body h3 + p,
+.article-body h3 + ul,
+.article-body h3 + ol,
+.article-body h3 + table {
+  margin-top: 0.35em;
+}
 .article-body .qa {
   margin: 0 0 1.1em;
   padding: 14px 18px;

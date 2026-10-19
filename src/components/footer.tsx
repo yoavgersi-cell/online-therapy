@@ -17,6 +17,7 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   {
     title: "Guides",
     links: [
+      { label: "Complete Guide to Online Therapy", href: "/articles/online-therapy-guide" },
       { label: "Does Online Therapy Work", href: "/articles/does-online-therapy-work" },
       { label: "Therapy That Takes Insurance", href: "/articles/online-therapy-that-takes-insurance" },
       { label: "Online Therapy Cost", href: "/articles/online-therapy-cost" },
