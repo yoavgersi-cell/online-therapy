@@ -109,7 +109,11 @@ export function EditorialContent() {
         <Link href="/articles/online-therapy-that-takes-insurance" className={link}>
           insurance guide
         </Link>{" "}
-        walks through the whole thing, including out-of-network reimbursement when nothing is covered.
+        walks through the whole thing, and our{" "}
+        <Link href="/articles/does-insurance-cover-online-therapy" className={link}>
+          complete guide to insurance and online therapy
+        </Link>{" "}
+        covers copays, deductibles, Medicare, Medicaid, EAPs and out-of-network reimbursement in depth.
       </p>
 
       <h3 className="mb-3 mt-8 text-[20px] font-bold text-[#191919]">Which platform fits which person</h3>

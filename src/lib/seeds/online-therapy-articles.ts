@@ -276,7 +276,7 @@ export const onlineTherapyArticles: ArticleData[] = [
       },
       {
         heading: "Which platforms accept insurance?",
-        body: 'One platform in our coverage is built around insurance: <a href="/reviews/talkspace">Talkspace</a> - subscription therapy and psychiatry, covered by many major plans and employer EAPs, with a claimed $0 copay for most insured members. Even <a href="/reviews/betterhelp">betterhelp</a>, long the holdout, now accepts insurance - with copays cited from around $23/session for covered members (plus a financial-aid questionnaire for self-pay) - and <a href="/reviews/headspace">headspace</a> - best known for its meditation app - now offers online therapy that accepts insurance too, with a coverage check on its site.',
+        body: '<p>This is the short version. For the full mechanics of coverage - copays, deductibles, parity, Medicare, Medicaid, EAPs, superbills and privacy - see our <a href="/articles/does-insurance-cover-online-therapy">complete guide to insurance and online therapy</a>.</p>One platform in our coverage is built around insurance: <a href="/reviews/talkspace">Talkspace</a> - subscription therapy and psychiatry, covered by many major plans and employer EAPs, with a claimed $0 copay for most insured members. Even <a href="/reviews/betterhelp">betterhelp</a>, long the holdout, now accepts insurance - with copays cited from around $23/session for covered members (plus a financial-aid questionnaire for self-pay) - and <a href="/reviews/headspace">headspace</a> - best known for its meditation app - now offers online therapy that accepts insurance too, with a coverage check on its site.',
       },
       {
         heading: "How do I check if my plan covers a platform?",

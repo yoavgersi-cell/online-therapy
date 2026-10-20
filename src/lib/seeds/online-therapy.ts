@@ -1,6 +1,7 @@
 import type { SiteConfig } from "@/lib/config";
 import { onlineTherapyArticles } from "./online-therapy-articles";
 import { onlineTherapyGuideArticle } from "./online-therapy-guide-article";
+import { onlineTherapyInsuranceGuideArticle } from "./online-therapy-insurance-guide-article";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online therapy vertical content - toponlinetherapy.io
@@ -592,7 +593,7 @@ export const onlineTherapyConfig: SiteConfig = {
   ],
 
   // The pillar guide leads the list so it is the featured article on /articles.
-  articles: [onlineTherapyGuideArticle, ...onlineTherapyArticles],
+  articles: [onlineTherapyGuideArticle, onlineTherapyInsuranceGuideArticle, ...onlineTherapyArticles],
 
   faqs: [
     {
@@ -893,7 +894,7 @@ export const onlineTherapyConfig: SiteConfig = {
       editorialSections: [
         {
           heading: "Which online therapy platforms take insurance?",
-          body: `<p>All three platforms in our coverage do. <strong><a href="/reviews/talkspace">Talkspace</a></strong> is built around it - covered by many major plans and employer EAPs, with a claimed $0 copay for most insured members that its eligibility check confirms in minutes - and insurance can apply to its psychiatry service too, plan permitting. <strong><a href="/reviews/betterhelp">betterhelp</a></strong>, long the platform that deliberately skipped insurance, now accepts it, with copays cited from around $23/session for covered members; you enter your plan details at signup and the coverage check answers before you commit. <strong><a href="/reviews/headspace">headspace</a></strong>'s online-therapy service accepts insurance too, with a coverage check on its site (and the service is HSA/FSA eligible); note that the headspace app itself is a separate subscription, not an insurance product.</p>`,
+          body: `<p>This page ranks the platforms by how well they work with insurance. For the mechanics - copays, deductibles, parity rules, Medicare, Medicaid, EAPs and superbills - read our <a href="/articles/does-insurance-cover-online-therapy">complete guide to insurance and online therapy</a>.</p><p>All three platforms in our coverage do. <strong><a href="/reviews/talkspace">Talkspace</a></strong> is built around it - covered by many major plans and employer EAPs, with a claimed $0 copay for most insured members that its eligibility check confirms in minutes - and insurance can apply to its psychiatry service too, plan permitting. <strong><a href="/reviews/betterhelp">betterhelp</a></strong>, long the platform that deliberately skipped insurance, now accepts it, with copays cited from around $23/session for covered members; you enter your plan details at signup and the coverage check answers before you commit. <strong><a href="/reviews/headspace">headspace</a></strong>'s online-therapy service accepts insurance too, with a coverage check on its site (and the service is HSA/FSA eligible); note that the headspace app itself is a separate subscription, not an insurance product.</p>`,
         },
         {
           heading: "How does insurance coverage for online therapy work?",
