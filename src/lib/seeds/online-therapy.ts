@@ -878,8 +878,20 @@ export const onlineTherapyConfig: SiteConfig = {
           heading: "How we chose the cheapest online therapy",
           body: `<p>We weighed how low each platform's real cost can go for a typical person - insurance acceptance, financial aid, discounts and employer benefits - against what you actually get for it: licensed clinicians, session formats and switching. We never rank a platform higher for being cheap if it cuts the care. Prices change often and we only publish figures we've verified, so confirm your number on each platform's site; see the full field on our <a href="/">online therapy comparison</a>.</p><p><em>This page is general information, not medical advice. In crisis in the US, call or text 988.</em></p>`,
         },
+        {
+          heading: "How much does the cheapest online therapy cost per week?",
+          body: `<p>The lowest verified published price in our coverage is <strong>Talkspace's messaging-only plan at $69 per week</strong>, with its video tiers at $99 and $109 per week and extra live sessions at $65 each. betterhelp quotes its subscription at signup - the range varies by location and preferences - and lowers it through a financial-aid questionnaire for people on lower incomes; we have not independently verified the current range, so we do not print one. With insurance, both are beaten outright: copays on in-network platforms typically land between $0 and $30, and Talkspace publishes $0 for many members.</p><table><thead><tr><th>Option</th><th>Verified price</th><th>Best for</th></tr></thead><tbody><tr><td>Talkspace Messaging Only</td><td>$69 per week</td><td>People who process in writing; the lowest self-pay entry point</td></tr><tr><td>Talkspace Video + Messaging</td><td>$99 per week</td><td>Weekly live sessions plus messaging</td></tr><tr><td>Talkspace Video + Messaging + Workshops</td><td>$109 per week</td><td>Adds live group workshops</td></tr><tr><td>betterhelp subscription</td><td>Quoted at signup</td><td>Most live-format flexibility; financial aid available</td></tr><tr><td>In-network with insurance</td><td>$0 to $30 copay, typically</td><td>Anyone whose plan covers a platform</td></tr><tr><td>Employer EAP</td><td>$0</td><td>A set number of free sessions per issue per year</td></tr></tbody></table>`,
+        },
+        {
+          heading: "Is messaging-only therapy worth it at $69 a week?",
+          body: `<p>For the right person, yes. Messaging-only suits people who express themselves better in writing, who want to reach their therapist between live sessions, or whose schedule makes a fixed weekly slot hard. It is a weaker fit as a sole format for acute distress, for people who need real-time dialogue, or for complex concerns - most clinicians treat messaging as a complement to live sessions rather than a replacement. Know the response schedule before you rely on it: Talkspace therapists respond on a set number of days per week, not instantly. If you find you want live sessions after a few weeks, stepping up a tier or adding a $65 live session costs less than starting over elsewhere.</p>`,
+        },
+        {
+          heading: "What is the cheapest online therapy with insurance?",
+          body: `<p>A covered platform at a $0 copay. Talkspace is in-network with many major insurers, Medicare, TRICARE and employer assistance programs and publishes $0 for many members; betterhelp now accepts insurance with copays cited from around $23 per session; headspace's therapy service accepts insurance too. The check takes minutes on each platform and is free. If your plan applies a deductible to mental-health visits, you pay the contracted rate per session until it is met, which can make a $69 messaging plan cheaper in the short run - our <a href="/articles/does-insurance-cover-online-therapy">complete guide to insurance and online therapy</a> walks through that arithmetic. And before paying anyone, ask HR about your EAP: the free sessions most people never use are the cheapest therapy there is.</p>`,
+        },
       ],
-      updatedAt: UPDATED,
+      updatedAt: "2026-10-26",
     },
     {
       slug: "best-online-therapy-with-insurance",
@@ -922,8 +934,20 @@ export const onlineTherapyConfig: SiteConfig = {
           heading: "How we chose the best online therapy with insurance",
           body: `<p>We ranked platforms on whether they accept insurance at all, how transparent the coverage check is, what covered members can expect to pay, and what you get for it - licensed clinicians, session formats and switching. We don't publish copays we haven't verified beyond what each platform cites, so treat every figure here as a starting point to confirm on your plan. See the full field on our <a href="/">online therapy comparison</a>.</p><p><em>This page is general information, not medical advice. In crisis in the US, call or text 988, free and open 24/7.</em></p>`,
         },
+        {
+          heading: "What will I actually pay per session with insurance?",
+          body: `<p>Three structures cover almost every plan. <strong>Copay, deductible does not apply:</strong> a flat amount from the first session - on in-network platforms typically $0 to $30, with Talkspace publishing $0 for many members and betterhelp citing copays from around $23. <strong>Deductible first:</strong> you pay the full contracted rate per session until the deductible is met, then your copay or coinsurance; high-deductible plans usually work this way. <strong>Coinsurance:</strong> a percentage of the allowed amount - Medicare Part B uses 20% after its deductible. Your plan's summary of benefits, under outpatient mental-health services, says which applies to you, and each platform's eligibility check returns your estimated number before you pay anything.</p>`,
+        },
+        {
+          heading: "What if my plan isn't accepted?",
+          body: `<p>You still have four levers, in roughly this order. Your employer's EAP may include free sessions that never touch your insurance. Out-of-network benefits, if your plan has them, let you claim partial reimbursement by submitting a superbill - an itemized receipt with the provider's credentials and the procedure and diagnosis codes - after a separate out-of-network deductible. betterhelp's financial-aid questionnaire reduces its subscription for people on lower incomes. And Talkspace's self-pay tiers start at $69 per week for messaging. Our <a href="/articles/does-insurance-cover-online-therapy">complete insurance guide</a> covers superbills, denials and appeals step by step.</p>`,
+        },
+        {
+          heading: "Does insurance cover online psychiatry?",
+          body: `<p>Yes, on the same basis as other outpatient care: the prescriber visit is a medical claim at your specialist cost-sharing, and the medication is a pharmacy claim at your plan's formulary tier. Talkspace is the platform in our coverage where psychiatry is offered alongside therapy and can be billed to insurance; self-pay, its psychiatry is $299 for the initial evaluation and $175 per follow-up. betterhelp does not offer psychiatry and headspace's therapy service does not prescribe, so if medication might be part of your care, starting on a platform with psychiatry avoids coordinating two providers later. Our <a href="/best-online-psychiatry">online psychiatry comparison</a> explains how the evaluation works.</p>`,
+        },
       ],
-      updatedAt: UPDATED,
+      updatedAt: "2026-10-26",
     },
     {
       slug: "best-online-psychiatry",
@@ -962,8 +986,20 @@ export const onlineTherapyConfig: SiteConfig = {
           heading: "How we chose",
           body: `<p>We looked for a real evaluation with a licensed psychiatric clinician, genuine ongoing follow-up, honest limits about what can be prescribed remotely, and coordination with therapy on the same platform. Only one platform in our coverage meets that bar today; we'll add others as partnerships with psychiatry-capable services come online. See the full field on our <a href="/">online therapy comparison</a>.</p><p><em>This page is general information, not medical advice. If you're in crisis, contact emergency services or, in the US, call or text 988 - free and open 24/7.</em></p>`,
         },
+        {
+          heading: "How much does online psychiatry cost?",
+          body: `<p>Talkspace, the platform in our coverage with psychiatry on-platform, publishes <strong>$299 for the initial evaluation and $175 per follow-up</strong> when self-paying, and many insurance plans cover it at the plan's specialist cost-sharing - in-network copays on Talkspace typically land between $0 and $30. The medication itself is a separate pharmacy claim priced by your plan's formulary tier; generic first-line medications are usually on the lowest tier. Run the eligibility check at signup to see both numbers before you book. We publish only verified prices, and these are the only psychiatry prices we have verified.</p>`,
+        },
+        {
+          heading: "What happens at the first online psychiatry appointment?",
+          body: `<p>Expect a longer visit than a routine check-in: a structured review of your symptoms, their history and severity, medical history and current medications, substance use, family history, and what you have tried before, sometimes with standardized rating scales. If medication is appropriate, the prescriber discusses options, likely side effects and what the first weeks look like, sends the prescription electronically to your pharmacy, and sets a follow-up - often two to four weeks after starting, then less frequently once things are stable. If you are already in therapy, say so; the best outcomes come when the prescriber and therapist know about each other, which is the practical advantage of having both on one platform.</p>`,
+        },
+        {
+          heading: "Can online psychiatry prescribe medication for anxiety, depression or ADHD?",
+          body: `<p>Common first-line medications for anxiety and depression - antidepressants such as SSRIs and SNRIs, and other non-controlled medications - are routinely prescribed by telehealth after an evaluation. Certain controlled substances, including stimulants used for ADHD and benzodiazepines, are subject to federal telemedicine prescribing rules that have changed several times since 2020 and may change again; whether a platform prescribes them remotely, and under what conditions, is something to confirm directly with the service and to expect to be stricter than for other medications. A legitimate service states its policy plainly and never promises a specific medication before an evaluation. Our <a href="/articles/online-psychiatry">online psychiatry guide</a> goes deeper on what can and cannot be prescribed online.</p>`,
+        },
       ],
-      updatedAt: "2026-10-02",
+      updatedAt: "2026-10-26",
     },
     {
       slug: "online-therapy-for-women",
@@ -1042,8 +1078,20 @@ export const onlineTherapyConfig: SiteConfig = {
           heading: "How we chose the best online therapy for anxiety",
           body: `<p>We ranked platforms on the factors that matter for anxiety specifically: access to CBT-trained licensed therapists, speed and ease of matching, format flexibility, between-session support, and the quality of daily-practice tools. See the full field on our <a href="/">online therapy comparison</a> and the individual <a href="/reviews">platform reviews</a>.</p><p><em>This page is general information, not medical advice. If your anxiety is severe or you're in crisis, contact a medical professional or, in the US, call or text 988 - free and open 24/7.</em></p>`,
         },
+        {
+          heading: "Which session format works best for anxiety?",
+          body: `<p>Live video is the default for anxiety work because it lets a therapist plan exposure exercises with you, watch how you respond, and adjust in real time. Messaging earns its place between sessions: reporting back on an exposure or a panic episode while it is fresh gives the next session something concrete to work with. Phone suits people whose anxiety includes being on camera, and live chat suits people who find it easier to write about what frightens them than to say it. betterhelp offers video, phone and chat plus messaging on every plan, which is the most flexibility; Talkspace is messaging-first with live video by plan tier, which suits people who want the between-session channel to be the main one. Whichever you choose, the format you will keep attending is the one that works.</p>`,
+        },
+        {
+          heading: "How much does online therapy for anxiety cost?",
+          body: `<p>The same as online therapy for anything else: anxiety is among the conditions insurance plans most routinely cover, so run the eligibility check first - in-network copays typically land between $0 and $30, Talkspace publishes $0 for many members, and betterhelp cites copays from around $23. Self-pay, Talkspace runs $69 per week for messaging only, $99 for video plus messaging and $109 with workshops; betterhelp quotes its subscription at signup with financial aid available. If medication becomes part of the plan, Talkspace's psychiatry is $299 for the initial evaluation and $175 per follow-up self-pay, and often covered. Our <a href="/articles/online-therapy-cost">cost guide</a> has every verified price.</p>`,
+        },
+        {
+          heading: "What does CBT for anxiety look like online?",
+          body: `<p>Cognitive behavioral therapy for anxiety is structured and practical, and that structure survives the screen intact. Early sessions map the cycle - the situations that trigger anxiety, the thoughts that spike it, the avoidance that keeps it going. Middle sessions teach the tools: identifying and testing anxious predictions, graded exposure to feared situations planned in session and practiced in your real environment, and techniques for the physical symptoms. Later sessions consolidate and plan for setbacks. Expect between-session practice every week; it is where most of the change happens, and messaging makes reporting back easy. Our <a href="/articles/cbt-online">guide to CBT online</a> explains a full course, and our <a href="/articles/online-therapy-for-anxiety">anxiety guide</a> covers what to look for in a therapist.</p>`,
+        },
       ],
-      updatedAt: UPDATED,
+      updatedAt: "2026-10-26",
     },
   ],
 

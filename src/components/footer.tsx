@@ -56,6 +56,25 @@ const COLUMNS: { title: string; links: { label: string; href: string }[] }[] = [
   },
 ];
 
+// The state pages with the most search impressions get a sitewide link so
+// authority flows to them from every page, not only the home grid.
+const POPULAR_STATES = [
+  { name: "Texas", slug: "texas" },
+  { name: "California", slug: "california" },
+  { name: "Florida", slug: "florida" },
+  { name: "New York", slug: "new-york" },
+  { name: "Colorado", slug: "colorado" },
+  { name: "New Jersey", slug: "new-jersey" },
+  { name: "Ohio", slug: "ohio" },
+  { name: "Pennsylvania", slug: "pennsylvania" },
+  { name: "North Carolina", slug: "north-carolina" },
+  { name: "Georgia", slug: "georgia" },
+  { name: "Arizona", slug: "arizona" },
+  { name: "Illinois", slug: "illinois" },
+  { name: "Washington", slug: "washington" },
+  { name: "Virginia", slug: "virginia" },
+];
+
 async function featuredComparisons(): Promise<{ label: string; href: string }[]> {
   try {
     const cfg = await getConfig();
@@ -107,6 +126,20 @@ export async function Footer() {
         </div>
 
         <div className="mt-8 border-t border-gray-100 pt-5">
+          <p className="mb-2 text-[12px] font-bold uppercase tracking-wider text-[#191919]">Online therapy by state</p>
+          <p className="mb-5 flex flex-wrap gap-x-3 gap-y-1 text-[13px] text-gray-500">
+            {POPULAR_STATES.map((s) => (
+              <Link key={s.slug} href={`/online-therapy/${s.slug}`} className="hover:text-[#1A7A52]">
+                {s.name}
+              </Link>
+            ))}
+            <Link href="/online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
+              All 50 states + DC
+            </Link>
+          </p>
+        </div>
+
+        <div className="border-t border-gray-100 pt-5">
           <p className="mb-4 text-xs text-gray-400">
             <strong className="text-gray-500">Affiliate Disclosure:</strong> Top Online Therapy may earn a commission
             when you click on links and make a purchase. This does not affect our rankings or reviews. We are

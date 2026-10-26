@@ -600,6 +600,14 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               >
                 Read the Reviews
               </Link>
+              {slug !== "online-therapy-guide" && (
+                <Link
+                  href={hubLink(ctx, "/articles/online-therapy-guide")}
+                  className="inline-flex items-center justify-center rounded-lg border border-[#1A7A52] px-5 py-2.5 text-[14px] font-bold text-[#1A7A52] hover:bg-[#E6F4EC]"
+                >
+                  Read the Complete Guide
+                </Link>
+              )}
             </div>
           </div>
 

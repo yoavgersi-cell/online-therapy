@@ -10,6 +10,7 @@ import { orgRef, WEBSITE_ID } from "@/lib/geo";
 import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { STATES, STATE_BY_SLUG } from "@/lib/states";
+import { stateNeighbors, medicaidProgramName, hasBrandedMedicaid } from "@/lib/state-details";
 
 export const revalidate = 60;
 
@@ -28,9 +29,9 @@ export async function generateMetadata({
   const s = STATE_BY_SLUG.get(state);
   if (!s) return {};
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
-  const title = `Online Therapy in ${s.name} (2026)`;
+  const title = `Best Online Therapy in ${s.name} (2026): Platforms, Insurance & Cost`;
   const description =
-    `Compare online therapy, virtual counseling and telehealth therapy platforms serving ${s.name}. Licensed ${s.abbr} therapists, video, phone or messaging sessions, and insurance accepted - start from anywhere in ${s.name}.`;
+    `The best online therapy platforms serving ${s.name} in 2026, compared: ${s.abbr}-licensed therapists by video, phone or messaging, insurance and ${medicaidProgramName(s.slug, s.name)} coverage, verified prices and how to start from anywhere in ${s.name}.`;
   return {
     title: { absolute: `${title} | Top Online Therapy` },
     description,
@@ -104,14 +105,37 @@ export default async function StatePage({
     },
   ];
 
+  const medicaid = medicaidProgramName(s.slug, s.name);
+  const neighbors = stateNeighbors(s.slug)
+    .map((slug) => STATE_BY_SLUG.get(slug))
+    .filter((n): n is NonNullable<typeof n> => !!n);
+
+  faqs.push({
+    question: `Does Medicaid cover online therapy in ${s.name}?`,
+    answer: `Medicaid in ${s.name} - ${hasBrandedMedicaid(s.slug) ? `run as ${medicaid}` : `the state's Medicaid program`} - covers mental-health care, and most states cover telehealth therapy, but which online platforms are in-network is decided state by state and plan by plan. Run each platform's eligibility check with your ${medicaid} details; if none is covered, ${s.name}'s community mental-health centers accept Medicaid and increasingly offer video sessions. Program names and managed-care plans change, so confirm with the state program.`,
+  });
+
   const author = config.experts?.[0];
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: `Best online therapy platforms in ${s.name}`,
+    numberOfItems: displayList.length,
+    itemListElement: displayList.map((p, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: p.name,
+      url: `${SITE_URL}/reviews/${p.id}`,
+    })),
+  };
 
   const webPageSchema = {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    name: `Online Therapy in ${s.name} (2026)`,
-    description: `Compare online therapy platforms serving ${s.name}, with state-licensed therapists, flexible session formats and insurance accepted.`,
+    name: `Best Online Therapy in ${s.name} (2026)`,
+    description: `The best online therapy platforms serving ${s.name}: state-licensed therapists, flexible session formats, insurance and Medicaid coverage, verified prices.`,
     url,
     inLanguage: "en-US",
     dateModified: CONTENT_LAST_UPDATED,
@@ -147,13 +171,14 @@ export default async function StatePage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
 
       <HeroSection
         backgroundImageUrl=""
         imageAlt=""
-        updatedLabel="Last Updated: September 2026"
-        h1={`Online Therapy in ${s.name}`}
-        h2={`Compare online therapy platforms serving ${s.name}`}
+        updatedLabel="Last Updated: October 2026"
+        h1={`Best Online Therapy in ${s.name}`}
+        h2={`The online therapy platforms serving ${s.name}, compared on insurance, formats and cost`}
         description={`Licensed ${s.name} therapists by video, phone, chat or messaging - with insurance accepted and matching in days, from anywhere in the state. Compare your options below.`}
       />
 
@@ -254,12 +279,22 @@ export default async function StatePage({
           Coverage is plan-specific rather than state-specific. Talkspace is covered by many major plans and employer EAPs and claims a $0 copay for most insured members; betterhelp now accepts insurance, with copays
           cited from around $23/session for covered members and a financial-aid questionnaire for self-pay;
           headspace&apos;s therapy service accepts insurance too, with a coverage check on its site. Employer
-          EAPs often include fully covered sessions and go unused. We only publish prices we&apos;ve verified,
-          so run the coverage checks and confirm your own number - our guide to{" "}
-          <Link href="/articles/online-therapy-that-takes-insurance" className="font-semibold text-[#1A7A52] hover:underline">
-            online therapy that takes insurance
+          EAPs often include fully covered sessions and go unused. Medicaid in {s.name}
+          {hasBrandedMedicaid(s.slug) ? <> - run as <strong>{medicaid}</strong> - </> : " "}
+          covers mental-health care, but which online platforms are in-network is decided plan by plan, so
+          run the checks with your Medicaid details and keep {s.name}&apos;s community mental-health centers
+          in mind as the fallback that always accepts it. Self-pay, the lowest verified published price in
+          our coverage is Talkspace&apos;s $69-per-week messaging plan; its video tiers are $99 and $109 per
+          week, and betterhelp quotes its subscription at signup with financial aid available. We only
+          publish prices we&apos;ve verified, so run the coverage checks and confirm your own number - our{" "}
+          <Link href="/articles/does-insurance-cover-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
+            complete guide to insurance and online therapy
           </Link>{" "}
-          walks through it.
+          covers copays, deductibles, Medicare, Medicaid and EAPs in depth, and our{" "}
+          <Link href="/articles/online-therapy-cost" className="font-semibold text-[#1A7A52] hover:underline">
+            cost guide
+          </Link>{" "}
+          has every verified price.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
@@ -276,6 +311,45 @@ export default async function StatePage({
           </Link>{" "}
           weighs the trade-offs honestly.
         </p>
+
+        <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
+          Keep Reading
+        </h2>
+        <ul className="mb-4 ml-5 list-disc space-y-1.5">
+          <li><Link href="/articles/online-therapy-guide" className="font-semibold text-[#1A7A52] hover:underline">The complete guide to online therapy</Link> - what it is, how it works, whether it works, and a first-30-days plan.</li>
+          <li><Link href="/online-therapy-for-beginners" className="font-semibold text-[#1A7A52] hover:underline">Online therapy for beginners</Link> - what the intake asks and what a first session looks like.</li>
+          <li><Link href="/best-online-psychiatry" className="font-semibold text-[#1A7A52] hover:underline">Online psychiatry</Link> - if medication might be part of your care in {s.name}.</li>
+          <li><Link href="/cheapest-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">Cheapest online therapy</Link> and <Link href="/free-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">free options</Link> - for when cost is the deciding factor.</li>
+        </ul>
+
+        {neighbors.length > 0 && (
+          <>
+            <h2 className="mb-3 mt-8 text-[24px] font-bold text-[#191919]">
+              Online Therapy in Nearby States
+            </h2>
+            <p className="mb-3">
+              Licensing stops at the state line, so if you split time between {s.name} and a neighboring state,
+              or are about to move, the page for that state shows what serves it:
+            </p>
+            <ul className="mb-4 flex flex-wrap gap-2">
+              {neighbors.map((n) => (
+                <li key={n.slug}>
+                  <Link
+                    href={`/online-therapy/${n.slug}`}
+                    className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[14px] font-semibold text-[#1A7A52] hover:border-[#1A7A52]"
+                  >
+                    Online therapy in {n.name}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/online-therapy" className="inline-block rounded-full border border-gray-200 bg-gray-50 px-3.5 py-1.5 text-[14px] font-semibold text-gray-600 hover:border-[#1A7A52]">
+                  All states
+                </Link>
+              </li>
+            </ul>
+          </>
+        )}
 
         <p className="mt-8 text-[13.5px] text-gray-500">
           This page is general information, not medical advice. Whether online therapy is right for you is a

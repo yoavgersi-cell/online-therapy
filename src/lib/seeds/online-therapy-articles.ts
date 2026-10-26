@@ -698,13 +698,13 @@ export const onlineTherapyArticles: ArticleData[] = [
   },
   {
     slug: "online-psychiatry",
-    title: "Online Psychiatry: How to Get Mental-Health Medication Online in 2026",
+    title: "Online Psychiatry (2026): How It Works, What It Costs & What Can Be Prescribed",
     description:
       "Online psychiatry connects you with a licensed prescriber by video for evaluation, diagnosis and medication management. How it works, what it can and can't prescribe, and how to pick a legitimate service.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
-    updatedAt: "2026-10-09",
+    updatedAt: "2026-10-26",
     heroColor: "#E6F4EC",
     author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
@@ -733,6 +733,14 @@ export const onlineTherapyArticles: ArticleData[] = [
       {
         heading: "Online psychiatry vs online therapy apps",
         body: `Searchers often weigh "a psychiatrist" against "an online therapy app" as if they were two versions of the same thing. They aren't. Therapy apps like <a href="/reviews/betterhelp">betterhelp</a> connect you with a licensed therapist for talk therapy and messaging; no one on the platform can prescribe. Online psychiatry is medical care: an evaluation by a psychiatrist or psychiatric nurse practitioner, a diagnosis, and medication that is then monitored over time. Among the platforms we cover, <a href="/reviews/talkspace">Talkspace</a> offers both under one account - self-pay psychiatry is $299 for the initial evaluation and $175 per follow-up, and many insurance plans cover it - while <a href="/reviews/headspace">headspace</a>'s app is self-guided and its therapy service does not prescribe. Our <a href="/articles/therapy-vs-psychiatry">therapist vs psychiatrist guide</a> helps you decide which you need first. If you are in crisis, call or text 988 in the US, or contact emergency services. This article is general information, not medical advice.`,
+      },
+      {
+        heading: "How much does online psychiatry cost?",
+        body: `<p>Of the platforms we cover, Talkspace is the one with psychiatry on-platform and the only one whose psychiatry prices we have verified: <strong>$299 for the initial evaluation and $175 per follow-up</strong> self-pay, with many insurance plans covering the visits at the plan's specialist cost-sharing - in-network copays on Talkspace typically land between $0 and $30. Medication is billed separately through your pharmacy benefit; generic first-line medications usually sit on the lowest formulary tier. A reasonable self-pay year with an evaluation and a follow-up every couple of months is therefore a few hundred dollars in visits plus the pharmacy cost - a figure your eligibility check will replace with your own number in minutes. Our <a href="/best-online-psychiatry">online psychiatry comparison</a> shows how it fits alongside therapy on the same platform.</p>`,
+      },
+      {
+        heading: "Online psychiatry vs seeing a psychiatrist in person",
+        body: `<p>Clinically, a telehealth psychiatric evaluation covers the same ground as an office visit: history, symptoms, medications, substance use, risk, and a plan. Where in-person still has the edge is when a physical examination or lab work needs to happen in the same visit, when a condition is severe or unstable enough to need close monitoring, or when a medication requires in-person prescribing under current telemedicine rules. Where online wins is access: psychiatrists are scarce in much of the country, waits for an in-person evaluation can run months, and follow-ups of fifteen to thirty minutes are far easier to keep by video than by driving to an office. For most people with anxiety or depression starting first-line medication, online psychiatry is a legitimate, convenient route - and a good online prescriber will refer you in person when that is what you need. Our <a href="/articles/therapy-vs-psychiatry">therapist vs psychiatrist guide</a> helps you decide whether you need a prescriber at all.</p>`,
       },
     ],
   },
@@ -846,13 +854,13 @@ export const onlineTherapyArticles: ArticleData[] = [
   },
   {
     slug: "online-therapy-cost",
-    title: "How Much Does Online Therapy Cost? Pricing Models Compared (2026)",
+    title: "Online Therapy Cost in 2026: $69-$109/Week Self-Pay or $0-$30 Copays",
     description:
       "Online therapy pricing comes in a few distinct shapes - weekly subscriptions, per-session fees, and insurance-based models. How they differ, what drives the real cost, and how to find the cheapest legitimate route for you.",
     category: "Guide",
     readTime: "7 min read",
     publishedAt: "2026-09-08",
-    updatedAt: "2026-09-08",
+    updatedAt: "2026-10-26",
     heroColor: "#E3F1EC",
     author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
@@ -877,6 +885,14 @@ export const onlineTherapyArticles: ArticleData[] = [
       {
         heading: "What's the cheapest legitimate route for you?",
         body: `It depends on three things: whether you have mental-health coverage, how often you want sessions, and whether you need therapy, psychiatry (medication) or both - since psychiatric care is priced differently. If cost is a hard barrier, do not skip <a href="/articles/free-and-low-cost-therapy-options">free and low-cost therapy options</a>, which covers routes beyond the commercial platforms. The honest bottom line: the "cheapest" platform in the abstract is the wrong question - the cheapest <em>sustainable</em> option for your coverage and needs is the right one, and our <a href="/">comparison</a> is built to find it. This article is general information, not medical advice.`,
+      },
+      {
+        heading: "What are the verified online therapy prices for 2026?",
+        body: `<p>We print a price only once we have verified it. As of October 2026, these are the verified prices in our coverage:</p><table><thead><tr><th>Platform and plan</th><th>Verified price</th><th>Notes</th></tr></thead><tbody><tr><td>Talkspace Messaging Only</td><td>$69 per week</td><td>Therapist responds five days a week</td></tr><tr><td>Talkspace Video + Messaging</td><td>$99 per week</td><td>Live video sessions plus messaging</td></tr><tr><td>Talkspace Video + Messaging + Workshops</td><td>$109 per week</td><td>Adds live group workshops</td></tr><tr><td>Talkspace Couples</td><td>$109 per week</td><td>Dedicated couples plan</td></tr><tr><td>Talkspace extra live session</td><td>$65</td><td>Beyond the sessions included in the plan</td></tr><tr><td>Talkspace Psychiatry</td><td>$299 initial, $175 follow-up</td><td>Self-pay; often covered by insurance</td></tr><tr><td>In-network insurance (Talkspace, betterhelp)</td><td>$0 to $30 copay, typically</td><td>Talkspace publishes $0 for many members; betterhelp cites copays from around $23</td></tr><tr><td>betterhelp subscription</td><td>Quoted at signup</td><td>Varies by location and preferences; financial-aid questionnaire; not independently verified by us</td></tr><tr><td>headspace app</td><td>Consumer subscription</td><td>Separate from therapy; HSA/FSA eligible; current prices not yet verified by us</td></tr></tbody></table><p>Our <a href="/articles/how-much-does-talkspace-cost">Talkspace pricing guide</a>, <a href="/articles/how-much-does-betterhelp-cost">betterhelp cost guide</a> and <a href="/articles/how-much-does-headspace-cost">headspace cost guide</a> go line by line.</p>`,
+      },
+      {
+        heading: "How much does online therapy cost per month?",
+        body: `<p>Weekly subscription prices are usually billed monthly, so multiply by the weeks in the billing cycle: a $69-per-week messaging plan is roughly $276 to $304 a month, a $99 video plan roughly $396 to $436, and a $109 plan roughly $436 to $480, depending on whether four or four-and-a-bit weeks fall in the cycle. With insurance the math changes shape entirely: four weekly sessions at a $25 copay is $100 a month, and at a $0 copay it is nothing. If your plan applies a deductible to mental-health visits, your first month or two can cost the full contracted rate per session before dropping to the copay - our <a href="/articles/does-insurance-cover-online-therapy">complete guide to insurance and online therapy</a> works through that arithmetic with examples. The honest monthly answer, then, is a range from $0 with covered care to a few hundred dollars self-pay, and the eligibility check is what tells you where you land.</p>`,
       },
     ],
   },
