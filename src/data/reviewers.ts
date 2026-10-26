@@ -287,7 +287,11 @@ const REVIEWED_2026_10_09: string[] = [
 ];
 
 // Pages published and reviewed after the full-site pass.
-const REVIEWED_LATER: Record<string, PageReview> = {};
+const REVIEWED_LATER: Record<string, PageReview> = {
+  // 2026-10-26: the two pillar guides (operator-confirmed).
+  "/articles/online-therapy-guide": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-26" },
+  "/articles/does-insurance-cover-online-therapy": { reviewer: "francheska-capistrano", reviewedAt: "2026-10-26" },
+};
 
 export const REVIEW_LOG: Record<string, PageReview> = {
   ...Object.fromEntries(
