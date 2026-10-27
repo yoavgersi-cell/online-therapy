@@ -11,6 +11,7 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { STATES, STATE_BY_SLUG } from "@/lib/states";
 import { stateNeighbors, medicaidProgramName, hasBrandedMedicaid } from "@/lib/state-details";
+import { stateNote } from "@/lib/state-notes";
 
 export const revalidate = 60;
 
@@ -30,8 +31,10 @@ export async function generateMetadata({
   if (!s) return {};
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
   const title = `Best Online Therapy in ${s.name} (2026): Platforms, Insurance & Cost`;
+  const note = stateNote(s.slug);
+  const titles = note ? note.licenses.slice(0, 2).join(" and ") : `${s.abbr}-licensed`;
   const description =
-    `The best online therapy platforms serving ${s.name} in 2026, compared: ${s.abbr}-licensed therapists by video, phone or messaging, insurance and ${medicaidProgramName(s.slug, s.name)} coverage, verified prices and how to start from anywhere in ${s.name}.`;
+    `The best online therapy platforms serving ${s.name} in 2026, compared: ${titles} therapists licensed in ${s.name}, video, phone or messaging sessions, insurance and ${medicaidProgramName(s.slug, s.name)} coverage, verified prices, and what is different about getting care in ${s.name}.`;
   return {
     title: { absolute: `${title} | Top Online Therapy` },
     description,
@@ -82,6 +85,9 @@ export default async function StatePage({
   const [c0, c1, c2] = s.cities;
   const citiesPhrase = s.cities.length >= 3 ? `${c0}, ${c1}, and ${c2}` : s.cities.join(" and ");
 
+  const note = stateNote(s.slug);
+  const licenseList = note ? note.licenses.join(", ") : "";
+
   const faqs = [
     {
       question: `Is online therapy available in ${s.name}?`,
@@ -89,7 +95,7 @@ export default async function StatePage({
     },
     {
       question: `Are online therapists licensed in ${s.name}?`,
-      answer: `They should be, and on the platforms we compare they are. Therapy licensing is state-based, so a clinician treating you must hold a license valid in ${s.name}; platforms match you only with therapists credentialed for your state. You can ask to see a therapist's license details at any time.`,
+      answer: `They should be, and on the platforms we compare they are. Therapy licensing is state-based, so a clinician treating you must hold a license valid in ${s.name}; platforms match you only with therapists credentialed for your state.${licenseList ? ` In ${s.name} the titles to look for on a profile are ${licenseList} - each is a state license you can verify on the licensing board's public lookup.` : ""} You can ask to see a therapist's license details at any time.`,
     },
     {
       question: `Does insurance cover online therapy in ${s.name}?`,
@@ -112,7 +118,7 @@ export default async function StatePage({
 
   faqs.push({
     question: `Does Medicaid cover online therapy in ${s.name}?`,
-    answer: `Medicaid in ${s.name} - ${hasBrandedMedicaid(s.slug) ? `run as ${medicaid}` : `the state's Medicaid program`} - covers mental-health care, and most states cover telehealth therapy, but which online platforms are in-network is decided state by state and plan by plan. Run each platform's eligibility check with your ${medicaid} details; if none is covered, ${s.name}'s community mental-health centers accept Medicaid and increasingly offer video sessions. Program names and managed-care plans change, so confirm with the state program.`,
+    answer: `Medicaid in ${s.name} - ${hasBrandedMedicaid(s.slug) ? `run as ${medicaid}` : `the state's Medicaid program`} - covers mental-health care, and most states cover telehealth therapy, but which online platforms are in-network is decided state by state and plan by plan. Run each platform's eligibility check with your ${medicaid} details; if none is covered, ${s.name}'s community mental-health centers accept Medicaid and increasingly offer video sessions.${note && !note.medicaidExpanded ? ` Note that ${s.name} has not adopted Medicaid expansion, so eligibility for adults without children or a disability is narrower than in most states - if you fall outside it, an employer EAP, Talkspace's $69-per-week messaging tier and betterhelp's financial-aid questionnaire are the realistic routes.` : ""} Program names and managed-care plans change, so confirm with the state program.`,
   });
 
   const author = config.experts?.[0];
@@ -179,7 +185,11 @@ export default async function StatePage({
         updatedLabel="Last Updated: October 2026"
         h1={`Best Online Therapy in ${s.name}`}
         h2={`The online therapy platforms serving ${s.name}, compared on insurance, formats and cost`}
-        description={`Licensed ${s.name} therapists by video, phone, chat or messaging - with insurance accepted and matching in days, from anywhere in the state. Compare your options below.`}
+        description={
+          note
+            ? `${note.licenses.slice(0, 2).join(" and ")} therapists licensed in ${s.name}, by video, phone, chat or messaging - insurance and ${medicaid} checks, matching in days, and what is different about online care in ${s.name}. Compare your options below.`
+            : `Licensed ${s.name} therapists by video, phone, chat or messaging - with insurance accepted and matching in days, from anywhere in the state. Compare your options below.`
+        }
       />
 
       <section className="mx-auto max-w-[1200px] px-4 pt-3">
@@ -221,6 +231,15 @@ export default async function StatePage({
           works, what serves {s.name}, and how to choose.
         </p>
 
+        {note && (
+          <>
+            <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
+              What&apos;s Different About Online Therapy in {s.name}
+            </h2>
+            <p className="mb-4">{note.note}</p>
+          </>
+        )}
+
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           How Online Therapy Works in {s.name}
         </h2>
@@ -228,6 +247,9 @@ export default async function StatePage({
           <li><strong>A short intake.</strong> You describe what you&apos;re dealing with, how you&apos;d like sessions to work, and - where the platform accepts insurance - your plan details for a coverage check.</li>
           <li><strong>Matching with a {s.name}-licensed therapist.</strong> Platforms match you only with clinicians credentialed to practice in {s.name}; if the first fit isn&apos;t right, switching is free and normal.</li>
           <li><strong>Sessions and support.</strong> Weekly live sessions - video, phone or chat - with messaging in between on most platforms, and tools like worksheets or a daily practice app alongside.</li>
+          {note && (
+            <li><strong>Scheduling in {note.timeZone} time.</strong> {s.name} keeps {note.timeZone} time; set your availability in your local time and confirm the session clock when you are matched, since platform tools sometimes default to another zone.</li>
+          )}
         </ol>
         <p className="mb-4">
           Not sure where to start? {topName} is our current top pick - see the full{" "}
@@ -271,6 +293,15 @@ export default async function StatePage({
           as someone in {c0}. If you travel or move, tell your platform - a therapist licensed only in {s.name}{" "}
           may not be able to see you from another state.
         </p>
+        {note && (
+          <p className="mb-4">
+            The license titles you will see on {s.name} therapist profiles are <strong>{licenseList}</strong>.
+            The letters differ from state to state - a counselor is an LPCC in some states, an LMHC or LCMHC in
+            others - but each one means a graduate degree, supervised clinical hours, a licensing exam and an
+            active license that {s.name}&apos;s board can discipline or revoke, and each can be checked in two
+            minutes on the board&apos;s public lookup.
+          </p>
+        )}
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           Insurance and Cost in {s.name}
