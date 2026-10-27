@@ -87,11 +87,18 @@ export default async function StatePage({
 
   const note = stateNote(s.slug);
   const licenseList = note ? note.licenses.join(", ") : "";
+  const mentionsTricare = !!note && note.note.includes("TRICARE");
+  const mentionsMedicare = !!note && note.note.includes("Medicare Part B");
+  const expansionClause = note
+    ? note.medicaidExpanded
+      ? `${s.name} has adopted Medicaid expansion, so low-income adults are generally eligible`
+      : `${s.name} has not adopted Medicaid expansion, so adults without children or a disability often fall outside it`
+    : "";
 
   const faqs = [
     {
       question: `Is online therapy available in ${s.name}?`,
-      answer: `Yes. Online therapy platforms match residents across ${s.name} - from ${citiesPhrase} to smaller towns and rural areas - with therapists licensed to practice in ${s.name}. Sessions happen by video, phone, live chat or messaging, so where you live in the state doesn't limit your choice of clinician the way it does with an office practice.`,
+      answer: `Yes. Online therapy platforms match residents across ${s.name} - from ${citiesPhrase} to smaller towns and rural areas - with therapists licensed to practice in ${s.name}. Sessions happen by video, phone, live chat or messaging, so where you live in the state doesn't limit your choice of clinician the way it does with an office practice.${note ? ` ${s.name} keeps ${note.timeZone} time, and the statewide pool matters most outside ${c0} and ${c1}, where local practices are thin.` : ""}`,
     },
     {
       question: `Are online therapists licensed in ${s.name}?`,
@@ -107,7 +114,7 @@ export default async function StatePage({
     },
     {
       question: `How much does online therapy cost in ${s.name}?`,
-      answer: `Pricing depends on the platform, your plan and your insurance - not on where you live in ${s.name}, although betterhelp's self-pay rate can vary by location and therapist availability. We only publish prices we've verified, so confirm your number at signup and use financial aid or employer EAP sessions where they apply.`,
+      answer: `Pricing depends on the platform, your plan and your insurance - not on where you live in ${s.name}, although betterhelp's self-pay rate can vary by location and therapist availability. We only publish prices we've verified, so confirm your number at signup and use financial aid or employer EAP sessions where they apply.${note ? ` The lowest verified self-pay price in our coverage is Talkspace's $69-per-week messaging plan; with insurance, copays typically land between $0 and $30. ${expansionClause}${note.medicaidExpanded ? ", so run the platform checks with your Medicaid details too." : ", which makes the EAP question and the insurance checks the first two steps for working adults in " + s.name + "."}` : ""}`,
     },
   ];
 
@@ -244,62 +251,56 @@ export default async function StatePage({
           How Online Therapy Works in {s.name}
         </h2>
         <ol className="mb-4 ml-5 list-decimal space-y-2">
-          <li><strong>A short intake.</strong> You describe what you&apos;re dealing with, how you&apos;d like sessions to work, and - where the platform accepts insurance - your plan details for a coverage check.</li>
-          <li><strong>Matching with a {s.name}-licensed therapist.</strong> Platforms match you only with clinicians credentialed to practice in {s.name}; if the first fit isn&apos;t right, switching is free and normal.</li>
-          <li><strong>Sessions and support.</strong> Weekly live sessions - video, phone or chat - with messaging in between on most platforms, and tools like worksheets or a daily practice app alongside.</li>
+          <li><strong>Intake and coverage check</strong> - what you need, how you want sessions to work, and your plan details.</li>
+          <li><strong>A {s.name}-licensed match</strong>{note ? ` - a ${note.licenses[0]}, ${note.licenses[1]} or ${note.licenses[2]} credentialed for ${s.name}` : ""}; switching is free if the first fit is wrong.</li>
+          <li><strong>Weekly sessions plus messaging</strong> by video, phone or chat, from {c0}, {c1} or anywhere else in the state.</li>
           {note && (
             <li><strong>Scheduling in {note.timeZone} time.</strong> {s.name} keeps {note.timeZone} time; set your availability in your local time and confirm the session clock when you are matched, since platform tools sometimes default to another zone.</li>
           )}
         </ol>
         <p className="mb-4">
-          Not sure where to start? {topName} is our current top pick - see the full{" "}
-          <Link href="/" className="font-semibold text-[#1A7A52] hover:underline">comparison</Link>{" "}
-          and our{" "}
-          <Link href="/reviews" className="font-semibold text-[#1A7A52] hover:underline">in-depth reviews</Link>.
+          {topName} is our current top pick for {s.name}; the full{" "}
+          <Link href="/" className="font-semibold text-[#1A7A52] hover:underline">comparison</Link>,{" "}
+          <Link href="/reviews" className="font-semibold text-[#1A7A52] hover:underline">reviews</Link> and{" "}
+          <Link href="/articles/online-therapy-guide" className="font-semibold text-[#1A7A52] hover:underline">complete guide</Link>{" "}
+          explain every step in depth.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           Online Therapy in {citiesPhrase}
         </h2>
         <p className="mb-4">
-          Whether you&apos;re searching for an online therapist in {c0}{c1 ? `, ${c1}` : ""}{c2 ? ` or ${c2}` : ""},
-          or you live hours from any of them, the answer is the same platform list: online matching draws
-          from every clinician licensed in {s.name}, not from one city&apos;s practices. That matters most
-          outside the metros, where the local pool is thin, but it helps in the cities too - you can filter
-          for a therapist who works with your specific concern instead of whoever has an opening nearby.
+          An online therapist &quot;in&quot; {c0}, {c1} or {c2} is really a therapist licensed anywhere in {s.name}:
+          matching draws from the whole state, not one city&apos;s practices. In {s.name} that matters most
+          outside the metros, and in the metros it means filtering for the specialty, language or background you
+          want instead of whoever has an opening nearby.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           Online Therapy, Virtual Counseling, Telehealth: Same Thing in {s.name}?
         </h2>
         <p className="mb-4">
-          Mostly, yes. &quot;Online therapy&quot;, &quot;virtual therapy&quot;, &quot;online counseling&quot; and
-          &quot;telehealth therapy&quot; all describe the same care: sessions with a licensed {s.name} clinician
-          by video, phone, chat or messaging instead of in an office. The one distinction worth knowing is
-          between a <strong>therapist</strong> (talk therapy - the platforms above) and a{" "}
-          <strong>psychiatric clinician</strong> (evaluation and medication management), which only Talkspace
-          offers on-platform here. Whatever you searched for, the platforms that serve {s.name} are the ones
-          compared above.
+          Mostly, yes - all four terms mean sessions with a {s.name}-licensed clinician by video, phone, chat or
+          messaging. The distinction that matters is <strong>therapist</strong> versus{" "}
+          <strong>psychiatric clinician</strong>; only Talkspace offers the latter on-platform in {s.name}. Our{" "}
+          <Link href="/articles/online-therapy-guide" className="font-semibold text-[#1A7A52] hover:underline">complete guide</Link>{" "}
+          covers the vocabulary.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           Therapist Licensing in {s.name}
         </h2>
         <p className="mb-4">
-          Therapy licensing is state-based, which is the one thing that makes location matter online. A
-          therapist treating you must hold a license valid in {s.name}, so the platforms we compare match you
-          from clinicians credentialed for the state - not from a national pool. In practice that widens your
-          choice rather than narrowing it: someone in a rural corner of {s.name} gets the same statewide pool
-          as someone in {c0}. If you travel or move, tell your platform - a therapist licensed only in {s.name}{" "}
-          may not be able to see you from another state.
+          A therapist treating you must hold a license valid in {s.name}, so platforms match you from clinicians
+          credentialed for the state - the same statewide pool for someone in {c2} as for someone in {c0}. If you
+          travel or move, tell your platform; a {s.name}-only license may not cover you from another state.
         </p>
         {note && (
           <p className="mb-4">
             The license titles you will see on {s.name} therapist profiles are <strong>{licenseList}</strong>.
-            The letters differ from state to state - a counselor is an LPCC in some states, an LMHC or LCMHC in
-            others - but each one means a graduate degree, supervised clinical hours, a licensing exam and an
-            active license that {s.name}&apos;s board can discipline or revoke, and each can be checked in two
-            minutes on the board&apos;s public lookup.
+            In {s.name} a clinical counselor is a {note.licenses[0]} and a clinical social worker a {note.licenses[1]};
+            each title means a graduate degree, supervised hours, a licensing exam and an active license that{" "}
+            {s.name}&apos;s board can discipline or revoke, checkable in two minutes on the board&apos;s lookup.
           </p>
         )}
 
@@ -307,36 +308,62 @@ export default async function StatePage({
           Insurance and Cost in {s.name}
         </h2>
         <p className="mb-4">
-          Coverage is plan-specific rather than state-specific. Talkspace is covered by many major plans and employer EAPs and claims a $0 copay for most insured members; betterhelp now accepts insurance, with copays
-          cited from around $23/session for covered members and a financial-aid questionnaire for self-pay;
-          headspace&apos;s therapy service accepts insurance too, with a coverage check on its site. Employer
-          EAPs often include fully covered sessions and go unused. Medicaid in {s.name}
-          {hasBrandedMedicaid(s.slug) ? <> - run as <strong>{medicaid}</strong> - </> : " "}
-          covers mental-health care, but which online platforms are in-network is decided plan by plan, so
-          run the checks with your Medicaid details and keep {s.name}&apos;s community mental-health centers
-          in mind as the fallback that always accepts it. Self-pay, the lowest verified published price in
-          our coverage is Talkspace&apos;s $69-per-week messaging plan; its video tiers are $99 and $109 per
-          week, and betterhelp quotes its subscription at signup with financial aid available. We only
-          publish prices we&apos;ve verified, so run the coverage checks and confirm your own number - our{" "}
-          <Link href="/articles/does-insurance-cover-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
-            complete guide to insurance and online therapy
-          </Link>{" "}
-          covers copays, deductibles, Medicare, Medicaid and EAPs in depth, and our{" "}
-          <Link href="/articles/online-therapy-cost" className="font-semibold text-[#1A7A52] hover:underline">
-            cost guide
-          </Link>{" "}
-          has every verified price.
+          Coverage is plan-specific, and the platform facts are the same everywhere: Talkspace is in-network with
+          many major plans, Medicare, TRICARE and EAPs (copays typically $0 to $30); betterhelp accepts insurance
+          (copays cited from around $23) and offers financial aid; headspace&apos;s therapy service accepts
+          insurance. Self-pay, the lowest verified price is Talkspace&apos;s $69-per-week messaging plan.
         </p>
+        {note && (
+          <p className="mb-4">
+            What is specific to {s.name}: Medicaid here is{" "}
+            {hasBrandedMedicaid(s.slug) ? <>run as <strong>{medicaid}</strong></> : <>{s.name} Medicaid</>}, and{" "}
+            {expansionClause}
+            {note.medicaidExpanded
+              ? " - run the platform checks with your Medicaid plan card, and keep the community mental-health centers in mind as the fallback that always accepts it."
+              : ` - for working adults who fall outside it, the EAP question and the insurance checks come first, then the $69 messaging tier or financial aid, then ${s.name}'s community mental-health centers on a sliding scale.`}
+            {mentionsTricare && ` Military households in ${s.name} can run the Talkspace check with TRICARE details.`}
+            {mentionsMedicare && ` For ${s.name}'s older residents, Medicare Part B covers telehealth therapy from home, and Talkspace lists Medicare among the plans it works with.`}
+            {" "}Our{" "}
+            <Link href="/articles/does-insurance-cover-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
+              insurance guide
+            </Link>{" "}
+            and{" "}
+            <Link href="/articles/online-therapy-cost" className="font-semibold text-[#1A7A52] hover:underline">
+              cost guide
+            </Link>{" "}
+            go deeper.
+          </p>
+        )}
+
+        {note && (
+          <>
+            <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
+              Online Therapy in {s.name} at a Glance
+            </h2>
+            <div className="mb-4 overflow-x-auto rounded-xl border border-gray-200">
+              <table className="w-full min-w-[520px] text-left text-[14px]">
+                <tbody className="divide-y divide-gray-100">
+                  <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">License titles to look for</td><td className="px-4 py-2.5 text-gray-600">{licenseList}</td></tr>
+                  <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Time zone</td><td className="px-4 py-2.5 text-gray-600">{note.timeZone}</td></tr>
+                  <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">Medicaid program</td><td className="px-4 py-2.5 text-gray-600">{medicaid}</td></tr>
+                  <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Medicaid expansion</td><td className="px-4 py-2.5 text-gray-600">{note.medicaidExpanded ? "Adopted - low-income adults generally eligible" : "Not adopted - adult eligibility is narrower"}</td></tr>
+                  <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">Largest metros</td><td className="px-4 py-2.5 text-gray-600">{citiesPhrase}</td></tr>
+                  <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Bordering states</td><td className="px-4 py-2.5 text-gray-600">{neighbors.length ? neighbors.map((n) => n.name).join(", ") : "None (see nearby states below)"}</td></tr>
+                  <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">Platforms serving {s.name}</td><td className="px-4 py-2.5 text-gray-600">{displayList.map((p) => p.name).join(", ")}</td></tr>
+                  <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Crisis line</td><td className="px-4 py-2.5 text-gray-600">Call or text 988 (free, 24/7); 911 in immediate danger</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </>
+        )}
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
           {s.name} vs. Finding a Therapist Near You
         </h2>
         <p className="mb-4">
-          Searching &quot;therapist near me&quot; in {s.name} will surface local practices, and those are a good
-          fit if you want to be in a room with someone, need higher-intensity or coordinated care, or
-          don&apos;t have reliable privacy at home. But for many common concerns - anxiety, low mood, stress,
-          relationship strain - online therapy is faster to start, easier to keep up, and often less
-          expensive once insurance is in the picture. Our guide to{" "}
+          A local {c0} practice suits people who want to be in a room, need higher-intensity care, or lack
+          privacy at home. For anxiety, low mood, stress and relationship strain, online therapy in {s.name} is
+          faster to start and easier to keep. Our guide to{" "}
           <Link href="/articles/online-therapy-vs-in-person" className="font-semibold text-[#1A7A52] hover:underline">
             online therapy vs in-person
           </Link>{" "}
