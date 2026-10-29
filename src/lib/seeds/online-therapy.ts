@@ -101,6 +101,112 @@ export const onlineTherapyConfig: SiteConfig = {
       // Aug 2026). betterhelp now works with many insurance plans, so insurance
       // coverage is described as a real feature in the reviews and articles.
       trustpilotReviews: [
+        // Captured from betterhelp's live Trustpilot profile, Oct 29, 2026
+        // (operator-supplied, verbatim; includes the 4-star critical ones).
+        {
+          "title": "User friendly, pick your therapist",
+          "text": "It easy to navigate. User friendly. I love being able to read over each therapist and the ability to switch therapist. The first one I chose didn't click with me how I needed to be. The second one has been absolutely awesome. I'm seriously so thankful for her because she has helped me so much in my life.",
+          "name": "Samantha Paschke",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 29, 2026"
+        },
+        {
+          "title": "I have had a wonderful experience with BetterHelp",
+          "text": "The platform is incredibly user-friendly, easy to navigate, and makes accessing therapy so convenient. One of the things I appreciate most is how affordable it is, especially considering the quality of care and accessibility it provides. My therapist has been absolutely wonderful! She is consistently punctual, thoughtful, compassionate, and genuinely attentive during our sessions.",
+          "name": "Kayla Merideth",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 29, 2026"
+        },
+        {
+          "title": "I love betterhelp",
+          "text": "As crazy as it may seem, seeking therapy or having mental issues isn't seen as normal in my family. It's almost as if my parents don't believe in it. Finally being able to get therapy and also at an affordable price has changed my life for the better. Being able to basically facetime with a therapist is really, extremely convenient. Especially for me since I travel A LOT.",
+          "name": "Brielle Cameron",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 28, 2026"
+        },
+        {
+          "title": "discontinued texting service",
+          "text": "I'm really disappointed that the messaging service is no longer an option. I really appreciated that I could shoot out a message to get my therapist thoughts and opinions on how to approach things during a yard year. I truly believe that this will have a huge negative impact on so many people who struggle.",
+          "name": "Chad Larsen",
+          "location": "US",
+          "rating": 4,
+          "date": "Oct 27, 2026"
+        },
+        {
+          "title": "BetterHelp made help accessible for me.",
+          "text": "Finding a therapist that matched my background and personality was easy, and being able to talk through my experiences and concerns has been incredibly helpful. I probably would never have sought help from a local practitioner, but being able to visit my therapist on-line is a perfect solution for me.",
+          "name": "Pete Hanlin",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 27, 2026"
+        },
+        {
+          "title": "For those who are wondering",
+          "text": "BetterHelp has an extensive, comprehensive questionnaire at the beginning of the process that, once completed, will offer you an array of therapists that specialise in the type of therapy you desire. Don't click with your initial therapists? No problem, as BetterHelp allows you to change therapists easily without making it an awkward situation. This is my second time using BetterHelp and both times the therapists I've been paired with have been exactly what I've needed when I've needed it.",
+          "name": "R Saubole",
+          "location": "GB",
+          "rating": 5,
+          "date": "Oct 24, 2026"
+        },
+        {
+          "title": "BetterHelp is such a blessing",
+          "text": "When you're depressed- the last thing you want is to get dressed and drive to a formal appointment. Many times i have done sessions in my pajamas and even in bed! I do weekly video calls with my counselor or a phone if thats better for me. There are various tools I can use to improve my mental health such as mood diary, journaling, goal setting, and group session on various topics. If you need to you can pause your subscription at any time.",
+          "name": "Patricia Zimmerman",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 24, 2026"
+        },
+        {
+          "title": "matched fast and messaging between sessions helps",
+          "text": "signed up for BetterHelp after my old therapist moved and they matched me within a day. the messaging is what I use most, I can drop a note midweek instead of holding it all for the appointment. had to ask for a different counselor once and that took a couple days.",
+          "name": "Erika Williams",
+          "location": "US",
+          "rating": 4,
+          "date": "Oct 24, 2026"
+        },
+        {
+          "title": "Great Therapist",
+          "text": "It is a great service, but you definitely need to find the right therapists for you. But I finally found the right therapist that has helped me tremendously over the past two years.",
+          "name": "Gia R",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 20, 2026"
+        },
+        {
+          "title": "BetterHelp has been great but expensive",
+          "text": "BetterHelp has been great. I got a wonderful therapist recently Rachael and she's challenged me in all the right ways. So glad I found her. Downside of BetterHelp is that it's very expensive. We're paying about $600 combined for my husband and myself.",
+          "name": "Regina Linsley",
+          "location": "US",
+          "rating": 4,
+          "date": "Oct 16, 2026"
+        },
+        {
+          "title": "Online counseling",
+          "text": "I suffer from major depressive disorder. I've done counseling off and on over the years in person. I was skeptical at first about using an app, but I was pleasantly surprised at how much I like doing my counseling online now. I can stay in my home, in my comfortable clothes and get real with my counselor. They give you choices on how often you want to talk to your counselor which helps with the budgeting.",
+          "name": "Terri Murray",
+          "location": "US",
+          "rating": 5,
+          "date": "Oct 2, 2026"
+        },
+        {
+          "title": "I'm very pleased with BetterHelp",
+          "text": "It's a terrific platform with great therapists at an affordable cost. I use the written platform, as it gives me time to think in the morning, and then I get my therapist's response later in the day. They also have a great customer service department. Life is short. Ask for help. You are not alone.",
+          "name": "Barb",
+          "location": "US",
+          "rating": 5,
+          "date": "Sep 28, 2026"
+        },
+        {
+          "title": "Vast variety of types of group therapies.",
+          "text": "This app and service has so many varieties of groups at various times of the day abd night, making it extremely convenient and they are beneficial as well. I tried 5 groups in my 1st month, and they all had something different to offer. As far as individual therapy, not as plentiful opportunities as the groups but has also been beneficial and professional.",
+          "name": "Stacey Young",
+          "location": "US",
+          "rating": 5,
+          "date": "Sep 26, 2026"
+        },
         {
           title: "Affordable, Accessible Mental Health Care",
           text: "BetterHelp makes good-quality mental health care accessible and affordable. You can receive therapy online in whichever way you'd prefer, and financial aid is available. I have been using it for a few months, and it has really helped me. I have attended webinars, used wellness tools, and attended weekly therapy sessions with an excellent therapist. I highly recommend BetterHelp.",
