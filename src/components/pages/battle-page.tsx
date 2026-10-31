@@ -8,6 +8,8 @@ import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 import { ComparisonLayout } from "@/components/comparison-layout";
 import { EditorialContent } from "@/components/editorial-content";
 import { LandingEditorial } from "@/components/landing-editorial";
+import { RelatedLinks } from "@/components/related-links";
+import { relatedFor } from "@/lib/related";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { notFound, permanentRedirect } from "next/navigation";
 import { ArrowRight, Check, Minus, ShieldCheck, Sparkles, Star } from "lucide-react";
@@ -280,6 +282,9 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
           ) : (
             <EditorialContent />
           )}
+          <div className="mx-auto max-w-[1200px] px-4 pb-10">
+            <RelatedLinks links={relatedFor(landing.slug, landing.slug)} />
+          </div>
         </ComparisonLayout>
       </>
     );

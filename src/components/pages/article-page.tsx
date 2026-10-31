@@ -12,6 +12,8 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { orgRef, providerEntity, citations, WEBSITE_ID } from "@/lib/geo";
 import { MedicalSources } from "@/components/medical-sources";
+import { RelatedLinks } from "@/components/related-links";
+import { relatedFor } from "@/lib/related";
 import { ProductCarousel } from "@/components/product-carousel";
 import { TrustpilotCarousel } from "@/components/trustpilot-carousel";
 import { TopProvidersBlock } from "@/components/top-providers-block";
@@ -577,6 +579,8 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               </div>
             ))}
           </article>
+
+          <RelatedLinks links={relatedFor(slug, slug)} />
 
           {/* CTA box */}
           <div className="mt-12 rounded-xl border border-gray-200 bg-white p-6 text-center sm:p-8">

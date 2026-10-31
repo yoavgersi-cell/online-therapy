@@ -367,7 +367,11 @@ export default async function StatePage({
           <Link href="/articles/online-therapy-vs-in-person" className="font-semibold text-[#1A7A52] hover:underline">
             online therapy vs in-person
           </Link>{" "}
-          weighs the trade-offs honestly.
+          weighs the trade-offs honestly. If you searched for a therapist near you, our{" "}
+          <Link href="/articles/online-therapy-near-me" className="font-semibold text-[#1A7A52] hover:underline">
+            online therapy near me explainer
+          </Link>{" "}
+          covers why location matters less online than it seems.
         </p>
 
         <h2 className="mb-4 mt-8 text-[24px] font-bold text-[#191919]">
@@ -390,13 +394,13 @@ export default async function StatePage({
               or are about to move, the page for that state shows what serves it:
             </p>
             <ul className="mb-4 flex flex-wrap gap-2">
-              {neighbors.map((n) => (
+              {neighbors.map((n, i) => (
                 <li key={n.slug}>
                   <Link
                     href={`/online-therapy/${n.slug}`}
                     className="inline-block rounded-full border border-gray-200 bg-white px-3.5 py-1.5 text-[14px] font-semibold text-[#1A7A52] hover:border-[#1A7A52]"
                   >
-                    Online therapy in {n.name}
+                    {["Online therapy in", "Therapists licensed in", "Telehealth therapy in"][i % 3]} {n.name}
                   </Link>
                 </li>
               ))}

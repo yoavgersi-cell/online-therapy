@@ -55,6 +55,11 @@ const REVIEW_SEO_OVERRIDES: Record<string, { title: string; description: string 
 
 // "Is X legit?" trust blocks. Verdicts are honest, signals are facts already
 // verified elsewhere on the site (provider highlights, audits, Trustpilot).
+// Long-form legitimacy article per provider review (links from the trust block).
+const LEGIT_ARTICLE: Record<string, string> = {
+  betterhelp: "/articles/is-betterhelp-legit",
+};
+
 const REVIEW_LEGIT: Record<string, { verdict: string; signals: string[] }> = {
   betterhelp: {
     verdict:
@@ -489,6 +494,13 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </li>
                 )}
               </ul>
+              {LEGIT_ARTICLE[slug] && (
+                <p className="mt-4 text-[14px]">
+                  <Link href={LEGIT_ARTICLE[slug]} className="font-semibold text-[#1A7A52] hover:underline">
+                    Read the full legitimacy check, with the scorecard and scam red flags
+                  </Link>
+                </p>
+              )}
               <p className="mt-4 text-[12px] leading-relaxed text-gray-400">
                 &ldquo;Legitimate&rdquo; here means a real, licensed telehealth operation - not a
                 guarantee of results. Therapists are licensed state by state. Always confirm current
