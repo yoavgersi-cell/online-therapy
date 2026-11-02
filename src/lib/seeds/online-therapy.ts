@@ -2,6 +2,7 @@ import type { SiteConfig } from "@/lib/config";
 import { onlineTherapyArticles } from "./online-therapy-articles";
 import { onlineTherapyGuideArticle } from "./online-therapy-guide-article";
 import { onlineTherapyInsuranceGuideArticle } from "./online-therapy-insurance-guide-article";
+import { onlineTherapyTimelineArticle } from "./online-therapy-timeline-article";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online therapy vertical content - toponlinetherapy.io
@@ -699,7 +700,7 @@ export const onlineTherapyConfig: SiteConfig = {
   ],
 
   // The pillar guide leads the list so it is the featured article on /articles.
-  articles: [onlineTherapyGuideArticle, onlineTherapyInsuranceGuideArticle, ...onlineTherapyArticles],
+  articles: [onlineTherapyGuideArticle, onlineTherapyInsuranceGuideArticle, onlineTherapyTimelineArticle, ...onlineTherapyArticles],
 
   faqs: [
     {

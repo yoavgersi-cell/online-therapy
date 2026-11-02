@@ -98,6 +98,8 @@ export const RELATED: Record<string, RelatedLink[]> = {
   "online-couples-therapy": [AUDIENCE[1], AUDIENCE[3], COST[1], CONDITIONS[4]],
   "what-is-family-therapy": [AUDIENCE[1], AUDIENCE[2], CONDITIONS[4], FORMAT[0]],
   "online-therapy-for-beginners": [FORMAT[3], FORMAT[2], AUDIENCE[0], CONDITIONS[4]],
+  // Timeline article (new)
+  "how-long-does-online-therapy-take-to-work": [CONDITIONS[0], CONDITIONS[1], FORMAT[2], FORMAT[0]],
   // Format cluster
   "online-therapy-vs-in-person": [FORMAT[1], FORMAT[2], CONDITIONS[3], FORMAT[3]],
   "online-therapy-near-me": [FORMAT[0], FORMAT[3], FORMAT[2], INSURANCE[0]],
