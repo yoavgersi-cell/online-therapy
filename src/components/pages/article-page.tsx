@@ -334,7 +334,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 not a long SEO intro. */}
             <div className="mb-2.5 flex items-center gap-3">
               <span
-                className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
+                className={`rounded-full px-2.5 py-0.5 text-[12px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
               >
                 {article.category}
               </span>
@@ -629,7 +629,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                     className="group rounded-xl border border-gray-200 bg-white p-5 transition-shadow hover:shadow-md"
                   >
                     <span
-                      className={`inline-block rounded-full px-2 py-0.5 text-[10px] font-semibold mb-2 ${categoryColors[ra.category] || "bg-gray-100 text-gray-600"}`}
+                      className={`inline-block rounded-full px-2 py-0.5 text-[12px] font-semibold mb-2 ${categoryColors[ra.category] || "bg-gray-100 text-gray-600"}`}
                     >
                       {ra.category}
                     </span>
@@ -654,7 +654,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               >
                 <ArrowLeft className="mt-0.5 h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#1A7A52] transition-colors" strokeWidth={2} />
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                  <span className="text-[12px] font-semibold uppercase tracking-wider text-gray-400">
                     Previous
                   </span>
                   <p className="mt-0.5 text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#1A7A52] transition-colors">
@@ -672,7 +672,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
               >
                 <ArrowRight className="mt-0.5 h-4 w-4 shrink-0 text-gray-400 group-hover:text-[#1A7A52] transition-colors" strokeWidth={2} />
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-400">
+                  <span className="text-[12px] font-semibold uppercase tracking-wider text-gray-400">
                     Next
                   </span>
                   <p className="mt-0.5 text-[14px] font-semibold leading-snug text-[#191919] group-hover:text-[#1A7A52] transition-colors">

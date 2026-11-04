@@ -173,11 +173,23 @@ html[data-hub] .hub-name {
   font-weight: 600;
   color: #191919;
 }
+.article-body .table-scroll {
+  margin: 1.15em 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+}
+.article-body .table-scroll table {
+  margin: 0;
+}
 @media (max-width: 640px) {
   .article-body table {
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
+    min-width: 520px;
+    font-size: 14px;
+  }
+  .article-body table td,
+  .article-body table th {
+    padding: 9px 11px;
   }
 }
 .article-body h3 {

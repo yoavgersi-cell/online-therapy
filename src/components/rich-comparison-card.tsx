@@ -86,7 +86,7 @@ export function RichComparisonCard({
                   />
                 ))}
               </div>
-              <p className="mt-0.5 text-[10px] font-bold uppercase tracking-wide text-[#1A7A52] sm:text-[11px]">{product.ratingLabel}</p>
+              <p className="mt-0.5 text-[12px] font-bold uppercase tracking-wide text-[#1A7A52] sm:text-[12px]">{product.ratingLabel}</p>
             </div>
             <div className="flex flex-col items-center justify-center rounded-lg bg-[#1A7A52] px-2.5 py-1 text-white sm:rounded-xl sm:px-3 sm:py-1.5">
               <span className="text-[20px] font-extrabold leading-none sm:text-[24px]">{product.rating.toFixed(1)}</span>
@@ -125,13 +125,13 @@ export function RichComparisonCard({
               <div className="rounded-xl border border-gray-100 bg-[#F1F8F4] p-3.5 sm:p-4">
                 {treatments.length > 0 && (
                   <div>
-                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Treatments offered</p>
+                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[12px]">Treatments offered</p>
                     <p className="mt-1 text-[12.5px] leading-snug text-gray-800 line-clamp-2 sm:line-clamp-none sm:text-[13.5px]">{treatments.slice(0, 4).join(" · ")}</p>
                   </div>
                 )}
                 {startingPlan?.price && (
                   <div className={treatments.length > 0 ? "mt-2.5 border-t border-gray-200 pt-2.5 sm:mt-3 sm:pt-3" : ""}>
-                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[11px]">Starting price</p>
+                    <p className="text-[10.5px] font-bold uppercase tracking-wide text-gray-500 sm:text-[12px]">Starting price</p>
                     <p className="mt-1 flex items-baseline gap-2 text-gray-900">
                       {startingPlan.regularPrice && (
                         <span className="text-[13px] font-medium text-gray-400 line-through sm:text-[14px]">{startingPlan.regularPrice}</span>
@@ -140,7 +140,7 @@ export function RichComparisonCard({
                       {startingPlan.unit && <span className="text-[12.5px] font-semibold text-gray-500 sm:text-[13px]">{startingPlan.unit}</span>}
                     </p>
                     {mentionsCompounded && (
-                      <p className="mt-1.5 text-[10.5px] leading-snug text-gray-400 sm:text-[11px]">
+                      <p className="mt-1.5 text-[10.5px] leading-snug text-gray-400 sm:text-[12px]">
                         *Compounded medications are not FDA-approved.
                       </p>
                     )}
@@ -170,7 +170,7 @@ export function RichComparisonCard({
               <div className="shrink-0 leading-tight lg:text-center">
                 <span className="hidden text-[12.5px] text-gray-500 lg:block">Pricing starts at</span>
                 <p className="whitespace-nowrap text-gray-900">
-                  <span className="text-[11px] font-semibold text-gray-400 lg:hidden">from </span>
+                  <span className="text-[12px] font-semibold text-gray-400 lg:hidden">from </span>
                   <span className="text-[20px] font-extrabold text-[#191919] lg:text-[22px]">{startingPlan.price}</span>
                   {startingPlan.unit && <span className="text-[12px] font-semibold text-gray-500 lg:text-[13px]">{startingPlan.unit}</span>}
                 </p>

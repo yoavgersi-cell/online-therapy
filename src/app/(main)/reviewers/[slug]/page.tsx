@@ -164,7 +164,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
           <div className="grid gap-3 sm:grid-cols-2">
             {r.licensure.map((c) => (
               <div key={c.title} className="rounded-xl border border-[#E5E5E5] bg-white p-4">
-                <p className="mb-1 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.05em] text-[#1A7A52]">
+                <p className="mb-1 flex items-center gap-1.5 text-[12px] font-semibold uppercase tracking-[0.05em] text-[#1A7A52]">
                   <BadgeCheck className="h-3.5 w-3.5" strokeWidth={2} /> Licensure
                 </p>
                 <p className="text-[15px] font-bold text-[#191919]">{c.title}</p>
@@ -174,7 +174,7 @@ export default async function ReviewerProfilePage({ params }: { params: Promise<
             ))}
             {r.education.map((e) => (
               <div key={e.degree} className="rounded-xl border border-[#E5E5E5] bg-white p-4">
-                <p className="mb-1 flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-[0.05em] text-[#1A7A52]">
+                <p className="mb-1 flex items-center gap-1.5 text-[12px] font-semibold uppercase tracking-[0.05em] text-[#1A7A52]">
                   <GraduationCap className="h-3.5 w-3.5" strokeWidth={2} /> Education
                 </p>
                 <p className="text-[15px] font-bold text-[#191919]">{e.degree}</p>

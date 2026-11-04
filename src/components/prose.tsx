@@ -106,7 +106,10 @@ function maybeSplitPlainBody(html: string): string {
 }
 
 export function enhanceArticleHtml(html: string): string {
-  const parts = maybeSplitPlainBody(html).split(/(<[^>]+>)/g);
+  // Wrap tables in a horizontal-scroll container on phones. Idempotent: a body
+  // already wrapped is left alone.
+  const wrapped = html.replace(/<table\b/gi, '<div class="table-scroll"><table').replace(/<\/table>/gi, "</table></div>");
+  const parts = maybeSplitPlainBody(wrapped).split(/(<[^>]+>)/g);
   const SKIP_OPEN = /^<(a|strong|b|h[1-6])\b/i;
   const SKIP_CLOSE = /^<\/(a|strong|b|h[1-6])>/i;
   let skipDepth = 0;

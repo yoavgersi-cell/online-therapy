@@ -32,7 +32,7 @@ export function ExpertByline({
       className={`group inline-flex items-center ${compact ? "gap-1.5" : "gap-2"}`}
     >
       <span
-        className={`flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#1A7A52]/[0.07] text-[10px] font-bold text-[#1A7A52] ${
+        className={`flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-[#1A7A52]/[0.07] text-[12px] font-bold text-[#1A7A52] ${
           compact ? "h-5 w-5" : "h-6 w-6"
         }`}
       >

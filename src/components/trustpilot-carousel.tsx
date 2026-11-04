@@ -62,7 +62,7 @@ function ReviewCard({ r }: { r: TrustpilotReview }) {
       <div className="mb-2.5 flex items-center justify-between gap-2">
         <TrustpilotStars rating={r.rating} boxClass="h-4 w-4" />
         {r.date && (
-          <span className="shrink-0 text-[11px] text-gray-400">{r.date}</span>
+          <span className="shrink-0 text-[12px] text-gray-400">{r.date}</span>
         )}
       </div>
       {r.title && (
@@ -74,12 +74,12 @@ function ReviewCard({ r }: { r: TrustpilotReview }) {
         &ldquo;{r.text}&rdquo;
       </p>
       <div className="mt-auto flex items-center gap-2">
-        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1A7A52]/10 text-[11px] font-bold text-[#1A7A52]">
+        <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1A7A52]/10 text-[12px] font-bold text-[#1A7A52]">
           {r.name.charAt(0)}
         </div>
         <div className="min-w-0">
           <p className="truncate text-[12.5px] font-semibold text-[#191919]">{r.name}</p>
-          <p className="text-[11px] text-gray-400">{r.location}</p>
+          <p className="text-[12px] text-gray-400">{r.location}</p>
         </div>
       </div>
     </div>

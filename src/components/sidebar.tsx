@@ -117,7 +117,7 @@ export function Sidebar({ config, providers, linkPrefix = "" }: { config: Sideba
                 </div>
               ))}
             </div>
-            <p className="mt-4 text-[11px] text-gray-400">Scores are updated regularly by our editorial team.</p>
+            <p className="mt-4 text-[12px] text-gray-400">Scores are updated regularly by our editorial team.</p>
           </SidebarCard>
         );
 

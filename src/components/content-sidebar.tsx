@@ -101,7 +101,7 @@ export function ContentSidebar({ config, providers, articles, pageType, sourceFl
                           {article.title}
                         </p>
                         {article.category && (
-                          <span className="mt-0.5 inline-block text-[11px] text-gray-400">
+                          <span className="mt-0.5 inline-block text-[12px] text-gray-400">
                             {article.category}
                           </span>
                         )}

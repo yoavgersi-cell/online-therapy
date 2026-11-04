@@ -141,7 +141,7 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
                 {rating !== null && ratingLabel !== null ? (
                   <RatingBadge rating={rating} label={ratingLabel} />
                 ) : (
-                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold text-gray-500">
+                  <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[12px] font-semibold text-gray-500">
                     Expert Review
                   </span>
                 )}

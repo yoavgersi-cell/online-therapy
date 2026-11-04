@@ -149,7 +149,7 @@ export async function Footer() {
             <p className="text-[12px] text-gray-400">
               &copy; {new Date().getFullYear()} Top Online Therapy. All rights reserved.
             </p>
-            <p className="text-[11px] text-gray-300">
+            <p className="text-[12px] text-gray-400">
               toponlinetherapy.io is not a mental-health provider. Always consult a licensed clinician.
             </p>
           </div>

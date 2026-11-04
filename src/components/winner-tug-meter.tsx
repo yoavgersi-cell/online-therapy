@@ -71,7 +71,7 @@ export function WinnerTugMeter({
             <span className="text-[28px] font-extrabold leading-none tracking-[-0.03em] tabular-nums text-[#0F6F4D] sm:text-[30px]">
               {pct}%
             </span>
-            <span className="mt-1.5 text-[10px] font-bold uppercase tracking-[0.07em] text-gray-400">
+            <span className="mt-1.5 text-[12px] font-bold uppercase tracking-[0.07em] text-gray-400">
               advantage
             </span>
           </div>
@@ -122,7 +122,7 @@ export function WinnerTugMeter({
 
           {/* Sources */}
           <div
-            className={`mt-5 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 border-t border-gray-100 pt-3.5 text-[11px] text-gray-400 transition-opacity delay-150 duration-500 sm:justify-start ${
+            className={`mt-5 flex flex-wrap items-center justify-center gap-x-2.5 gap-y-1 border-t border-gray-100 pt-3.5 text-[12px] text-gray-400 transition-opacity delay-150 duration-500 sm:justify-start ${
               revealed ? "opacity-100" : "opacity-0"
             }`}
           >

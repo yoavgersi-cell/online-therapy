@@ -184,7 +184,7 @@ function ReadMoreProse({ text, label, visibleSentences = 2 }: { text: string; la
       <details className="group mt-1.5">
         <summary className="inline-flex cursor-pointer list-none items-center gap-1 text-[14px] font-semibold text-[#1A7A52] hover:underline [&::-webkit-details-marker]:hidden">
           {label}
-          <span className="text-[11px] transition-transform group-open:rotate-180">▾</span>
+          <span className="text-[12px] transition-transform group-open:rotate-180">▾</span>
         </summary>
         <ReadableProse text={rest} className="mt-2" paragraphClassName="text-[15px] leading-[1.85] text-gray-600" />
       </details>
@@ -625,7 +625,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
               <table className="w-full table-fixed border-collapse text-left">
                 <thead>
                   <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                    <th className="w-[26%] py-3 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
+                    <th className="w-[26%] py-3 pl-4 pr-2 text-[12px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:w-[22%] sm:py-3.5 sm:text-[12px]">
                       At a glance
                     </th>
                     <th className="py-3 px-2 text-[13px] font-bold text-[#191919] sm:py-3.5 sm:px-3 sm:text-[15px]">{p1.name}</th>
@@ -884,7 +884,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                                   {plan.unit && <span className="text-[12px] text-gray-400">{plan.unit}</span>}
                                 </div>
                                 {plan.cadence && (
-                                  <p className="mt-1 text-[11px] font-semibold uppercase tracking-wide text-gray-400">
+                                  <p className="mt-1 text-[12px] font-semibold uppercase tracking-wide text-gray-400">
                                     {plan.cadence}
                                   </p>
                                 )}
@@ -1000,7 +1000,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <table className="w-full min-w-[520px] border-collapse text-left">
                   <thead>
                     <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                      <th className="w-[34%] px-4 py-3.5 text-[11px] font-bold uppercase tracking-[0.07em] text-gray-400" />
+                      <th className="w-[34%] px-4 py-3.5 text-[12px] font-bold uppercase tracking-[0.07em] text-gray-400" />
                       <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p1.name}</th>
                       <th className="px-4 py-3.5 text-[14px] font-bold text-[#191919]">{p2.name}</th>
                     </tr>
@@ -1239,7 +1239,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                       <div className="flex flex-wrap items-center gap-2 text-[13px] font-bold text-[#191919]">
                         {t.names.map((name, ni) => (
                           <Fragment key={ni}>
-                            {ni > 0 && <span className="text-[11px] font-extrabold text-gray-300">VS</span>}
+                            {ni > 0 && <span className="text-[12px] font-extrabold text-gray-300">VS</span>}
                             <span>{name}</span>
                           </Fragment>
                         ))}
@@ -1261,7 +1261,7 @@ export async function BattlePageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   >
                     <div className="flex items-center gap-2 text-[13px] font-bold text-[#191919]">
                       <span>{bp1.name}</span>
-                      <span className="text-[11px] font-extrabold text-gray-300">VS</span>
+                      <span className="text-[12px] font-extrabold text-gray-300">VS</span>
                       <span>{bp2.name}</span>
                     </div>
                     <span className="ml-auto inline-flex items-center gap-1 text-[13px] font-semibold text-[#1A7A52] group-hover:underline">

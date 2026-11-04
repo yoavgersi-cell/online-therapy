@@ -55,7 +55,7 @@ function ProductCard({
         <div className="relative flex h-[150px] items-center justify-center border-b border-gray-100 bg-white p-3">
           {chip && (
             <span
-              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[10px] font-bold ring-1 ${chip.className}`}
+              className={`absolute left-2 top-2 z-10 rounded-full px-2 py-0.5 text-[12px] font-bold ring-1 ${chip.className}`}
             >
               {chip.label}
             </span>
@@ -84,14 +84,14 @@ function ProductCard({
             <span className="text-[17px] font-extrabold tracking-tight text-[#191919] [font-variant-numeric:tabular-nums]">
               {product.price}
             </span>
-            <span className="text-[11px] font-semibold text-gray-400">/mo</span>
+            <span className="text-[12px] font-semibold text-gray-400">/mo</span>
             {product.regularPrice && (
               <span className="text-[12px] font-medium text-gray-400 line-through [font-variant-numeric:tabular-nums]">
                 {product.regularPrice}
               </span>
             )}
           </div>
-          <p className="mt-0.5 text-[11px] leading-snug text-gray-400">{product.priceNote}</p>
+          <p className="mt-0.5 text-[12px] leading-snug text-gray-400">{product.priceNote}</p>
           <p className="mt-1.5 text-[12.5px] font-medium text-gray-800">{provider.name}</p>
           <div className="mt-auto flex items-center gap-1.5 pt-2 text-[11.5px] text-gray-500">
             <Truck className="h-3.5 w-3.5 shrink-0" strokeWidth={2} />

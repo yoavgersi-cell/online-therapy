@@ -164,7 +164,7 @@ export async function ThreeWayPageView({ trio, ctx }: { trio: ThreeWayComparison
             <table className="w-full min-w-[640px] table-fixed border-collapse text-left">
               <thead>
                 <tr className="border-b-2 border-gray-200 bg-gray-50/80">
-                  <th className="w-[19%] py-3.5 pl-4 pr-2 text-[11px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:text-[12px]" />
+                  <th className="w-[19%] py-3.5 pl-4 pr-2 text-[12px] font-bold uppercase tracking-[0.06em] text-gray-400 sm:text-[12px]" />
                   {providers.map((p) => (
                     <th key={p.id} className="py-3.5 px-3 text-[14px] font-bold text-[#191919] sm:text-[15px]">
                       {p.name}

@@ -159,7 +159,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
             <div className="flex flex-1 flex-col justify-center p-6 sm:p-8">
               <div className="mb-3 flex items-center gap-3">
                 <span
-                  className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[articles[0].category] || "bg-gray-100 text-gray-600"}`}
+                  className={`rounded-full px-2.5 py-0.5 text-[12px] font-semibold ${categoryColors[articles[0].category] || "bg-gray-100 text-gray-600"}`}
                 >
                   {articles[0].category}
                 </span>
@@ -212,7 +212,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
               <div className="flex flex-1 flex-col p-5">
                 <div className="mb-2.5 flex items-center gap-3">
                   <span
-                    className={`rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
+                    className={`rounded-full px-2.5 py-0.5 text-[12px] font-semibold ${categoryColors[article.category] || "bg-gray-100 text-gray-600"}`}
                   >
                     {article.category}
                   </span>
@@ -256,7 +256,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                   className="group flex flex-col rounded-xl border border-gray-200 bg-white p-6 transition-shadow hover:shadow-md"
                 >
                   <span
-                    className={`mb-3 inline-flex w-fit rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${categoryColors[g.category] || "bg-gray-100 text-gray-600"}`}
+                    className={`mb-3 inline-flex w-fit rounded-full px-2.5 py-0.5 text-[12px] font-semibold ${categoryColors[g.category] || "bg-gray-100 text-gray-600"}`}
                   >
                     {g.category}
                   </span>
@@ -306,7 +306,7 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
                         className="max-h-full max-w-[110px] object-contain"
                       />
                     </div>
-                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#1A7A52]/20 bg-white text-[11px] font-extrabold text-[#1A7A52]">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border-2 border-[#1A7A52]/20 bg-white text-[12px] font-extrabold text-[#1A7A52]">
                       VS
                     </span>
                     <div className="flex h-[36px] flex-1 items-center justify-center">
@@ -329,12 +329,12 @@ export async function ArticlesIndexView({ ctx }: { ctx: SiteContext }) {
 
                   <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-4">
                     {winner ? (
-                      <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-bold text-emerald-700">
+                      <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1 text-[12px] font-bold text-emerald-700">
                         <Trophy className="h-3 w-3" strokeWidth={2.5} />
                         Winner: {winner.name}
                       </span>
                     ) : (
-                      <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[11px] font-semibold text-gray-500">
+                      <span className="rounded-full bg-gray-100 px-2.5 py-1 text-[12px] font-semibold text-gray-500">
                         Close call
                       </span>
                     )}

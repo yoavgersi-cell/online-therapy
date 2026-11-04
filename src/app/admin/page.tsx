@@ -262,7 +262,7 @@ export default function AdminPage() {
         <div className="flex items-center gap-4">
           <h1 className="text-lg font-bold text-[#191919]">Top Online Therapy CMS</h1>
           <div className="flex items-center gap-2 rounded-lg border border-gray-200 bg-gray-50 py-1 pl-3 pr-1">
-            <span className="text-[11px] font-semibold uppercase tracking-wide text-gray-400">Vertical</span>
+            <span className="text-[12px] font-semibold uppercase tracking-wide text-gray-400">Vertical</span>
             <select
               value={vertical}
               onChange={(e) => switchVertical(e.target.value)}
@@ -642,7 +642,7 @@ export default function AdminPage() {
                   const order = config.sidebar.blockOrder ?? ["socialProof", "secureBadge", "featuredImage", "editorialReviews", "rankingMethodology", "disclosure"];
                   return (
                     <div key={blockId} className="flex items-center gap-3 rounded-lg border bg-gray-50 px-4 py-2.5">
-                      <span className="flex h-6 w-6 items-center justify-center rounded bg-[#191919] text-[11px] font-bold text-white">{bi + 1}</span>
+                      <span className="flex h-6 w-6 items-center justify-center rounded bg-[#191919] text-[12px] font-bold text-white">{bi + 1}</span>
                       <span className="flex-1 text-sm font-medium text-[#191919]">{labels[blockId] ?? blockId}</span>
                       <div className="flex gap-1 shrink-0">
                         <button
@@ -1996,7 +1996,7 @@ export default function AdminPage() {
                           const provider = config.providers.find((p) => p.id === pid);
                           return (
                             <div key={pid} className="flex items-center gap-2 rounded border bg-white px-2.5 py-1.5">
-                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#191919] text-[10px] font-bold text-white">{pi + 1}</span>
+                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded bg-[#191919] text-[12px] font-bold text-white">{pi + 1}</span>
                               <span className="flex-1 text-xs font-medium text-[#191919] truncate">{provider?.name ?? pid}</span>
                               <div className="flex gap-0.5 shrink-0">
                                 <button
@@ -2037,7 +2037,7 @@ export default function AdminPage() {
                           );
                         })}
                         {order.length === 0 && (
-                          <p className="py-2 text-center text-[10px] text-gray-400 italic">Using algorithm</p>
+                          <p className="py-2 text-center text-[12px] text-gray-400 italic">Using algorithm</p>
                         )}
                       </div>
                       <select

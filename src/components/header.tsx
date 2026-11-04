@@ -19,7 +19,7 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link href="/" className="flex items-baseline gap-1.5" aria-label="Top Online Therapy home">
           <span className="text-[20px] font-bold tracking-tight text-[#1A7A52]">Top Online Therapy</span>
-          <span className="text-[11px] font-semibold uppercase tracking-wider text-[#8A8A8A]">
+          <span className="text-[12px] font-semibold uppercase tracking-wider text-[#8A8A8A]">
             .io
           </span>
         </Link>

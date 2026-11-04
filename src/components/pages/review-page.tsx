@@ -544,7 +544,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   <div className="flex items-center justify-between gap-2">
                     <h4 className="text-[15px] font-bold text-[#191919]">{plan.name}</h4>
                     {plan.cadence && (
-                      <span className="rounded-full bg-[#1A7A52]/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-[#1A7A52]">
+                      <span className="rounded-full bg-[#1A7A52]/10 px-2.5 py-0.5 text-[12px] font-semibold uppercase tracking-wide text-[#1A7A52]">
                         {plan.cadence}
                       </span>
                     )}
@@ -558,7 +558,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                     )}
                   </div>
                   {plan.regularPrice && (
-                    <span className="mt-2 inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[11px] font-bold text-emerald-700">
+                    <span className="mt-2 inline-block rounded-full bg-emerald-50 px-2.5 py-0.5 text-[12px] font-bold text-emerald-700">
                       Sale price
                     </span>
                   )}
@@ -594,7 +594,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                   </div>
                   <div>
                     {step.timing && (
-                      <span className="text-[11px] font-semibold uppercase tracking-wide text-[#1A7A52]">
+                      <span className="text-[12px] font-semibold uppercase tracking-wide text-[#1A7A52]">
                         {step.timing}
                       </span>
                     )}
@@ -702,7 +702,7 @@ export async function ReviewPageView({ slug, ctx }: { slug: string; ctx: SiteCon
                 <div key={i} className="rounded-xl border border-gray-200 bg-[#FCFCFC] p-4 sm:p-5">
                   {/* Post header - the Reddit identity line */}
                   <div className="mb-2 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[12px]">
-                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FF4500] text-[10px] font-bold text-white">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-[#FF4500] text-[12px] font-bold text-white">
                       r/
                     </span>
                     {t.subreddit ? (

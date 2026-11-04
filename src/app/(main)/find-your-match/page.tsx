@@ -285,7 +285,7 @@ export default function FindYourMatchPage() {
               return (
                 <div key={i} className="flex flex-col items-center gap-1.5">
                   <Icon className="h-[18px] w-[18px] text-[#8fb5cc] sm:h-[24px] sm:w-[24px]" strokeWidth={1.5} />
-                  <span className="text-[11px] font-medium text-gray-500 sm:text-[15px]">{label}</span>
+                  <span className="text-[12px] font-medium text-gray-500 sm:text-[15px]">{label}</span>
                 </div>
               );
             })}
@@ -414,7 +414,7 @@ export default function FindYourMatchPage() {
               <span className="rounded-full bg-[#1A7A52] px-4 py-1 text-[12px] font-bold text-white sm:text-[13px]">
                 {featured.matchPct}% Match
               </span>
-              <span className="rounded-full bg-amber-50 px-3 py-1 text-[11px] font-semibold text-amber-700 sm:text-[12px]">
+              <span className="rounded-full bg-amber-50 px-3 py-1 text-[12px] font-semibold text-amber-700 sm:text-[12px]">
                 Top Recommendation
               </span>
             </div>
@@ -423,7 +423,7 @@ export default function FindYourMatchPage() {
             </div>
             <div className="mt-2 flex items-center gap-3 px-1">
               {featured.reasons.map((r, i) => (
-                <span key={i} className="flex items-center gap-1 text-[11px] text-gray-500 sm:text-[12px]">
+                <span key={i} className="flex items-center gap-1 text-[12px] text-gray-500 sm:text-[12px]">
                   <Check className="h-3 w-3 shrink-0 text-[#1A7A52]" strokeWidth={2} />
                   {r}
                 </span>
@@ -445,7 +445,7 @@ export default function FindYourMatchPage() {
                   <p className="text-[13px] leading-relaxed text-gray-500 italic">
                     &ldquo;{t.text}&rdquo;
                   </p>
-                  <p className="mt-1 text-[11px] font-medium text-gray-400">
+                  <p className="mt-1 text-[12px] font-medium text-gray-400">
                     {t.name} &middot; {t.state}
                   </p>
                 </div>
@@ -463,7 +463,7 @@ export default function FindYourMatchPage() {
                 {others.map((provider) => (
                   <div key={provider.id}>
                     <div className="mb-1 flex items-center gap-2 px-1">
-                      <span className="rounded-full bg-gray-200 px-3 py-0.5 text-[11px] font-bold text-gray-600">
+                      <span className="rounded-full bg-gray-200 px-3 py-0.5 text-[12px] font-bold text-gray-600">
                         {provider.matchPct}% Match
                       </span>
                     </div>
@@ -496,7 +496,7 @@ export default function FindYourMatchPage() {
               style={{ width: `${progress}%` }}
             />
           </div>
-          <span className="shrink-0 text-[11px] font-medium text-gray-400 sm:text-[12px]">
+          <span className="shrink-0 text-[12px] font-medium text-gray-400 sm:text-[12px]">
             Question {step + 1} of {totalSteps}
           </span>
         </div>

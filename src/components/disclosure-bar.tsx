@@ -8,11 +8,11 @@ export function DisclosureBar() {
 
   return (
     <>
-      <div className="bg-[#EEF6F1] border-b-[1.5px] border-[#CFE6D9] px-4 py-1.5 sm:py-2 text-center text-[10px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
+      <div className="bg-[#EEF6F1] border-b-[1.5px] border-[#CFE6D9] px-4 py-2 sm:py-2 text-center text-[12px] sm:text-[13px] leading-tight sm:leading-normal text-gray-600">
         Some providers featured on this site may compensate us. This may affect the order and placement of listings but does not influence our editorial ratings or reviews.{" "}
         <button
           onClick={() => setIsOpen(true)}
-          className="font-bold text-[#191919] underline underline-offset-2 hover:text-[#1A7A52]"
+          className="inline-flex min-h-[32px] items-center font-bold text-[#191919] underline underline-offset-2 hover:text-[#1A7A52]"
         >
           Advertising Disclosure
         </button>
