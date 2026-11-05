@@ -3,6 +3,7 @@ import { onlineTherapyArticles } from "./online-therapy-articles";
 import { onlineTherapyGuideArticle } from "./online-therapy-guide-article";
 import { onlineTherapyInsuranceGuideArticle } from "./online-therapy-insurance-guide-article";
 import { onlineTherapyTimelineArticle } from "./online-therapy-timeline-article";
+import { aiChatbotVsTherapistArticle } from "./online-therapy-ai-article";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // Online therapy vertical content - toponlinetherapy.io
@@ -700,7 +701,7 @@ export const onlineTherapyConfig: SiteConfig = {
   ],
 
   // The pillar guide leads the list so it is the featured article on /articles.
-  articles: [onlineTherapyGuideArticle, onlineTherapyInsuranceGuideArticle, onlineTherapyTimelineArticle, ...onlineTherapyArticles],
+  articles: [onlineTherapyGuideArticle, onlineTherapyInsuranceGuideArticle, onlineTherapyTimelineArticle, aiChatbotVsTherapistArticle, ...onlineTherapyArticles],
 
   faqs: [
     {
