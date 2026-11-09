@@ -102,6 +102,8 @@ export const RELATED: Record<string, RelatedLink[]> = {
   "how-long-does-online-therapy-take-to-work": [CONDITIONS[0], CONDITIONS[1], FORMAT[2], FORMAT[0]],
   // AI and therapy (new)
   "ai-chatbot-vs-therapist": [FORMAT[2], CONDITIONS[0], PSYCHIATRY[1], FORMAT[3]],
+  // Top-3 pillar (new)
+  "best-online-therapy-2026": [TRUST_BETTERHELP[0], INSURANCE[0], PSYCHIATRY[0], COST[0]],
   // Format cluster
   "online-therapy-vs-in-person": [FORMAT[1], FORMAT[2], CONDITIONS[3], FORMAT[3]],
   "online-therapy-near-me": [FORMAT[0], FORMAT[3], FORMAT[2], INSURANCE[0]],
