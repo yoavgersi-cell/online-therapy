@@ -8,6 +8,7 @@ import { hreflangLanguages } from "@/lib/regions";
 import { organizationSchema, webSiteSchema } from "@/lib/geo";
 import "./globals.css";
 
+import { OG_IMAGE } from "@/lib/seo";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -34,7 +35,7 @@ export const metadata: Metadata = {
     "headspace review",
     "online therapy platforms",
   ],
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     title: "Top Online Therapy - Compare the Best Online Therapy Platforms & Prices",
     description:
       "Independent, side-by-side comparisons of top online therapy platforms - ranked on insurance, session formats, price and support.",

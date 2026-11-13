@@ -28,6 +28,7 @@ import { YoutubeReviewSection } from "@/components/youtube-review";
 import { ReadableProse } from "@/components/prose";
 import { ProviderAudit } from "@/components/provider-audit";
 
+import { OG_IMAGE } from "@/lib/seo";
 // Per-provider SEO overrides, "is X legit?" trust blocks, and extra FAQs were a
 // weight-loss-vertical feature (all keyed by WL provider slugs and, where used,
 // gated to ctx.vertical === "weight-loss"). This single-vertical build keeps
@@ -177,7 +178,7 @@ export async function reviewMetadata(slug: string, ctx: SiteContext): Promise<Me
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       siteName: "Top Online Therapy",
       title: pageTitle,
       description: pageDescription,

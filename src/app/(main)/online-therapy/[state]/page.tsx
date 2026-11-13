@@ -13,6 +13,7 @@ import { STATES, STATE_BY_SLUG } from "@/lib/states";
 import { stateNeighbors, medicaidProgramName, hasBrandedMedicaid } from "@/lib/state-details";
 import { stateNote } from "@/lib/state-notes";
 
+import { OG_IMAGE } from "@/lib/seo";
 export const revalidate = 60;
 
 const SITE_URL = "https://www.toponlinetherapy.io";
@@ -39,7 +40,7 @@ export async function generateMetadata({
     title: { absolute: `${title} | Top Online Therapy` },
     description,
     alternates: { canonical: url },
-    openGraph: { siteName: "Top Online Therapy", title, description, url, type: "website" },
+    openGraph: { images: [OG_IMAGE], siteName: "Top Online Therapy", title, description, url, type: "website" },
   };
 }
 

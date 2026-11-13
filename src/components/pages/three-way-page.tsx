@@ -12,6 +12,7 @@ import { LastUpdated } from "@/components/last-updated";
 import { MedicalSources, TrustDisclosure } from "@/components/medical-sources";
 import { TRIO_FACTS, type ThreeWayComparison } from "@/lib/three-way";
 
+import { OG_IMAGE } from "@/lib/seo";
 // Matrix rows rendered for every trio - one place to add a row site-wide.
 // Three-way pages are not used on this single-vertical site (the registry is
 // empty), so this component never renders; the rows are kept generic.
@@ -37,7 +38,7 @@ export function threeWayMetadata(trio: ThreeWayComparison, ctx: SiteContext): Me
         ? { index: false, follow: true }
         : undefined,
     alternates: { canonical: url },
-    openGraph: { siteName: "Top Online Therapy", title: trio.metaTitle, description: trio.description, url, type: "article" },
+    openGraph: { images: [OG_IMAGE], siteName: "Top Online Therapy", title: trio.metaTitle, description: trio.description, url, type: "article" },
   };
 }
 

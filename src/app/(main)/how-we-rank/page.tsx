@@ -9,6 +9,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 
+import { OG_IMAGE } from "@/lib/seo";
 export const revalidate = 60;
 
 const CANONICAL = "https://www.toponlinetherapy.io/how-we-rank";
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
   description:
     "Our full methodology for ranking and reviewing online therapy platforms: the factors we score, where our data comes from, how we verify accuracy, and how we pick winners in head-to-head comparisons.",
   alternates: { canonical: CANONICAL },
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     siteName: "Top Online Therapy",
     title: "How We Rank & Review Online Therapy Platforms - Our Methodology",
     description:

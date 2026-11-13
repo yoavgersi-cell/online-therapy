@@ -4,6 +4,7 @@ import { STATES } from "@/lib/states";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 
+import { OG_IMAGE } from "@/lib/seo";
 export const revalidate = 60;
 
 const SITE_URL = "https://www.toponlinetherapy.io";
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   description:
     "Find online therapy in your state. Compare platforms that match you with therapists licensed where you live - video, phone or messaging sessions, insurance accepted. Pick your state to see options.",
   alternates: { canonical: `${SITE_URL}/online-therapy` },
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     siteName: "Top Online Therapy",
     title: "Online Therapy by State (2026)",
     description: "Compare online therapy platforms with therapists licensed in your state.",
@@ -64,6 +65,30 @@ export default function OnlineTherapyIndex() {
           </Link>
         ))}
       </div>
+
+      <section className="mt-14 max-w-2xl text-[16px] leading-[1.75] text-gray-700">
+        <h2 className="mb-3 text-[22px] font-bold text-[#191919]">What changes from state to state</h2>
+        <p className="mb-4">
+          Three things are set state by state, and they decide most of the difference between two residents of
+          different states. The first is licensing: the therapist must hold a license valid where you are during
+          the session, and the license titles differ (an LPC in one state may be an LPCC or LMHC in another). The
+          second is Medicaid: the program name, the expansion status and the managed-care networks all vary. The
+          third is time zone: a few states split across two zones, which matters when you schedule across the line.
+        </p>
+        <p className="mb-4">
+          Each state page on this site lists the license titles to look for, the time zone, the Medicaid program
+          and whether the state has expanded Medicaid, along with the platforms that serve it. For the rules that
+          apply everywhere, see our{" "}
+          <a href="/articles/does-insurance-cover-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
+            insurance guide
+          </a>{" "}
+          and our{" "}
+          <a href="/articles/online-therapy-guide" className="font-semibold text-[#1A7A52] hover:underline">
+            complete guide to online therapy
+          </a>
+          . If you travel or move, tell your therapist before you go; a re-match after a permanent move is normal.
+        </p>
+      </section>
     </div>
   );
 }

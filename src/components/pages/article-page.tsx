@@ -21,6 +21,7 @@ import { ComparisonCard } from "@/components/comparison-card";
 import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/reddit-community";
 import { notFound, permanentRedirect } from "next/navigation";
 
+import { OG_IMAGE } from "@/lib/seo";
 // Code-side CTR overrides and quick-answer boxes for high-impression articles
 // were a weight-loss-vertical feature (applied only when ctx.vertical ===
 // "weight-loss"). This single-vertical build keeps the maps empty so the
@@ -51,7 +52,7 @@ export async function articleMetadata(slug: string, ctx: SiteContext): Promise<M
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       siteName: "Top Online Therapy",
       title: override?.title ?? article.title,
       description: override?.description ?? article.description,

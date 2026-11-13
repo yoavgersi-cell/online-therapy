@@ -7,6 +7,7 @@ import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 import { type SiteContext, canonicalUrl, hubLink } from "@/lib/site-context";
 
+import { OG_IMAGE } from "@/lib/seo";
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
 }
@@ -26,7 +27,7 @@ export async function articlesIndexMetadata(ctx: SiteContext): Promise<Metadata>
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       siteName: "Top Online Therapy",
       title,
       description,

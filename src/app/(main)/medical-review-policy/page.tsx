@@ -4,6 +4,7 @@ import { ShieldCheck } from "lucide-react";
 import { Breadcrumbs } from "@/components/breadcrumbs";
 import { SITE_ORIGIN, SITE_NAME, REVIEWERS, reviewerDisplayName, reviewerPath, reviewerPersonSchema } from "@/data/reviewers";
 
+import { OG_IMAGE } from "@/lib/seo";
 const CANONICAL = `${SITE_ORIGIN}/medical-review-policy`;
 const TITLE = `Medical Review Policy: How ${SITE_NAME} Checks Health Content`;
 const DESCRIPTION =
@@ -14,7 +15,7 @@ export const metadata: Metadata = {
   title: { absolute: TITLE },
   description: DESCRIPTION,
   alternates: { canonical: CANONICAL },
-  openGraph: { siteName: SITE_NAME, title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
+  openGraph: { images: [OG_IMAGE], siteName: SITE_NAME, title: TITLE, description: DESCRIPTION, url: CANONICAL, type: "article" },
 };
 
 export default function MedicalReviewPolicyPage() {

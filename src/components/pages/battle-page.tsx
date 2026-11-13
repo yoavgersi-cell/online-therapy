@@ -31,6 +31,7 @@ import { RedditThreadCarousel, REDDIT_COMMUNITY_FEEDBACK } from "@/components/re
 import { threeWayBySlug, THREE_WAY_COMPARISONS } from "@/lib/three-way";
 import { ThreeWayPageView, threeWayMetadata } from "@/components/pages/three-way-page";
 
+import { OG_IMAGE } from "@/lib/seo";
 // Per-battle 12-month cost math and code-side CTR overrides were a weight-loss-
 // vertical feature (all keyed by WL matchup slugs and gated to ctx.vertical ===
 // "weight-loss"). This single-vertical build keeps the maps empty and renders
@@ -95,7 +96,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
       description: landingDesc,
       robots: ctx.noindex ? { index: false, follow: false } : undefined,
       alternates: { canonical: url },
-      openGraph: {
+      openGraph: { images: [OG_IMAGE],
         siteName: "Top Online Therapy",
         title: landing.seoTitle,
         description: landingDesc,
@@ -152,7 +153,7 @@ export async function battleMetadata(slug: string, ctx: SiteContext): Promise<Me
         ? { index: false, follow: true }
         : undefined,
     alternates: { canonical: url },
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       siteName: "Top Online Therapy",
       title: metaTitle,
       description: metaDescription,

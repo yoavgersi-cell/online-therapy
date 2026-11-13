@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { OG_IMAGE } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Find Your Best Online Therapy Match - Free Quiz",
   description:
@@ -7,7 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.toponlinetherapy.io/find-your-match",
   },
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     siteName: "Top Online Therapy",
     title: "Find Your Best Online Therapy Match",
     description:

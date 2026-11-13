@@ -12,6 +12,7 @@ import { getConfig } from "@/lib/config-store";
 import { CONTENT_LAST_UPDATED } from "@/lib/config";
 import { StateLinks } from "@/components/state-links";
 
+import { OG_IMAGE } from "@/lib/seo";
 export const revalidate = 60;
 
 const SITE_URL = "https://www.toponlinetherapy.io";
@@ -23,7 +24,7 @@ export const metadata: Metadata = {
   description:
     "Compare the best online therapy platforms of 2026. Top mental-health providers ranked by insurance coverage, session formats, therapist matching, pricing and value - find your best fit.",
   alternates: { canonical: SITE_URL },
-  openGraph: {
+  openGraph: { images: [OG_IMAGE],
     siteName: "Top Online Therapy",
     title: "Best Online Therapy Platforms of 2026 - Compare Top Providers",
     description:

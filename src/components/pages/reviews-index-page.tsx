@@ -7,6 +7,7 @@ import { RatingBadge } from "@/components/rating-badge";
 import { MedicalReviewBar } from "@/components/medical-review-bar";
 import { pageReviewSchema } from "@/data/reviewers";
 
+import { OG_IMAGE } from "@/lib/seo";
 function verticalName(id: string): string {
   return VERTICALS.find((v) => v.id === id)?.name ?? "Treatment";
 }
@@ -36,7 +37,7 @@ export async function reviewsIndexMetadata(ctx: SiteContext): Promise<Metadata> 
     alternates: {
       canonical: url,
     },
-    openGraph: {
+    openGraph: { images: [OG_IMAGE],
       siteName: "Top Online Therapy",
       title,
       description,
@@ -152,6 +153,38 @@ export async function ReviewsIndexView({ ctx }: { ctx: SiteContext }) {
             </Link>
           ))}
         </div>
+
+        <section className="mx-auto mt-14 max-w-[760px] text-[16px] leading-[1.75] text-gray-700">
+          <h2 className="mb-3 text-[22px] font-bold text-[#191919]">How to read a platform review on this site</h2>
+          <p className="mb-4">
+            Every review follows the same order: what the platform is, what it costs, whether insurance covers it,
+            what its customers say, and who it is not for. Prices appear only once they are verified from the
+            platform&rsquo;s own published terms. Where a figure is a company claim, we label it as one.
+          </p>
+          <p className="mb-4">
+            Ratings are shown as captured from each platform&rsquo;s live Trustpilot profile, including the low ones.
+            At the time of our latest capture, betterhelp held 3.9 across 9,652 reviews, Talkspace 4.4 across 2,370,
+            and headspace 1.5 across 770. Those averages measure customer experience, which at these companies is
+            shaped by billing, matching and cancellation as much as by clinical care.
+          </p>
+          <p className="mb-4">
+            If you are choosing between platforms, start with our{" "}
+            <a href="/articles/best-online-therapy-2026" className="font-semibold text-[#1A7A52] hover:underline">
+              top-three comparison for 2026
+            </a>
+            . If cost decides it, read the{" "}
+            <a href="/articles/online-therapy-cost" className="font-semibold text-[#1A7A52] hover:underline">
+              cost guide
+            </a>{" "}
+            and check your coverage with the{" "}
+            <a href="/articles/does-insurance-cover-online-therapy" className="font-semibold text-[#1A7A52] hover:underline">
+              insurance guide
+            </a>
+            . Reviews do not affect placement; our{" "}
+            <a href="/how-we-rank" className="font-semibold text-[#1A7A52] hover:underline">methodology</a>{" "}
+            explains how we order platforms.
+          </p>
+        </section>
       </div>
     </div>
   );
