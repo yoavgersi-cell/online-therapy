@@ -1,0 +1,221 @@
+{
+  "style": "Flat editorial illustration, soft shadows, calm and clinical-neutral. Palette: deep green #1A7A52, mint #E6F4EC, warm grey #E5E5E5 accents. Wide 3:2 composition with generous empty space at the edges. No text, letters, numbers, logos or brand names. No photographs of real people, no identifiable faces, no crisis or distress imagery.",
+  "items": [
+    {
+      "slug": "online-therapy-guide",
+      "priority": 1,
+      "scene": "A quiet workspace with an open notebook, a mug of tea and a laptop showing an abstract calm chat bubble, sunlight through a window onto a plant.",
+      "alt": "Open notebook, tea and laptop on a desk by a window, a calm setting for starting online therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "does-insurance-cover-online-therapy",
+      "priority": 2,
+      "scene": "A folded insurance card and a clipboard beside a small stack of coins and a phone, arranged on a soft mint background.",
+      "alt": "Insurance card, clipboard and coins beside a phone, representing how insurance covers online therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "is-betterhelp-legit",
+      "priority": 3,
+      "scene": "A shield icon overlapping a speech bubble and a checkmark, symmetrical composition in green tones.",
+      "alt": "Shield and checkmark over a speech bubble, symbolizing a legitimacy check for an online therapy platform",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "best-online-therapy-2026",
+      "priority": 4,
+      "scene": "Three equal-height rounded cards arranged side by side on a mint background, each with a simple abstract icon: a chat bubble, a heart, a small leaf.",
+      "alt": "Three cards with chat, heart and leaf icons, representing a top three comparison of online therapy platforms",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "how-much-does-talkspace-cost",
+      "priority": 5,
+      "scene": "A pile of coins beside a calendar showing weekly markers and a small receipt, flat and uncluttered.",
+      "alt": "Coins, weekly calendar and receipt, representing the cost of Talkspace therapy per week",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "free-and-low-cost-therapy-options",
+      "priority": 6,
+      "scene": "A open door with warm light spilling onto a path, a single bench and a small tree, mint and green palette.",
+      "alt": "Open door with light and a bench on a path, representing free and low-cost therapy options",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-psychiatry",
+      "priority": 7,
+      "scene": "A stethoscope and a laptop with a blank video call window, placed on a desk with a plant.",
+      "alt": "Stethoscope and laptop with a video call window, representing online psychiatry and medication review",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-cost",
+      "priority": 8,
+      "scene": "A wallet, a small jar of coins and a phone with a blank calendar, shown in soft green tones.",
+      "alt": "Wallet, coin jar and phone calendar, representing the cost of online therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "betterhelp-alternatives",
+      "priority": 9,
+      "scene": "Two diverging paths on a mint background, one leading to a small house and one to a tree, with a signpost between them.",
+      "alt": "Two paths branching from a signpost, representing alternatives to betterhelp",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "how-much-does-betterhelp-cost",
+      "priority": 10,
+      "scene": "A monthly calendar page with a coin beside it and a simple speech bubble, flat style.",
+      "alt": "Monthly calendar with a coin and speech bubble, representing the monthly cost of betterhelp",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "does-betterhelp-take-insurance",
+      "priority": 11,
+      "scene": "A medical insurance card held beside a speech bubble, on a soft green background.",
+      "alt": "Insurance card beside a speech bubble, representing whether betterhelp accepts insurance",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "does-talkspace-take-insurance",
+      "priority": 12,
+      "scene": "A health plan card with a small check mark beside a phone showing a blank chat screen.",
+      "alt": "Health plan card with a check mark beside a phone chat screen, representing Talkspace insurance coverage",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "how-much-does-headspace-cost",
+      "priority": 13,
+      "scene": "A meditation cushion beside a phone showing a soft circular timer, in mint and green.",
+      "alt": "Meditation cushion beside a phone with a timer, representing the cost of the headspace app",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "how-to-choose-an-online-therapy-platform",
+      "priority": 14,
+      "scene": "Four stacked tiles, each with a simple icon, arranged as a checklist on a mint background.",
+      "alt": "Four stacked tiles with icons forming a checklist, representing how to choose an online therapy platform",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-that-takes-insurance",
+      "priority": 15,
+      "scene": "A key and an insurance card placed together on a green desk pad.",
+      "alt": "Key and insurance card on a desk, representing online therapy that takes insurance",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-vs-in-person",
+      "priority": 16,
+      "scene": "Split composition: a laptop with a calm video window on the left, a plain office chair and window on the right, divided by a soft line.",
+      "alt": "Split scene of a laptop video session and an office chair, comparing online and in-person therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-near-me",
+      "priority": 17,
+      "scene": "A simple map pin above a rounded map shape, with a route dotted line, in green tones.",
+      "alt": "Map pin and route line, representing online therapy near me",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-for-anxiety",
+      "priority": 18,
+      "scene": "Calm abstract waves in soft green layers, a small sun outline above them.",
+      "alt": "Calm layered waves and a soft sun, representing online therapy for anxiety",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-therapy-for-depression",
+      "priority": 19,
+      "scene": "A window with soft morning light, a plant growing toward it, a chair beside it.",
+      "alt": "Window with morning light and a growing plant, representing online therapy for depression",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "cbt-online",
+      "priority": 20,
+      "scene": "A thought bubble linked by arrows to a small checklist and a plant, flat diagram style.",
+      "alt": "Thought bubble linked to a checklist and plant, representing CBT delivered online",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "does-online-therapy-work",
+      "priority": 21,
+      "scene": "A rising line chart in green on a soft background, with a small leaf at the end of the line.",
+      "alt": "Rising line chart with a leaf, representing whether online therapy works",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "online-couples-therapy",
+      "priority": 22,
+      "scene": "Two overlapping circles in green and mint with a small heart between them, on a plain background.",
+      "alt": "Two overlapping circles with a heart, representing online couples therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "what-is-family-therapy",
+      "priority": 23,
+      "scene": "A simple house outline with three rounded figures of different sizes in silhouette, no faces, green palette.",
+      "alt": "House with three silhouetted figures, representing family therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "types-of-therapy",
+      "priority": 24,
+      "scene": "Four equal tiles with simple icons: a speech bubble, a path, a leaf and a book, on a mint background.",
+      "alt": "Four tiles with speech bubble, path, leaf and book icons, representing types of therapy",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "therapy-vs-psychiatry",
+      "priority": 25,
+      "scene": "Two chairs facing each other across a small table with a notebook and a pill-shaped outline, neutral green palette.",
+      "alt": "Two chairs facing each other across a table with a notebook, representing therapy versus psychiatry",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "ai-chatbot-vs-therapist",
+      "priority": 26,
+      "scene": "A speech bubble with a simple robot-line icon on one side and a human-line silhouette on the other, separated by a soft divider.",
+      "alt": "Speech bubble with a robot icon beside a human silhouette, representing AI chatbots versus therapists",
+      "status": "pending",
+      "backlog": true
+    },
+    {
+      "slug": "how-long-does-online-therapy-take-to-work",
+      "priority": 27,
+      "scene": "A growth curve in green rising across a calendar grid, with small markers for each week.",
+      "alt": "Growth curve across a calendar grid, representing how long online therapy takes to work",
+      "status": "pending",
+      "backlog": true
+    }
+  ]
+}

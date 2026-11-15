@@ -51,6 +51,22 @@ and unverified prices. Exit code 1 means a blocking issue. A scheduled Claude
 routine runs it weekly on a fresh build, fixes safe issues under the content
 rules below, and reports.
 
+## Article images
+
+Every article needs an image. The build runs `scripts/check-article-images.mjs`
+and fails if an article has no image, unless it is a legacy article queued in
+`scripts/article-image-manifest.json` with `"backlog": true`.
+
+- New article: add a manifest entry (scene and alt text, without `backlog`),
+  then run `node scripts/generate-article-images.mjs --apply --slug <slug>`.
+  It writes `public/article-images/<slug>.png` and sets `image` and `imageAlt`
+  in the seed, so the article ships with its image.
+- Backlog: `node scripts/generate-article-images.mjs --apply` generates the
+  next five queued images. A scheduled routine runs this daily.
+- Dry run (no API calls): run the generator without `--apply`.
+- Images are generated with the OpenAI Images API. The key is attached by the
+  session's network proxy and is never stored in the repository.
+
 ## Content rules
 
 Mental-health content is YMYL at its most sensitive. Keep every crisis-adjacent

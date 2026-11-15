@@ -212,7 +212,7 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
     "@type": "Article",
     headline: article.title,
     description: article.description,
-    image: canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
+    image: article.image ? `${ctx.origin}${article.image}` : canonicalUrl(ctx, `/articles/${slug}/opengraph-image`),
     datePublished: article.publishedAt,
     dateModified: latestUpdate(article.updatedAt),
     wordCount,
@@ -344,6 +344,21 @@ export async function ArticlePageView({ slug, ctx }: { slug: string; ctx: SiteCo
                 {article.readTime}
               </span>
             </div>
+
+            {article.image && (
+              <figure className="mb-5 overflow-hidden rounded-xl border border-gray-200 bg-[#E6F4EC]">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={article.image}
+                  alt={article.imageAlt || article.title}
+                  width={1536}
+                  height={1024}
+                  className="aspect-[3/2] w-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
+              </figure>
+            )}
 
             <h1 className="text-[24px] font-bold leading-tight text-[#191919] sm:text-[32px]">
               {article.title}
