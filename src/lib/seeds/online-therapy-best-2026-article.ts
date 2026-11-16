@@ -12,6 +12,8 @@ export const bestOnlineTherapy2026Article: ArticleData = {
   "publishedAt": "2026-11-09",
   "updatedAt": "2026-11-09",
   "heroColor": "#E6F4EC",
+  "image": "/article-images/best-online-therapy-2026.png",
+  "imageAlt": "Three cards with chat, heart and leaf icons, representing a top three comparison of online therapy platforms",
   "author": "Top Online Therapy Editorial Team",
   "keyTakeaways": [
     "Best overall for talk therapy: betterhelp. Largest verified network (31,739 therapists, company figure), free therapist switching, live video, phone or chat, and insurance accepted with copays cited from around $23 per session.",

@@ -16,6 +16,8 @@ export const onlineTherapyGuideArticle: ArticleData = {
   "publishedAt": "2026-10-19",
   "updatedAt": "2026-10-19",
   "heroColor": "#E6F4EC",
+  "image": "/article-images/online-therapy-guide.png",
+  "imageAlt": "Open notebook, tea and laptop on a desk by a window, a calm setting for starting online therapy",
   "author": "Top Online Therapy Editorial Team",
   "keyTakeaways": [
     "Online therapy is psychotherapy with a licensed clinician by video, phone, chat or messaging - the same treatment as in-person care, delivered where you are; it is not a meditation app, a chatbot or a crisis service.",

@@ -25,6 +25,8 @@ export const onlineTherapyArticles: ArticleData[] = [
     publishedAt: "2026-09-25",
     updatedAt: "2026-10-05",
     heroColor: "#E4F2EA",
+    image: "/article-images/how-much-does-talkspace-cost.png",
+    imageAlt: "Coins, weekly calendar and receipt, representing the cost of Talkspace therapy per week",
     author: "Top Online Therapy Editorial Team",
     keyTakeaways: [
       "Self-pay Talkspace is a weekly subscription in three tiers: $69 (messaging only), $99 (video + messaging), $109 (video + messaging + workshops). Couples therapy is $109/week.",
@@ -457,6 +459,8 @@ export const onlineTherapyArticles: ArticleData[] = [
     "publishedAt": "2026-09-14",
     "updatedAt": "2026-10-29",
     "heroColor": "#E6F4EC",
+    "image": "/article-images/is-betterhelp-legit.png",
+    "imageAlt": "Shield and checkmark over a speech bubble, symbolizing a legitimacy check for an online therapy platform",
     "author": "Top Online Therapy Editorial Team",
     "keyTakeaways": [
       "Yes, betterhelp is legitimate: its therapists are licensed clinicians, and the platform scores 3.9 out of 5 on Trustpilot across 9,652 reviews.",

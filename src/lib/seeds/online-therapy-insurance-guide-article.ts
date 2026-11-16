@@ -16,6 +16,8 @@ export const onlineTherapyInsuranceGuideArticle: ArticleData = {
   "publishedAt": "2026-10-20",
   "updatedAt": "2026-10-20",
   "heroColor": "#E6F4EC",
+  "image": "/article-images/does-insurance-cover-online-therapy.png",
+  "imageAlt": "Insurance card, clipboard and coins beside a phone, representing how insurance covers online therapy",
   "author": "Top Online Therapy Editorial Team",
   "keyTakeaways": [
     "Most US health plans cover online therapy on the same terms as an office visit. Your cost comes down to three questions: is the platform in-network, does your deductible apply, and what is your copay or coinsurance.",
