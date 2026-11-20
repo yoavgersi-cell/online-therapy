@@ -87,6 +87,10 @@ export default async function StatePage({
 
   const note = stateNote(s.slug);
   const licenseList = note ? note.licenses.join(", ") : "";
+  // Pick the counselor and social-work titles by name, not by list position,
+  // so a state whose list starts with LMFT or LPCC is not described wrongly.
+  const counselorTitle = note?.licenses.find((l) => /^(LPC|LPCC|LPCMH|LMHC|LCMHC|LCPC|CMHC)\b/.test(l));
+  const socialWorkTitle = note?.licenses.find((l) => /^(LCSW|LICSW|LMSW)\b/.test(l));
   const mentionsTricare = !!note && note.note.includes("TRICARE");
   const mentionsMedicare = !!note && note.note.includes("Medicare Part B");
   const expansionClause = note
@@ -244,6 +248,13 @@ export default async function StatePage({
               What&apos;s Different About Online Therapy in {s.name}
             </h2>
             <p className="mb-4">{note.note}</p>
+            {note.sources && note.sources.length > 0 && (
+              <p className="mb-4 text-[14px] text-gray-500">
+                Sources: {note.sources.map((src, i) => (
+                  <span key={src.url}>{i > 0 && "; "}<a href={src.url} className="text-[#1A7A52] hover:underline" rel="noopener">{src.label}</a></span>
+                ))}.
+              </p>
+            )}
           </>
         )}
 
@@ -298,8 +309,10 @@ export default async function StatePage({
         {note && (
           <p className="mb-4">
             The license titles you will see on {s.name} therapist profiles are <strong>{licenseList}</strong>.
-            In {s.name} a clinical counselor is a {note.licenses[0]} and a clinical social worker a {note.licenses[1]};
-            each title means a graduate degree, supervised hours, a licensing exam and an active license that{" "}
+            {counselorTitle && (
+              <>In {s.name} a clinical counselor holds the <strong>{counselorTitle}</strong> title{socialWorkTitle && <> and a clinical social worker the <strong>{socialWorkTitle}</strong> title</>}. </>
+            )}
+            Each title means a graduate degree, supervised hours, a licensing exam and an active license that{" "}
             {s.name}&apos;s board can discipline or revoke, checkable in two minutes on the board&apos;s lookup.
           </p>
         )}
@@ -344,6 +357,9 @@ export default async function StatePage({
               <table className="w-full min-w-[520px] text-left text-[14px]">
                 <tbody className="divide-y divide-gray-100">
                   <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">License titles to look for</td><td className="px-4 py-2.5 text-gray-600">{licenseList}</td></tr>
+                  {note?.board && (
+                    <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">Licensing board</td><td className="px-4 py-2.5 text-gray-600"><a href={note.board.lookupUrl} className="font-semibold text-[#1A7A52] hover:underline" rel="noopener">{note.board.name}</a></td></tr>
+                  )}
                   <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Time zone</td><td className="px-4 py-2.5 text-gray-600">{note.timeZone}</td></tr>
                   <tr><td className="px-4 py-2.5 font-semibold text-[#191919]">Medicaid program</td><td className="px-4 py-2.5 text-gray-600">{medicaid}</td></tr>
                   <tr className="bg-gray-50/50"><td className="px-4 py-2.5 font-semibold text-[#191919]">Medicaid expansion</td><td className="px-4 py-2.5 text-gray-600">{note.medicaidExpanded ? "Adopted - low-income adults generally eligible" : "Not adopted - adult eligibility is narrower"}</td></tr>

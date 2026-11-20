@@ -16,6 +16,10 @@ export interface StateNote {
   medicaidExpanded: boolean;
   /** 100-160 words, written for this state only. */
   note: string;
+  /** The state board that licenses the titles above, with its public license lookup. Optional until verified. */
+  board?: { name: string; lookupUrl: string };
+  /** Official sources for the state-specific statements in `note`. */
+  sources?: { label: string; url: string }[];
 }
 
 export const STATE_NOTES: Record<string, StateNote> = {
@@ -47,7 +51,15 @@ export const STATE_NOTES: Record<string, StateNote> = {
     licenses: ["LPCC", "LMFT", "LCSW", "licensed psychologist"],
     timeZone: "Pacific",
     medicaidExpanded: true,
-    note: "California has the largest licensed therapist pool of any state, which cuts both ways online: more choice of specialty, language and background than anywhere else, and more competition for the therapists people most want. Two things are specific to California. Its clinical counselor license is the LPCC rather than the LPC used in most states, and the LMFT is unusually common here, so expect to see both on profiles. And its Medicaid program, Medi-Cal, covers mental-health care through county-based managed-care plans, so which online platform is in-network can differ from Los Angeles County to Sacramento County; run the check with your county plan details. Therapists who work in Spanish, Mandarin, Cantonese, Tagalog, Vietnamese and Korean are easier to find in California than almost anywhere, but still ask at intake.",
+    note: "California's mental-health licenses are issued by two boards. The Board of Behavioral Sciences licenses marriage and family therapists (LMFT), clinical social workers (LCSW) and professional clinical counselors (LPCC). The Board of Psychology licenses psychologists. Trainees carry associate titles (AMFT, ASW, APCC) while they gain supervised hours, and an associate is not a fully licensed clinician, so check the status of any therapist on the board's lookup. Medi-Cal, the state's Medicaid program, delivers specialty mental-health services through county mental health plans, so whether a given therapist or platform is covered depends on the county you live in, not only on the statewide program. Ask the platform which county contracts it holds before you book. Commercial insurance follows the plan you have, and that is a separate check from Medi-Cal.",
+    board: {
+      name: "California Board of Behavioral Sciences",
+      lookupUrl: "https://www.bbs.ca.gov/",
+    },
+    sources: [
+      { label: "Board of Behavioral Sciences: about the board and license types", url: "https://www.bbs.ca.gov/about/board_info.html" },
+      { label: "DHCS: Medi-Cal specialty mental health services and county mental health plans", url: "https://www.dhcs.ca.gov/services/MH/Pages/default.aspx" },
+    ],
   },
   colorado: {
     licenses: ["LPC", "LCSW", "LMFT", "licensed psychologist"],
