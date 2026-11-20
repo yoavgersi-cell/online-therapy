@@ -17,9 +17,9 @@ export const onlineTherapyArticles: ArticleData[] = [
   // left to the platform's site until the operator verifies them.
   {
     slug: "how-much-does-talkspace-cost",
-    title: "Talkspace Pricing (2026): $69-$109/Week Self-Pay, $0-$30 Copays With Insurance",
+    title: "Talkspace Pricing (2026): $69-$109/Week Self-Pay",
     description:
-      "How much does Talkspace cost? Self-pay: $69/week messaging only, $99/week video + messaging, $109/week with workshops or for couples. Psychiatry $299 initial, $175 follow-up. With insurance: copays typically $0-$30. Full breakdown.",
+      "Talkspace self-pay is $69/week messaging only, $99/week with video, $109/week with workshops or couples. Psychiatry $299 initial, $175 follow-up. Copays $0-$30 with insurance.",
     category: "Advice",
     readTime: "6 min read",
     publishedAt: "2026-09-25",
@@ -95,7 +95,7 @@ export const onlineTherapyArticles: ArticleData[] = [
   },
   {
     slug: "betterhelp-alternatives",
-    title: "betterhelp Alternatives (2026): Options That Take Insurance, Add Psychiatry or Cost Less",
+    title: "betterhelp Alternatives (2026): Insurance, Psychiatry, Cost",
     description:
       "The best alternatives to betterhelp, matched to why you're switching: Talkspace if you want insurance billing or psychiatry, headspace for a daily practice, and the genuinely free routes. Plus when a therapist switch beats a platform switch.",
     category: "Advice",
@@ -374,7 +374,7 @@ export const onlineTherapyArticles: ArticleData[] = [
     slug: "free-and-low-cost-therapy-options",
     title: "Free Online Therapy: The Options That Actually Exist (2026)",
     description:
-      "Real routes to affordable mental-health support - EAPs, community clinics, sliding-scale therapists, training clinics, support lines - and where the online platforms fit in.",
+      "Real routes to affordable support: EAPs, community clinics, sliding-scale therapists, training clinics, support lines, and where online platforms fit.",
     category: "Advice",
     readTime: "8 min read",
     publishedAt: UPDATED,
@@ -873,7 +873,7 @@ export const onlineTherapyArticles: ArticleData[] = [
   },
   {
     slug: "online-therapy-cost",
-    title: "Online Therapy Cost in 2026: $69-$109/Week Self-Pay or $0-$30 Copays",
+    title: "Online Therapy Cost in 2026: $69-$109/Week or $0-$30 Copays",
     description:
       "Online therapy pricing comes in a few distinct shapes - weekly subscriptions, per-session fees, and insurance-based models. How they differ, what drives the real cost, and how to find the cheapest legitimate route for you.",
     category: "Guide",

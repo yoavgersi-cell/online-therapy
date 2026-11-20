@@ -9,8 +9,8 @@ import type { ArticleData } from "@/lib/config";
 // ~12505 words.
 export const onlineTherapyGuideArticle: ArticleData = {
   "slug": "online-therapy-guide",
-  "title": "Online Therapy: The Complete 2026 Guide (Cost, Insurance, Platforms)",
-  "description": "Everything about online therapy in one place: how it works, whether it works, verified 2026 prices, insurance and free options, betterhelp vs Talkspace vs headspace, psychiatry, privacy, licensing and a 30-day plan.",
+  "title": "Online Therapy in 2026: Cost, Insurance and Platforms",
+  "description": "Online therapy explained: how it works, verified 2026 prices, insurance and free options, betterhelp vs Talkspace vs headspace, psychiatry, licensing and a 30-day plan.",
   "category": "Guide",
   "readTime": "52 min read",
   "publishedAt": "2026-10-19",

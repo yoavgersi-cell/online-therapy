@@ -19,16 +19,16 @@ const SITE_URL = "https://www.toponlinetherapy.io";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Best Online Therapy Platforms of 2026 - Compare Top Providers",
+    absolute: "Best Online Therapy Platforms of 2026: Compare Providers",
   },
   description:
-    "Compare the best online therapy platforms of 2026. Top mental-health providers ranked by insurance coverage, session formats, therapist matching, pricing and value - find your best fit.",
+    "Compare the best online therapy platforms of 2026 by insurance, session format, therapist matching and price. Find the right fit for you.",
   alternates: { canonical: SITE_URL },
   openGraph: { images: [OG_IMAGE],
     siteName: "Top Online Therapy",
-    title: "Best Online Therapy Platforms of 2026 - Compare Top Providers",
+    title: "Best Online Therapy Platforms of 2026: Compare Providers",
     description:
-      "Compare the best online therapy platforms of 2026 - top providers ranked by insurance, session formats, price, support and value.",
+      "Compare the best online therapy platforms of 2026 by insurance, session format, therapist matching and price. Find the right fit for you.",
     url: SITE_URL,
     type: "website",
   },

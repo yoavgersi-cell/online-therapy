@@ -1060,9 +1060,9 @@ export const onlineTherapyConfig: SiteConfig = {
     },
     {
       slug: "best-online-psychiatry",
-      seoTitle: "Best Online Psychiatry (2026): Medication Management by Video, Compared",
+      seoTitle: "Best Online Psychiatry (2026): Medication Visits Compared",
       seoDescription:
-        "Online psychiatry compared: which platform offers evaluation and medication management by video, how insurance applies, what can and can't be prescribed remotely, and how it pairs with therapy.",
+        "Online psychiatry: evaluation and medication management by video, how insurance applies, what can be prescribed remotely, and how it pairs with therapy.",
       h1: "Best Online Psychiatry",
       h2: "Psychiatric evaluation and medication management online - the platform that offers it, and how to start",
       heroDescription:

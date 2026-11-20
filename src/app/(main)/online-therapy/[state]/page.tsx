@@ -31,13 +31,12 @@ export async function generateMetadata({
   const s = STATE_BY_SLUG.get(state);
   if (!s) return {};
   const url = `${SITE_URL}/online-therapy/${s.slug}`;
-  const title = `Best Online Therapy in ${s.name} (2026): Platforms, Insurance & Cost`;
-  const note = stateNote(s.slug);
-  const titles = note ? note.licenses.slice(0, 2).join(" and ") : `${s.abbr}-licensed`;
+  // Titles are kept under 60 characters so Google does not cut them off.
+  const title = `Online Therapy in ${s.name} (2026): Costs & Insurance`;
   const description =
-    `The best online therapy platforms serving ${s.name} in 2026, compared: ${titles} therapists licensed in ${s.name}, video, phone or messaging sessions, insurance and ${medicaidProgramName(s.slug, s.name)} coverage, verified prices, and what is different about getting care in ${s.name}.`;
+    `Online therapy in ${s.name} for 2026: state-licensed therapists, insurance and ${medicaidProgramName(s.slug, s.name)} coverage, session formats and verified prices.`;
   return {
-    title: { absolute: `${title} | Top Online Therapy` },
+    title: { absolute: title },
     description,
     alternates: { canonical: url },
     openGraph: { images: [OG_IMAGE], siteName: "Top Online Therapy", title, description, url, type: "website" },
