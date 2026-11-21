@@ -284,10 +284,19 @@ export const STATE_NOTES: Record<string, StateNote> = {
     note: "Tennessee keeps Central time in Nashville, Memphis and the west and Eastern time in Knoxville, Chattanooga and the east, so a cross-state match should confirm which clock the session uses. Tennessee has not adopted Medicaid expansion, so TennCare covers a narrower group of adults; for working adults without coverage, the routes are an employer EAP, the $69 messaging tier, financial aid and the community mental-health centers. Tennessee's counselor title is the LPC-MHSP - the suffix designates a mental-health service provider who can diagnose - and it is the credential to look for on profiles. Nashville and Memphis have deep markets; the Cumberland Plateau and the rural west do not. Fort Campbell families can use TRICARE in the Talkspace check.",
   },
   texas: {
-    licenses: ["LPC", "LCSW", "LMFT", "licensed psychologist"],
-    timeZone: "Central (Mountain in El Paso and the far west)",
+    licenses: ["LPC", "LMFT", "LCSW", "licensed psychologist"],
+    timeZone: "Central (Mountain in El Paso)",
     medicaidExpanded: false,
-    note: "Texas is big enough to have two time zones - El Paso keeps Mountain time - and big enough that the drive to the nearest therapist in the Panhandle, West Texas or the Valley can be hours, which is why statewide online matching matters here more than in most states. Texas has not adopted Medicaid expansion, and its Medicaid program covers few adults without children or a disability; for working Texans without coverage, an employer EAP, Talkspace's $69 messaging tier and betterhelp's financial-aid questionnaire are the realistic routes, and the insurance checks matter because a covered plan is the only path to copay pricing. Spanish-speaking therapists are a common request across the state and are more findable through the statewide pool than any one city's practices. Texas has one of the largest military populations in the country - Fort Hood, Fort Bliss, Joint Base San Antonio and more - so TRICARE details in the Talkspace check apply to many households.",
+    note: "Texas licenses most talk therapists through the Texas Behavioral Health Executive Council, which runs separate boards: the Professional Counselors board issues the LPC (and LPC-Associate while a trainee is supervised), the Marriage and Family Therapists board issues the LMFT, and the Social Worker Examiners board issues the LCSW, LMSW and LBSW. Psychologists are licensed by the State Board of Examiners of Psychologists. Texas adopted the psychology compact, PSYPACT, in 2019, so a psychologist licensed in another participating state may be able to offer telepsychology to Texas residents, and a Texas psychologist can practice telepsychology in other member states; the Texas board lists how a psychologist applies for that authority. Most of the state is on Central time, but El Paso keeps Mountain time, so set availability in the zone you live in. Texas has not adopted the ACA Medicaid expansion, so most low-income adults without children or a qualifying disability are not eligible for Medicaid; Medicaid mental-health care runs through STAR, STAR+PLUS and STAR Kids managed-care plans, and those plans are the ones to check. Texas law bars a Medicaid managed-care plan from refusing to pay for a covered service only because it was delivered by telehealth.",
+    board: {
+      name: "Texas Behavioral Health Executive Council",
+      lookupUrl: "https://bhec.texas.gov/",
+    },
+    sources: [
+      { label: "Texas Behavioral Health Executive Council", url: "https://bhec.texas.gov/category/tbhec" },
+      { label: "Tex. Occ. Code 501.601 (PSYPACT)", url: "https://texas.public.law/statutes/tex._occ._code_section_501.601" },
+      { label: "Texas Government Code ch. 548 (telehealth)", url: "https://statutes.capitol.texas.gov/Docs/GV/pdf/GV.548.pdf" },
+    ],
   },
   utah: {
     licenses: ["CMHC", "LCSW", "LMFT", "licensed psychologist"],
